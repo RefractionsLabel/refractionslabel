@@ -17,7 +17,7 @@
 		<p class="author">{author}</p>
 		<p class="date">{format(date, 'do MMMM yyyy')}</p>
 	</div>
-	<p class="description">{description}</p>
+	<p class="description">{@html text}</p>
 </div>
 
 <style>

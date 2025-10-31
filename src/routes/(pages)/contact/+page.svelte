@@ -91,11 +91,8 @@
 	}
 
 	.contact-emails {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		text-align: center;
+		position: relative;
+		top: 40%;
 	}
 
 	.contact-emails p {
@@ -107,6 +104,7 @@
 	.contact-emails a {
 		color: rgba(3, 24, 3, 0.9);
 		text-decoration: underline;
+		text-transform: lowercase;
 		font-size: var(--fs-sm);
 	}
 

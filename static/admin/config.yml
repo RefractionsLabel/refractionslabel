@@ -10,7 +10,7 @@ collections:
     label: "Insights"
     folder: "src/lib/_content/insights"
     create: true
-    slug: "{{title}-{day}-{month}}"
+    slug: "{{title}}-{{day}}-{{month}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
@@ -22,7 +22,7 @@ collections:
     label: "Releases"
     folder: "src/lib/_content/releases"
     create: true
-    slug: "{{artist}-{title}}"
+    slug: "{{artist}}-{{title}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Artist", name: "artist", widget: "string" }
