@@ -1,93 +1,59 @@
 <script lang="ts">
 	import HighlightedHeader from '$lib/components/HighlightedHeader.svelte';
+
+	interface Association {
+		name: string;
+		logoSrc: string;
+		altText: string;
+		href: string;
+	}
+
+	let associations: Association[] = [
+		{
+			name: 'Camden Collective',
+			logoSrc: '/Logos/camden_collective.webp',
+			altText: 'Camden Collective Logo',
+			href: 'https://camdencollective.co.uk/'
+		},
+		{
+			name: 'Subtle',
+			logoSrc: '/Logos/Subtle_Logo.png',
+			altText: 'Subtle Logo',
+			href: '#'
+		},
+		{
+			name: 'Subvert - The Collectively Owned Music Marketplace',
+			logoSrc: '/Logos/SubvertWhite.png',
+			altText: 'Subvert Logo',
+			href: 'https://subvert.fm/'
+		},
+		{
+			name: 'MusicVenueProperties | Conserving & Preserving Grassroots Music Venues',
+			logoSrc: '/Logos/MVPWHITE.png',
+			altText: 'MVP Logo',
+			href: 'https://musicvenueproperties.com/'
+		}
+	];
 </script>
 
-<div class="main-content about-content">
+<div class="main-content flex flex-col items-center gap-16 lg:w-[72vw]">
 	<HighlightedHeader headerText="ABOUT"></HighlightedHeader>
 
-	<div class="associations">
-		<h2>Associations</h2>
-		<a class="association-link" href="https://camdencollective.co.uk/" target="_blank">
-			<img
-				src="/Logos/camden_collective.webp"
-				alt="Camden Collective Logo"
-				class="association-img"
-			/>Camden Collective
-		</a>
-		<a class="association-link" href="https://subvert.fm/" target="_blank">
-			<img src="/Logos/SubvertWhite.png" alt="Subvert Logo" class="association-img" />Subvert - The
-			Collectively Owned Music Marketplace
-		</a>
-		<a class="association-link" href="https://camdencollective.co.uk/" target="_blank">
-			<img src="/Logos/MVPWHITE.png" alt="MVP Logo" class="association-img" />MusicVenueProperties |
-			Conserving & Preserving Grassroots Music Venues
-		</a>
+	<div class="w-full flex items-center flex-col justify-center bg-white p-6 md:p-12">
+		<div class="text-center mb-10 text-primary py-0 px-6 border-0 font-bold uppercase w-fit">
+			<h1 class="!text-xl md:!text-xl !tracking-[1px] font-variation">Associations</h1>
+		</div>
+
+		<div class="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-8">
+			{#each associations as association}
+				<a
+					href={association.href}
+					target="_blank"
+					class="flex aspect-square items-center justify-center bg-primary p-6 transition-transform duration-300 hover:scale-105 md:p-8"
+				>
+					<img src={association.logoSrc} alt={association.altText} class="object-contain" />
+				</a>
+			{/each}
+		</div>
 	</div>
 </div>
-
-<style>
-	h2 {
-		margin: 2rem 0 1rem 0;
-	}
-
-	.about-content {
-		width: 72vw;
-		padding: 2.5rem 2rem 2.5rem 2rem;
-	}
-
-	.associations {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		text-align: center;
-		margin-top: 3rem;
-		width: 100%;
-	}
-
-	.association-link {
-		display: flex;
-		align-items: center;
-		margin: 3rem 0;
-		font-size: var(--fs-sm);
-		text-decoration: none;
-		color: white;
-		gap: 1rem;
-	}
-
-	.association-img {
-		height: 3rem;
-		width: auto;
-		margin-right: 1rem;
-		max-width: 40vw;
-	}
-
-	@media (max-width: 900px) {
-		.association-link {
-			font-size: var(--fs-xs);
-			margin: 2rem 0;
-		}
-		.association-img {
-			height: 2.2rem;
-			max-width: 60vw;
-		}
-	}
-
-	@media (max-width: 600px) {
-		.about-content {
-			padding: 0 0.5rem;
-		}
-		.association-link {
-			font-size: var(--fs-3xs);
-			flex-direction: column;
-			align-items: center;
-			gap: 0.5rem;
-		}
-		.association-img {
-			margin-right: 0;
-			margin-bottom: 0.3rem;
-			height: 1.5rem;
-			max-width: 80vw;
-		}
-	}
-</style>
