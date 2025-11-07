@@ -1,140 +1,61 @@
 <script lang="ts">
 	let atTop = $state(true);
 	let menuOpen = $state(false);
+
 	const isScrollAtTop = () => {
-		atTop = document.body.scrollTop < 50 && document.documentElement.scrollTop < 50;
+		atTop = window.scrollY < 10;
+	};
+
+	const closeMenu = () => {
+		menuOpen = false;
 	};
 </script>
 
 <svelte:window onscroll={isScrollAtTop} />
 
-<header class={'navbar ' + (atTop ? 'full' : 'minimised')}>
-	<a href="/" aria-label="Home"><div class={'logo ' + (!atTop && 'minimised')}></div></a>
+<header
+	class="fixed inset-x-0 top-0 z-[99] box-border flex w-full items-center justify-between px-[2%] overflow-visible bg-primary/80 transition-all duration-400 py-3"
+>
+	<a href="/" aria-label="Home">
+		<div
+			class="bg-no-repeat transition-all duration-400 h-10 w-40 bg-[url(/Logos/RefractionsLogoWhite.svg)] md:w-52"
+		></div>
+	</a>
+
 	<button
-		class="menu-toggle"
+		class="z-50 block cursor-pointer border-none bg-transparent p-2 md:hidden"
 		aria-label="Toggle menu"
 		aria-expanded={menuOpen}
 		onclick={() => (menuOpen = !menuOpen)}
 	>
-		<span></span>
-		<span></span>
-		<span></span>
+		<span class="block h-0.5 w-7 my-1.5 bg-white transition-transform duration-300 ease-in-out"
+		></span>
+		<span class="block h-0.5 w-7 my-1.5 bg-white transition-transform duration-300 ease-in-out"
+		></span>
+		<span class="block h-0.5 w-7 my-1.5 bg-white transition-transform duration-300 ease-in-out"
+		></span>
 	</button>
-	<nav class:open={menuOpen}>
-		<a href="/releases" onclick={() => (menuOpen = false)}>RELEASES</a>
-		<a href="/insights" onclick={() => (menuOpen = false)}>INSIGHTS</a>
-		<a href="/about" onclick={() => (menuOpen = false)}>ABOUT</a>
-		<a href="/contact" onclick={() => (menuOpen = false)}>CONTACT</a>
+
+	<nav
+		class="
+      absolute top-full inset-x-0 flex-col bg-primary/95 transition-all
+      {menuOpen ? 'flex' : 'hidden'}
+
+      md:relative md:top-auto md:flex md:flex-row gap-6 md:items-center md:bg-transparent md:p-0"
+	>
+		<a href="/releases" class="nav-link !m-0" onclick={closeMenu}>RELEASES</a>
+		<a href="/insights" class="nav-link !m-0" onclick={closeMenu}>INSIGHTS</a>
+		<a href="/about" class="nav-link !m-0" onclick={closeMenu}>ABOUT</a>
+		<a href="/contact" class="nav-link !m-0" onclick={closeMenu}>CONTACT</a>
 	</nav>
 </header>
 
 <style>
-	.navbar {
-		overflow: hidden;
-		background-color: rgba(3, 24, 3, 0.8);
-		transition: 0.4s;
-		position: fixed;
-		width: 100%;
-		max-width: 100vw;
-		left: 0;
-		right: 0;
-		box-sizing: border-box;
-		top: 0;
-		z-index: 99;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-
-	.navbar.full {
-		padding: 50px 2% 50px 2%;
-	}
-
-	.navbar.minimised {
-		padding: 10px 2% 10px 2%;
-	}
-
-	.logo {
-		background-image: url(/Logos/RefractionsLogoWhite.svg);
-		background-repeat: no-repeat;
-		transition: 0.4s;
-		width: 200px;
-		height: 40px;
-		margin-left: 2%;
-	}
-
-	.logo.minimised {
-		background-image: url(/Logos/RefractionsLogomarkWhite.svg);
-		width: 40px;
-	}
-
-	nav {
-		padding: 0 30px;
-	}
-
-	.minimised nav a {
-		margin: 0 1rem;
-		font-size: 1.5rem;
-	}
-
-	/* Mobile menu toggle (hidden on desktop) */
-	.menu-toggle {
-		display: none;
-		background: transparent;
-		border: none;
-		cursor: pointer;
-		padding: 8px;
-		margin-right: 12px;
-	}
-
-	.menu-toggle span {
-		display: block;
-		width: 26px;
-		height: 2px;
-		margin: 5px 0;
-		background: #fff;
-		transition:
-			transform 0.3s ease,
-			opacity 0.3s ease;
-	}
-
-	/* Mobile styles */
-	@media (max-width: 768px) {
-		/* Allow dropdown to render below fixed header */
-		.navbar {
-			overflow: visible;
-		}
-
-		/* Reduce logo width slightly on small screens */
-		.logo {
-			width: 160px;
-		}
-
-		.menu-toggle {
-			display: block;
-		}
-
-		/* Hide inline nav by default on mobile */
-		nav {
-			display: none;
-		}
-
-		/* Show dropdown when open */
-		nav.open {
-			display: flex;
-			flex-direction: column;
-			position: absolute;
-			top: 100%;
-			left: 0;
-			right: 0;
-			background-color: rgba(3, 24, 3, 0.95);
-			gap: 0;
-		}
-
-		nav.open a {
-			padding: 14px 20px;
-			margin: 0;
-			border-top: 1px solid rgba(255, 255, 255, 0.1);
-		}
+	/* .nav-link {
+		@apply m-0 block border-t border-white/10 p-4 text-center text-lg
+        md:mx-4 md:border-none md:p-4 md:text-xl lg:mx-8;
+	} */
+	nav.flex-col > .nav-link:first-child {
+		@apply border-t-0;
 	}
 </style>
