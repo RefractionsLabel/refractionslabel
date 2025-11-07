@@ -16,7 +16,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		width: 97vw;
+		width: full;
 		padding: 1rem 2rem;
 		background-color: rgba(3, 24, 3);
 	}

@@ -11,15 +11,15 @@
 </script>
 
 <div class="flex min-h-screen flex-col p-6">
-	<main class="flex flex-1 flex-col items-center justify-center  pt-40">
+	<main class="flex flex-1 flex-col items-center justify-center pt-40">
 		<img
 			alt="Main Brand Logo and Title"
 			src="/Logos/RefractionsLogoWhite.svg"
-			class="block h-auto w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-[42rem] "
+			class="block h-auto w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-[42rem]"
 		/>
 
 		<nav
-			class="my-12 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 md:my-16 md:gap-x-10"
+			class="mt-12 md:my-12 flex flex-col md:flex-row flex-nowrap md:flex-wrap md:items-center md:justify-center gap-x-6 gap-y-2 md:my-16 md:gap-x-10"
 		>
 			{#each menuItems as item}
 				<a href={`${item.link}`}>{item.title}</a>

@@ -3,13 +3,22 @@
 	import HighlightedHeader from '$lib/components/HighlightedHeader.svelte';
 </script>
 
-<div class="main-content contact-content">
+<div class="main-content p-10 lg:w-[86vw] xl:w-[72vw]">
 	<HighlightedHeader headerText="CONTACT"></HighlightedHeader>
 
-	<section class="contact-panel">
-		<div class="org-block">
-			<h3 class="panel-title">REFRACTIONS LABEL LTD</h3>
-			<address class="address-block">
+	<section
+		class="h-auto w-full md:box-border
+    bg-white text-primary
+    grid grid-cols-1 items-start
+    gap-8 p-10
+    lg:grid-cols-2
+    xl:gap-12 xl:p-16"
+	>
+		<div class="grid content-start gap-4">
+			<h3 class="panel-title mb-4 text-xl">REFRACTIONS LABEL LTD</h3>
+			<address
+				class="address-block text-ml font-normal not-italic leading-none normal-case [font-variation-settings:'wght'_400,'wdth'_80]"
+			>
 				Collective Auction Rooms<br />
 				5-7 Buck Street<br />
 				London<br />
@@ -18,131 +27,33 @@
 			</address>
 		</div>
 
-		<div class="contact-emails">
-			<p>
+		<div class="contact-emails lg:relative lg:top-[40%]">
+			<p class="mb-4 text-xs md:text-sm text-primary/90">
 				GENERAL:
-				<a href="mailto:hello@refractionslabel.com">hello@refractionslabel.com</a>
+				<a
+					href="mailto:hello@refractionslabel.com"
+					class="text-sm text-primary/90 lowercase underline">hello@refractionslabel.com</a
+				>
 			</p>
-			<p>
+			<p class="text-xs md:text-sm text-primary/90">
 				DEMOS:
-				<a href="mailto:demo@refractionslabel.com">demo@refractionslabel.com</a>
+				<a
+					href="mailto:demo@refractionslabel.com"
+					class="text-sm text-primary/90 lowercase underline">demo@refractionslabel.com</a
+				>
 			</p>
 		</div>
 
-		<button id="connect" class="social-button">CONNECT ON SOCIALS</button>
+		<button
+			id="connect"
+			class="social-button mt-0 border-none bg-primary/90 py-4 px-6 text-xs text-white lg:mt-20"
+		>
+			CONNECT ON SOCIALS
+		</button>
 
 		<div class="newsletter">
-			<h3>NEWSLETTER</h3>
+			<h3 class="mb-[0.2rem] text-left text-l tracking-[0.2rem] lg:text-center">NEWSLETTER</h3>
 			<EmailFormBlack />
 		</div>
 	</section>
 </div>
-
-<style>
-	.contact-content {
-		width: 72vw;
-		padding: 2.5rem 2rem 2.5rem 2rem;
-		height: auto;
-	}
-
-	.contact-panel {
-		background: white;
-		color: rgb(3, 24, 3);
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-auto-rows: auto;
-		gap: 3rem;
-		padding: 4rem;
-		align-items: flex-start;
-		width: 100%;
-		box-sizing: border-box;
-		height: auto;
-	}
-
-	.org-block {
-		display: grid;
-		gap: 1rem;
-		align-content: start;
-	}
-
-	.panel-title {
-		font-size: var(--fs-xl);
-		margin: 0 0 1rem 0;
-	}
-
-	.address-block {
-		text-transform: none;
-		font-style: normal;
-		font-variation-settings:
-			'wght' 400,
-			'wdth' 80;
-		line-height: 1;
-		font-size: var(--fs-ml);
-	}
-
-	.social-button {
-		background: rgba(3, 24, 3, 0.9);
-		color: white;
-		border: none;
-		padding: 1rem 1.5rem;
-		font-size: var(--fs-xs);
-		cursor: pointer;
-		margin-top: 5rem;
-	}
-
-	.contact-emails {
-		position: relative;
-		top: 40%;
-	}
-
-	.contact-emails p {
-		color: rgba(3, 24, 3, 0.9);
-		margin: 0 0 1rem 0;
-		font-size: var(--fs-sm);
-	}
-
-	.contact-emails a {
-		color: rgba(3, 24, 3, 0.9);
-		text-decoration: underline;
-		text-transform: lowercase;
-		font-size: var(--fs-sm);
-	}
-
-	.newsletter h3 {
-		font-size: var(--fs-l);
-		text-align: center;
-		margin: 0 0 0.2rem 0;
-		letter-spacing: 0.2rem;
-	}
-
-	/* Responsive tweaks */
-	@media (max-width: 1200px) {
-		.contact-content {
-			width: 86vw;
-		}
-		.contact-panel {
-			padding: 2.5rem;
-			gap: 2rem;
-		}
-	}
-
-	@media (max-width: 900px) {
-		.contact-content {
-			width: 92vw;
-		}
-		.contact-panel {
-			grid-template-columns: 1fr;
-			grid-auto-rows: auto;
-		}
-
-		.social-button {
-			margin-top: 0;
-		}
-
-		.newsletter h3,
-		.contact-emails {
-			text-align: left;
-			align-items: start;
-		}
-	}
-</style>
