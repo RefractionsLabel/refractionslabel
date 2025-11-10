@@ -4,161 +4,48 @@
 	const { title, artist, date, cover_art, buy_link, embed_snippet, description } = data.attributes;
 </script>
 
-<div class="main-content release-detail-content">
-	<button class="back-button" onclick={() => (window.location.href = '/releases')}
-		>← Back to releases</button
-	>
-	<p class="release-date">{format(date, 'do MMMM yyyy')}</p>
-
-	<div class="cover-art">
-		<img src={cover_art} alt="Cover art for {title}" />
+<div
+	class="main-content flex w-full flex-col gap-8 bg-white p-6 pb-12 text-primary
+           md:p-8
+           lg:w-[72vw] lg:!p-12"
+>
+	<div class="flex justify-between w-full">
+		<button
+			class="flex items-center justify-start cursor-pointer rounded-none !text-xs !mb-6 md:!text-sm border !border-primary !bg-primary text-white hover:!bg-white hover:text-primary hover:!border-primary"
+			onclick={() => (window.location.href = '/insights')}>← Back to insights</button
+		>
+		<p class="text-right text-sm text-primary">{format(date, 'do MMMM yyyy')}</p>
 	</div>
 
-	<div class="info">
-		<h1>{title}</h1>
-		<h2>{artist}</h2>
-		<p>{@html description}</p>
-	</div>
+	<div class="grid w-full grid-cols-1 gap-8 md:grid-cols-2 md:gap-12">
+		<div class="flex flex-col">
+			<div class="cover-art w-full">
+				<img src={cover_art} alt="Cover art for {title}" class="h-auto w-full" />
+			</div>
+			<div class="embed-container w-full mt-10">
+				{@html embed_snippet}
+			</div>
+		</div>
+		<div class="flex flex-col justify-between">
+			<div class="info flex flex-col gap-4">
+				<h1 class="text-5xl font-extrabold leading-none !font-variation !tracking-tight uppercase md:!text-5xl lg:!text-7xl xl:!text-8xl">{artist}</h1>
+				<h2 class="text-2xl font-light leading-none uppercase md:!text-3xl lg:!text-5xl">{title}</h2>
 
-	<div class="embed-container">
-		{@html embed_snippet}
-	</div>
-
-	<div class="buy-link">
-		<a href={buy_link} target="_blank" rel="noopener noreferrer">Buy / Stream</a>
+				<div class="text-ml max-w-none normal-case text-primary mt-12">
+					{@html description}
+				</div>
+			</div>
+			<div class="buy-link">
+				<a
+					href={buy_link}
+					target="_blank"
+					rel="noopener noreferrer"
+					class="flex h-[42px] w-fit cursor-pointer items-center rounded-none border-0 bg-primary px-6 text-center text-ml text-white no-underline transition-transform duration-300 hover:scale-105"
+				>
+					Buy / Stream
+				</a>
+			</div>
+		</div>
 	</div>
 </div>
 
-<style>
-	.release-detail-content {
-		background-color: white;
-		color: rgb(3, 24, 3);
-		position: relative;
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-template-areas:
-			'cover info'
-			'embed buy';
-		gap: 2rem;
-		width: 72vw;
-		padding: 7.5rem 5rem 3rem 5rem;
-		align-items: start;
-		justify-items: start;
-	}
-
-	.cover-art {
-		grid-area: cover;
-	}
-
-	.info {
-		grid-area: info;
-		display: flex;
-		flex-direction: column;
-		gap: 1rem;
-	}
-
-	.embed-container {
-		grid-area: embed;
-	}
-
-	.buy-link {
-		grid-area: buy;
-		display: flex;
-		align-items: flex-start;
-		max-height: 42px;
-	}
-
-	img,
-	.embed-container {
-		width: 100%;
-		height: auto;
-	}
-
-	img {
-		border: 1px solid rgba(3, 24, 3, 0.2);
-	}
-
-	.back-button {
-		background-color: rgb(3, 24, 3);
-		color: white;
-		border-radius: 0;
-		font-size: var(--fs-sm);
-		cursor: pointer;
-		margin-bottom: 2rem;
-		position: absolute;
-		top: 2rem;
-		left: 2.5rem;
-		z-index: 2;
-	}
-
-	.release-date {
-		font-size: var(--fs-sm);
-		position: absolute;
-		top: 3rem;
-		right: 5rem;
-		color: rgb(3, 24, 3);
-	}
-
-	p {
-		color: rgb(3, 24, 3);
-	}
-
-	.buy-link a {
-		display: flex;
-		background-color: rgb(3, 24, 3);
-		color: white;
-		height: 42px;
-		max-height: 42px;
-		text-align: center;
-		align-items: center;
-		padding: 0 1rem;
-		text-decoration: none;
-		font-size: var(--fs-ml);
-		width: fit-content;
-		border-radius: 0;
-		cursor: pointer;
-		border: 0;
-	}
-
-	@media (max-width: 1200px) {
-		.release-detail-content {
-			grid-template-columns: 1fr;
-			grid-template-areas:
-				'cover'
-				'info'
-				'embed'
-				'buy';
-			padding: 9rem 5rem 3rem 5rem;
-		}
-		.cover-art,
-		.embed-container,
-		.info,
-		.buy-link {
-			margin: 0.2rem 0;
-		}
-
-		.release-date {
-			top: 7rem;
-		}
-	}
-
-	@media (max-width: 600px) {
-		.cover-art,
-		.embed-container,
-		.info,
-		.buy-link {
-			margin: 0.1rem 0;
-			padding: 0;
-		}
-		.info h1 {
-			font-size: var(--fs-xxl);
-		}
-		.info h2 {
-			font-size: var(--fs-xl);
-		}
-		.buy-link a {
-			font-size: var(--fs-md);
-			height: 36px;
-		}
-	}
-</style>

@@ -4,7 +4,7 @@
 	let menuItems = [
 		{ title: 'RELEASES', link: '/releases' },
 		{ title: 'INSIGHTS', link: '/insights' },
-		{ title: 'RADIO', link: '/radio' },
+		{ title: 'RADIO', link: 'https://www.subtleradio.com/residents/refractions' },
 		{ title: 'ABOUT', link: '/about' },
 		{ title: 'CONTACT', link: '/contact' }
 	];
