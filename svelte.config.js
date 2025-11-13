@@ -1,4 +1,5 @@
-import adapter from '@sveltejs/adapter-netlify';
+// import adapter from '@sveltejs/adapter-netlify'; uncomment this when you need to deploy to Netlify
+import adapter from '@sveltejs/adapter-auto';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 /** @type {import('@sveltejs/kit').Config} */
