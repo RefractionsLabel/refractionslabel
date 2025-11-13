@@ -26,13 +26,9 @@
 <svelte:window on:scroll={isScrollAtTop} />
 
 <header
-	class="fixed inset-x-0 top-0 z-[99] flex w-full items-center justify-between px-[2%] py-10 bg-primary/80 transition-all duration-400"
+	class={`fixed inset-x-0 top-0 z-[99] flex w-full items-center justify-between bg-primary/80 transition-all px-[2%]  duration-400 ${atTop ? 'py-10' : 'py-4'}`}
 >
-	<a href="/" aria-label="Home">
-		<div
-			class="bg-no-repeat transition-all duration-400 h-10 w-40 bg-[url(/Logos/RefractionsLogoWhite.svg)] md:w-52"
-		></div>
-	</a>
+	<a href="/" aria-label="Home"><div class={'logo ' + (!atTop && 'minimised')}></div></a>
 
 	<button
 		class="z-50 block cursor-pointer border-none !bg-transparent hover:!bg-transparent p-2 md:hidden"
@@ -65,11 +61,12 @@
 			md:max-h-none md:opacity-100
 		"
 	>
-		<div class="flex flex-col px-[2%] gap-4 py-6 pb-12 md:flex-row md:p-0 md:gap-18">
+		<div class="flex flex-col px-[2%] gap-4 py-6 pb-12 md:flex-row md:p-0 xl:gap-18">
 			{#each navlinks as link}
 				<a
 					href={link.link}
-					class="nav-link py-3 text-white hover:text-gray-300 transition-colors md:py-0 border-b border-gray-100/10"
+					class:text-xs={!menuOpen}
+					class="text-sm no-underline [font-variation-settings:'wght'_400,'wdth'_100] lg:text-ml xl:text-md p-4 hover:bg-white hover:text-primary/80 duration-400 text-white hover:text-gray-300 transition-colors"
 					onclick={closeMenu}
 				>
 					{link.title}
@@ -78,3 +75,19 @@
 		</div>
 	</nav>
 </header>
+
+<style>
+	.logo {
+		background-image: url(/Logos/RefractionsLogoWhite.svg);
+		background-repeat: no-repeat;
+		transition: 0.4s;
+		width: 200px;
+		height: 40px;
+		margin-left: 2%;
+	}
+
+	.logo.minimised {
+		background-image: url(/Logos/RefractionsLogomarkWhite.svg);
+		width: 40px;
+	}
+</style>

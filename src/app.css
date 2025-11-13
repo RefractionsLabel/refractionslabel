@@ -1,9 +1,6 @@
 @import 'tailwindcss';
 html {
 	font-family: 'podium-sharp-variable', sans-serif;
-	/* font-variation-settings:
-		'wght' 700,
-		'wdth' 50; */
 	@apply text-[80%] text-white !tracking-wider;
 }
 
@@ -28,14 +25,14 @@ html {
 }
 
 body {
-	@apply m-0 bg-[rgb(3,24,3)] uppercase;
+	@apply m-0 bg-primary uppercase;
 }
 
 .container {
 	@apply flex max-w-fit flex-col justify-center items-center w-full m-auto h-full;
 }
 .main-content {
-	@apply mt-[15rem] mb-32 min-h-[60vh] flex flex-col justify-start items-center min-w-[72vw] py-10 px-8;
+	@apply mt-40 mb-32 min-h-[60vh] flex flex-col justify-start items-center min-w-[72vw] py-10 px-8;
 }
 
 h1 {
@@ -49,8 +46,7 @@ h2 {
 h3 {
 	@apply m-0 text-lg;
 }
-p,
-a {
+p {
 	@apply m-0 no-underline text-md [font-variation-settings:'wght'_400,'wdth'_100];
 }
 
@@ -58,19 +54,11 @@ nav {
 	@apply flex justify-between items-center;
 }
 
-nav a {
-	@apply p-4 transition-all duration-400 text-ml md:mx-8 md:text-md;
-}
-
-nav a:hover {
-	@apply bg-white text-[rgba(3,24,3,0.8)];
-}
-
 button,
 input,
 textarea,
 select {
-	@apply font-[inherit] text-[1.5em] text-inherit tracking-[inherit] [font-variant:inherit] [text-transform:inherit];
+	@apply font-[inherit] sm:text-[1.5em] text-inherit tracking-[inherit] [font-variant:inherit] [text-transform:inherit];
 }
 
 input,

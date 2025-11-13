@@ -27,7 +27,7 @@
 	}
 </script>
 
-<div class="main-content w-full px-4 lg:!px-16 lg:py-10">
+<div class="main-content w-full px-4 lg:!px-32 lg:py-10">
 	<HighlightedHeader headerText="INSIGHTS"></HighlightedHeader>
 
 	<div class="flex w-full flex-wrap items-center justify-between gap-16 lg:items-stretch">

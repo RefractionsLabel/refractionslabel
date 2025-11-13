@@ -13,12 +13,14 @@
 				>
 					<div class="ml-form-formContent horozintalForm">
 						<div class="ml-form-horizontalRow">
-							<div class="ml-input-horizontal w-full mr-2">
+							<div class="ml-input-horizontal mr-2">
 								<div style="width: 100%;" class="horizontal-fields">
-									<div class="ml-field-group ml-field-email ml-validate-email ml-validate-required w-48 sm:w-56 md:w-92 ">
+									<div
+										class="ml-field-group ml-field-email ml-validate-email ml-validate-required w-full max-w-48 sm:max-w-56 md:max-w-92"
+									>
 										<input
 											type="email"
-											class="form-control !w-full placeholder:text-center placeholder:text-white !py-6 "
+											class="form-control !w-full placeholder:text-center placeholder:text-white !py-6"
 											data-inputmask=""
 											name="fields[email]"
 											placeholder="Email Address"
@@ -29,7 +31,7 @@
 							</div>
 
 							<div class="ml-button-horizontal primary">
-								<button type="submit" class="primary !py-6 ">Subscribe</button>
+								<button type="submit" class="primary !py-6">Subscribe</button>
 
 								<button disabled style="display: none;" type="button" class="loading">
 									<div class="ml-form-embedSubmitLoad"></div>

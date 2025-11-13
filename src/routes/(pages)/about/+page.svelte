@@ -36,7 +36,7 @@
 	];
 </script>
 
-<div class="main-content flex flex-col items-center gap-16 lg:w-[72vw]">
+<div class="main-content w-full px-4 lg:!px-32 lg:py-10">
 	<HighlightedHeader headerText="ABOUT"></HighlightedHeader>
 
 	<div class="w-full flex items-center flex-col justify-center bg-white p-6 md:p-12">
