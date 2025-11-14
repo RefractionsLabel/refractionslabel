@@ -22,6 +22,9 @@ html {
 
 	/* Colors */
 	--color-primary: rgb(3, 24, 3);
+
+	/* Font Classes */
+	--font-sans: 'sans-serif';
 }
 
 body {
@@ -80,10 +83,14 @@ button:hover {
 
 /* Insights */
 .author {
-	@apply text-left !text-ml !text-black sm:mr-8 !my-2 md:!my-4;
+	@apply text-left !text-sm md:!text-ml !text-black sm:mr-8 !my-2 md:!my-4;
 }
 .date {
-	@apply m-0 text-left !text-ml !text-black;
+	font-variation-settings:
+		'wght' 400,
+		'wdth' 100;
+
+	@apply m-0 text-left !text-sm md:!text-ml !text-black;
 }
 
 /* ===== Main Scrollbar ===== */

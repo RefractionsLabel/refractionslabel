@@ -20,7 +20,7 @@
 									>
 										<input
 											type="email"
-											class="form-control !w-full placeholder:text-center placeholder:text-white !py-6"
+											class="form-control !w-full placeholder:text-center placeholder:text-white !py-3 !text-xs xl:!text-sm"
 											data-inputmask=""
 											name="fields[email]"
 											placeholder="Email Address"
@@ -31,7 +31,7 @@
 							</div>
 
 							<div class="ml-button-horizontal primary">
-								<button type="submit" class="primary !py-6">Subscribe</button>
+								<button type="submit" class="primary !py-3 !text-xs xl:!text-sm">Subscribe</button>
 
 								<button disabled style="display: none;" type="button" class="loading">
 									<div class="ml-form-embedSubmitLoad"></div>

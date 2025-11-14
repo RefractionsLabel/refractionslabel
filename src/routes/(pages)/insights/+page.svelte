@@ -33,16 +33,16 @@
 	<div class="flex w-full flex-wrap items-center justify-between gap-16 lg:items-stretch">
 		{#each insightsFiles as file}
 			<button
-				class="relative flex !w-full !h-[300px] !p-4 justify-center gap-4 !bg-white !text-black hover:!bg-white/80
+				class="relative flex !w-full !h-[400px] !p-4 justify-center gap-4 !bg-white !text-black hover:!bg-white/80
                shadow-[0_2px_8px_rgba(0,0,0,0.04)] text-[80%] [font-variation-settings:'wght'_700,'wdth'_50] lg:!p-12"
 				onclick={() => (window.location.href = '/insights/' + file.slug)}
 			>
-				<div class="hidden lg:block lg:h-full lg:w-1/2 lg:overflow-hidden">
+				<div class="hidden lg:block lg:h-full lg:w-2/5 lg:overflow-hidden">
 					<img src="/WebBackgrounds/AboutBackground.jpg" alt="Image for {file.attributes.title}" />
 				</div>
 
-				<div class="flex w-full flex-col justify-start overflow-hidden lg:w-1/2 lg:px-4">
-					<h3 class="text-left !text-black leading-[0.85]">{file.attributes.title}</h3>
+				<div class="flex w-full flex-col justify-start overflow-hidden lg:w-3/5 lg:px-4">
+					<h3 class="text-left !text-black leading-[0.85] !text-[32px] md:!text-lg">The weather is beautiful and the sun is shining brightly today</h3>
 
 					<div
 						class="flex flex-col items-start gap-8

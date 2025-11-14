@@ -15,7 +15,7 @@
 		<img
 			alt="Main Brand Logo and Title"
 			src="/Logos/RefractionsLogoWhite.svg"
-			class="block h-auto w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-[42rem]"
+			class="block h-auto w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-[32rem]"
 		/>
 
 		<nav
@@ -24,19 +24,19 @@
 			{#each menuItems as item}
 				<a
 					href={`${item.link}`}
-					class="text-sm no-underline [font-variation-settings:'wght'_400,'wdth'_100] lg:text-ml xl:text-md p-4 hover:bg-white hover:text-primary/80 duration-400 text-white hover:text-gray-300 transition-colors lg:mx-8"
+					class="text-xs no-underline [font-variation-settings:'wght'_400,'wdth'_100] lg:text-sm xl:text-ml p-4 hover:bg-white hover:text-primary/80 duration-400 text-white hover:text-gray-300 transition-colors lg:mx-8"
 					>{item.title}</a
 				>
 			{/each}
 		</nav>
 	</main>
 	<footer
-		class="w-full flex flex-col items-center justify-center text-center text-5xs sm:text-4xs md:text-3xs lg:text-2xs mb-10 space-y-4"
+		class="w-full flex flex-col items-center justify-center text-center text-5xs sm:text-4xs md:text-3xs lg:text-2xs mb-6 space-y-10"
 	>
 		<EmailForm />
 
 		<p class="!text-[12px]">
-			Refractions<span class="font-serif">®</span> is a registered trademark of Refractions Label Ltd.
+			Refractions<span class="font-sans">®</span> is a registered trademark of Refractions Label Ltd.
 			All rights reserved.
 		</p>
 	</footer>
