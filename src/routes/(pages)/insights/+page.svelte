@@ -33,7 +33,7 @@
 	<div class="flex w-full flex-wrap items-center justify-between gap-16 lg:items-stretch">
 		{#each insightsFiles as file}
 			<button
-				class="relative flex w-full max-h-[300px] justify-center gap-4 !bg-white !text-black hover:!bg-white/80
+				class="relative flex !w-full !h-[300px] !p-4 justify-center gap-4 !bg-white !text-black hover:!bg-white/80
                shadow-[0_2px_8px_rgba(0,0,0,0.04)] text-[80%] [font-variation-settings:'wght'_700,'wdth'_50] lg:!p-12"
 				onclick={() => (window.location.href = '/insights/' + file.slug)}
 			>

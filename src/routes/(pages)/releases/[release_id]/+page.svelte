@@ -9,14 +9,14 @@
            md:p-8
            lg:w-[72vw] lg:!p-12"
 >
-	<div class="flex justify-between w-full">
+	<div class="flex w-full flex-col md:flex-row  md:justify-between">
 		<button
 			class="flex items-center justify-start cursor-pointer rounded-none !text-xs !mb-6 md:!text-sm border !border-primary !bg-primary text-white hover:!bg-white hover:text-primary hover:!border-primary"
-			onclick={() => (window.location.href = '/insights')}>← Back to insights</button
+			onclick={() => (window.location.href = '/releases')}>← Back to releases</button
 		>
-		<p class="text-right text-sm text-primary">{format(date, 'do MMMM yyyy')}</p>
-	</div>
+		<p class="!text-ml md:!text-md text-primary">{format(date, 'do MMMM yyyy')}</p>
 
+	</div>
 	<div class="grid w-full grid-cols-1 gap-8 md:grid-cols-2 md:gap-12">
 		<div class="flex flex-col">
 			<div class="cover-art w-full">
@@ -28,8 +28,14 @@
 		</div>
 		<div class="flex flex-col justify-between">
 			<div class="info flex flex-col gap-4">
-				<h1 class="text-5xl font-extrabold leading-none !font-variation !tracking-tight uppercase md:!text-5xl lg:!text-7xl xl:!text-8xl">{artist}</h1>
-				<h2 class="text-2xl font-light leading-none uppercase md:!text-3xl lg:!text-5xl">{title}</h2>
+				<h1
+					class="text-5xl font-extrabold leading-none !font-variation !tracking-tight uppercase md:!text-5xl lg:!text-7xl xl:!text-8xl"
+				>
+					{artist}
+				</h1>
+				<h2 class="text-2xl font-light leading-none uppercase md:!text-3xl lg:!text-5xl">
+					{title}
+				</h2>
 
 				<div class="text-ml max-w-none normal-case text-primary mt-12">
 					{@html description}
@@ -48,4 +54,3 @@
 		</div>
 	</div>
 </div>
-

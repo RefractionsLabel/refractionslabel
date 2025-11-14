@@ -41,7 +41,7 @@
 
 	<div class="w-full flex items-center flex-col justify-center bg-white p-6 md:p-12">
 		<div class="text-center mb-10 text-primary py-0 px-6 border-0 font-bold uppercase w-fit">
-			<h1 class="!text-xl md:!text-xl !tracking-[1px] font-variation">Associations</h1>
+			<h1 class="!text-l sm:!text-xl !tracking-[1px] font-variation">Associations</h1>
 		</div>
 
 		<div class="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-8">
