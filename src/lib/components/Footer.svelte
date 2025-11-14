@@ -31,10 +31,6 @@
 		font-family: serif;
 	}
 
-	a {
-		text-decoration: underline;
-	}
-
 	@media (max-width: 600px) {
 		footer {
 			flex-direction: column;
