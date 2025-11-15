@@ -33,22 +33,24 @@
 	<div class="flex w-full flex-wrap items-center justify-between gap-16 lg:items-stretch">
 		{#each insightsFiles as file}
 			<button
-				class="relative flex !w-full !h-[300px] md:!h-[400px] !p-4 justify-center gap-4 !bg-white !text-black hover:!bg-white/80
+				class="relative flex !w-full !h-[300px] md:!h-[400px] !p-4 justify-center gap-4 md:gap-8 !bg-white !text-black hover:!bg-white/80
                shadow-[0_2px_8px_rgba(0,0,0,0.04)] text-[80%] [font-variation-settings:'wght'_700,'wdth'_50] lg:!p-12"
 				onclick={() => (window.location.href = '/insights/' + file.slug)}
 			>
 				<div class="hidden lg:block lg:h-full lg:w-2/5 lg:overflow-hidden">
-					<img src="/WebBackgrounds/AboutBackground.jpg" alt="Image for {file.attributes.title}" />
+					<img
+						src="/WebBackgrounds/AboutBackground.jpg"
+						alt="Image for {file.attributes.title}"
+						class="h-full w-full object-cover object-center"
+					/>
 				</div>
 
-				<div class="flex w-full flex-col justify-start overflow-hidden lg:w-3/5 md:p-4">
+				<div class="flex w-full flex-col justify-start overflow-hidden lg:w-3/5 md:p-4 lg:p-0">
 					<h3 class="text-left !text-black leading-[0.85] !text-l md:!text-lg">
-						The weather is beautiful and the sun is shining brightly today
+						{file.attributes.title}
 					</h3>
 
-					<div
-						class="flex gap-4 items-center justify-between md:gap-0"
-					>
+					<div class="flex gap-4 items-center justify-between md:gap-0">
 						<p class="author">
 							{file.attributes.author}
 						</p>

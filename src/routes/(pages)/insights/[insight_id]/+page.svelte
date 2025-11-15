@@ -18,9 +18,13 @@
 	</div>
 
 	<div
-		class="flex w-full justify-center mt-4 mb-2 text-ml sm:mb-4 sm:text-md lg:text-xxl bg-[url('/WebBackgrounds/InsightsBackground.jpg')] bg-cover"
+		class="flex w-full justify-center mt-4 mb-2 text-ml sm:mb-4 bg-[url('/WebBackgrounds/InsightsBackground.jpg')] bg-cover"
 	>
-		<HighlightedHeader headerText={title}></HighlightedHeader>
+		<div
+			class="bg-white my-10 text-primary py-0 px-6 border-0 font-bold uppercase mix-blend-lighten w-fit"
+		>
+			<h1 class="!text-ml leading-none md:!text-l lg:!text-xl !tracking-[4px] font-variation">{title}</h1>
+		</div>
 	</div>
 
 	<div
@@ -31,7 +35,7 @@
 		<p class="date">{format(date, 'do MMMM yyyy')}</p>
 	</div>
 
-	<div class="mt-4 text-start w-full normal-case text-primary text-md min-h-86">
+	<div class="mt-4 text-start w-full normal-case text-primary text-sm md:text-ml lg:text-md min-h-86">
 		{@html text}
 	</div>
 </div>
