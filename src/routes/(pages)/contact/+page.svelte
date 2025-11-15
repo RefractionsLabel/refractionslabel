@@ -35,16 +35,16 @@
 
 	<section
 		class="h-auto w-full md:box-border
-    bg-white text-primary flex justify-center md:items-center min-h-[60vh] p-6 md:p-10 xl:p-16"
+    bg-white text-primary flex justify-center md:items-center min-h-[50vh] md:min-h-[60vh] p-6 md:p-10 xl:p-16"
 	>
 		<div class=" grid grid-cols-1 md:grid-cols-2 w-[70vw]">
 			<div class="grid content-start gap-4">
-				<h3 class="!text-l md:!text-lg lg:!text-xl md:!tracking-[4px] font-variation leading-none">
+				<h3 class="!text-l md:!text-l xl:!text-xl !tracking-[1px] xl:!tracking-[2px] font-variation leading-none">
 					REFRACTIONS LABEL LTD
 				</h3>
 
 				<address
-					class="text-sm md:text-md font-normal not-italic md:leading-9 uppercase-case [font-variation-settings:'wght'_400,'wdth'_80]"
+					class="!text-sm md:!text-ml xl:!text-md font-normal not-italic md:leading-10 uppercase-case"
 				>
 					Collective Auction Rooms<br />
 					5-7 Buck Street<br />
