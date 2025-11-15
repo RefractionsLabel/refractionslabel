@@ -19,7 +19,7 @@
 									<div class="ml-field-group ml-field-email ml-validate-email ml-validate-required w-full sm:max-w-56 md:max-w-full ">
 										<input
 											type="email"
-											class="form-control !w-full placeholder:text-center placeholder:text-primary !py-4 sm:!py-6 !text-xs lg:!text-md !text-primary "
+											class="form-control !w-full placeholder:text-center placeholder:text-primary !py-4 sm:!py-6 !text-xs lg:!text-ml !text-primary "
 											data-inputmask=""
 											name="fields[email]"
 											placeholder="Email Address"
@@ -30,7 +30,7 @@
 							</div>
 
 							<div class="ml-button-horizontal primary">
-								<button type="submit" class="primary !py-4 sm:!py-6 !text-xs lg:!text-md ">Subscribe</button>
+								<button type="submit" class="primary !py-4 sm:!py-6 !text-xs lg:!text-ml">Subscribe</button>
 
 								<button disabled style="display: none;" type="button" class="loading">
 									<div class="ml-form-embedSubmitLoad"></div>

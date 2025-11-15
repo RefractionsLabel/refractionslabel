@@ -1,9 +1,17 @@
 <script lang="ts">
 	import HighlightedHeader from '$lib/components/HighlightedHeader.svelte';
+	import MouseScrollIndicator from '$lib/components/MouseScrollIndicator.svelte';
+	import { fade } from 'svelte/transition';
 
 	let { data, form } = $props();
 
-	// The data structure is perfect for this new layout, no changes needed here.
+	let atTop = $state(true);
+	let menuOpen = $state(false);
+
+	const isScrollAtTop = () => {
+		atTop = window.scrollY < 10;
+	};
+
 	interface InfoSection {
 		title: string;
 		points: string[];
@@ -44,23 +52,31 @@
 	];
 </script>
 
+<svelte:window on:scroll={isScrollAtTop} />
 
 <div
-	class="!my-0 w-full bg-cover bg-top bg-no-repeat text-white  bg-[url('/WebBackgrounds/InsideBackground.jpg')]"
+	class="!my-0 w-full bg-cover bg-top bg-no-repeat text-white bg-[url('/WebBackgrounds/InsideBackground.jpg')]"
 >
 	{#if data.unlocked}
-	
 		<div class="mx-auto flex w-full max-w-[90vw] flex-col items-center px-4 py-24 sm:py-32">
-			<section class="mb-14 h-[50vh] gap-6 flex flex-col items-center justify-end text-center sm:mb-32">
+			<section
+				class="mb-14 h-[50vh] gap-6 flex flex-col items-center justify-end text-center sm:mb-32"
+			>
 				<img
 					alt="Main Brand Logo and Title"
 					src="/Logos/RefractionsLogoWhite.svg"
 					class="h-auto w-full max-w-[350px] sm:max-w-[400px]"
 				/>
-				<p class="mt-4 !text-sm tracking-wider sm:!text-ml">
+				<p class="mt-4 relative !text-sm tracking-wider sm:!text-ml">
 					Presenting a higher calibre of audio, clothing, and events within bass music
+					{#if atTop}
+						<div transition:fade={{ duration: 400 }} class="absolute bottom-[-80px] left-1/2">
+							<MouseScrollIndicator />
+						</div>
+					{/if}
 				</p>
 			</section>
+
 			<div class="flex w-full flex-col items-start gap-24 sm:gap-32">
 				{#each infoSections as section}
 					<section class="w-full">
@@ -88,9 +104,9 @@
 						class="transition-transform hover:scale-110"
 					/></a
 				>
-				<p class="!text-xs text-white/70">
-					Refractions<span class="font-serif">®</span> is a registered trademark of Refractions
-					Label Ltd. All rights reserved.
+				<p class="!text-xs text-white">
+					Refractions<span class="font-sans">®</span> is a registered trademark of Refractions Label
+					Ltd. All rights reserved.
 				</p>
 			</section>
 		</div>

@@ -15,7 +15,6 @@ export const actions: Actions = {
 		const password = formData.get('password');
 
 		if (!password || password !== INSIDE_PASSWORD) {
-			console.log('Incorrect password attempt:', password, 'Expected:', INSIDE_PASSWORD);
 			return fail(400, { message: 'Incorrect password.' });
 		}
 

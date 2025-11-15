@@ -39,9 +39,10 @@
 	>
 		<div class=" grid grid-cols-1 md:grid-cols-2 w-[70vw] md:mt-10">
 			<div class="grid content-start gap-4">
-				<h3 class="font-variation mb-4 text-xl leading-[.9]">REFRACTIONS LABEL LTD</h3>
+				<h3 class="!text-xl md:!text-xl !tracking-[4px] font-variation leading-none">REFRACTIONS LABEL LTD</h3>
+				
 				<address
-					class="text-ml md:text-md font-normal not-italic leading-9 normal-case [font-variation-settings:'wght'_400,'wdth'_80]"
+					class="text-ml md:text-md font-normal not-italic leading-9 uppercase-case [font-variation-settings:'wght'_400,'wdth'_80]"
 				>
 					Collective Auction Rooms<br />
 					5-7 Buck Street<br />
@@ -58,7 +59,7 @@
 					<button
 						id={socialButton.id}
 						onclick={() => window.open(socialButton.url, '_blank')}
-						class={`!border-2 !border-primary !w-full !text-4xs sm:!text-xs lg:!text-md !bg-primary !py-6 !px-6 !text-white !lg:mt-20 hover:!bg-transparent hover:!text-primary hover:!border-primary ${socialButton.lowercase ? '!normal-case' : ''}`}
+						class={`!border-2 !border-primary !w-full !text-4xs sm:!text-xs lg:!text-ml !bg-primary !py-6 !px-6 !text-white !lg:mt-20 hover:!bg-transparent hover:!text-primary hover:!border-primary ${socialButton.lowercase ? '!normal-case' : ''}`}
 					>
 						{socialButton.title}
 					</button>
