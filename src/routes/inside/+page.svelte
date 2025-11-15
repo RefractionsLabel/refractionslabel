@@ -1,149 +1,124 @@
 <script lang="ts">
 	import HighlightedHeader from '$lib/components/HighlightedHeader.svelte';
+	import MouseScrollIndicator from '$lib/components/MouseScrollIndicator.svelte';
+	import { fade } from 'svelte/transition';
 
 	let { data, form } = $props();
+
+	let atTop = $state(true);
+	let menuOpen = $state(false);
+
+	const isScrollAtTop = () => {
+		atTop = window.scrollY < 10;
+	};
+
+	interface InfoSection {
+		title: string;
+		points: string[];
+	}
+	const infoSections: InfoSection[] = [
+		{
+			title: 'WHY',
+			points: [
+				'TO PUSH THE FOREFRONT OF INNOVATIVE AND UNCONVENTIONAL BASS MUSIC',
+				'TO CHAMPION INDEPENDENCE AND THE INDEPENDENTS',
+				'TO LOOK FORWARD AND OPERATE AS A TRULY 21ST CENTURY RECORD LABEL',
+				'TO CONSISTENTLY DELIVER THE HIGHEST LEVEL OF QUALITY AND EXPERIENCE IN EVERYTHING WE DO'
+			]
+		},
+		{
+			title: 'HOW',
+			points: [
+				'EVERY RELEASE IS A CAMPAIGN',
+				'FAIR AND ROBUST EXCLUSIVE LICENCE AGREEMENT, VETTED BY A MUSIC LAWYER',
+				'BESPOKE ARTWORK AND VISUAL ASSETS',
+				'SOCIAL MARKETING STRATEGY AND EXECUTION',
+				'CUSTOM TWO-WEEK POST-RELEASE PERFORMANCE REPORT',
+				'GLOBAL DISTRIBUTION AND PLAYLIST PITCHING VIA SYMPHONIC DISTRIBUTION',
+				'TRANSPARENT, ON DEMAND ROYALTY DATA VIA INFINITE CATALOG',
+				'DJ AND RADIO PROMO VIA PROMOLY',
+				'TASTEMAKER CHANNEL PLACEMENTS VIA EDM DISTRICT'
+			]
+		},
+		{
+			title: 'WHO',
+			points: [
+				'REFRACTIONS IS THE CREATION OF MYSELF, JOE PARKER, A LONDON-BASED LABEL FOUNDER WITH <br> OVER A DECADE OF EXPERIENCE IN INDEPENDENT ELECTRONIC MUSIC.',
+				'PRIOR TO STARTING REFRACTIONS, I WORKED AT ANJUNADEEP ASSISTING WITH LABEL <br> OPERATIONS, CAMPAIGN ROLLOUTS, EVENT COORDINATION, AND BOTH ONLINE AND OFFLINE <br> MARKETING.',
+				'I PREVIOUSLY FOUNDED AND RAN A DIGITAL LABEL, RELEASING OVER 40 PROJECTS AND <br> REACHING MORE THAN 1.5 MILLION STREAMS. I HOLD A DEGREE IN MUSIC BUSINESS AND A <br> MASTER’S IN ENTERPRISE AND ENTREPRENEURSHIP, BOTH OF WHICH UNDERPIN THE STRUCTURE <br> AND VISION BEHIND REFRACTIONS.',
+				'REFRACTIONS IS THE CULMINATION OF EVERYTHING I’VE LEARNED SO FAR. IT’S A LABEL BUILT ON <br> QUALITY, IN BOTH PRODUCT AND EXPERIENCE; PROFESSIONALISM, IN HOW WE OPERATE <br> AND INTERACT WITH THE WIDER INDUSTRY; AUTHENTICITY, IN THE PRODUCTS WE SELL AND THE <br> CULTURE WE PUSH; AND INDEPENDENCE, TO MAINTAIN INTEGRITY IN ALL WE DO.'
+			]
+		}
+	];
 </script>
 
-{#if data.unlocked}
-	<section id="logo-section">
-		<img alt="Main Brand Logo and Title" src="/Logos/RefractionsLogoWhite.svg" width="600" />
-		<p>Presenting a higher calibre of audio, clothing, and events within bass music</p>
-	</section>
-	<section id="inside-info">
-		<section id="why" class="info-section">
-			<HighlightedHeader headerText="WHY"></HighlightedHeader>
-			<p>TO PUSH THE FOREFRONT OF INNOVATIVE AND UNCONVENTIONAL BASS MUSIC</p>
-			<p>TO CHAMPION INDEPENDENCE AND THE INDEPENDENTS</p>
-			<p>TO LOOK FORWARD AND OPERATE AS A TRULY 21ST CENTURY RECORD LABEL</p>
-			<p>TO CONSISTENTLY DELIVER THE HIGHEST LEVEL OF QUALITY AND EXPERIENCE IN EVERYTHING WE DO</p>
-		</section>
-		<section id="how" class="info-section">
-			<HighlightedHeader headerText="HOW"></HighlightedHeader>
-			<p>EVERY RELEASE IS A CAMPAIGN</p>
-			<p>FAIR AND ROBUST EXCLUSIVE LICENCE AGREEMENT, VETTED BY A MUSIC LAWYER</p>
-			<p>BESPOKE ARTWORK AND VISUAL ASSETS</p>
-			<p>SOCIAL MARKETING STRATEGY AND EXECUTION</p>
-			<p>CUSTOM TWO-WEEK POST-RELEASE PERFORMANCE REPORT</p>
-			<p>GLOBAL DISTRIBUTION AND PLAYLIST PITCHING VIA SYMPHONIC DISTRIBUTION</p>
-			<p>TRANSPARENT, ON DEMAND ROYALTY DATA VIA INFINITE CATALOG</p>
-			<p>DJ AND RADIO PROMO VIA PROMOLY</p>
-			<p>TASTEMAKER CHANNEL PLACEMENTS VIA EDM DISTRICT</p>
-		</section>
-		<section id="who" class="info-section">
-			<HighlightedHeader headerText="WHO"></HighlightedHeader>
-			<p>
-				REFRACTIONS IS THE CREATION OF MYSELF, JOE PARKER, A LONDON-BASED LABEL FOUNDER WITH OVER A
-				DECADE OF EXPERIENCE IN INDEPENDENT ELECTRONIC MUSIC.
-			</p>
-			<p>
-				PRIOR TO STARTING REFRACTIONS, I WORKED AT ANJUNADEEP ASSISTING WITH LABEL OPERATIONS,
-				CAMPAIGN ROLLOUTS, EVENT COORDINATION, AND BOTH ONLINE AND OFFLINE MARKETING.
-			</p>
-			<p>
-				I PREVIOUSLY FOUNDED AND RAN A DIGITAL LABEL, RELEASING OVER 40 PROJECTS AND REACHING MORE
-				THAN 1.5 MILLION STREAMS. I HOLD A DEGREE IN MUSIC BUSINESS AND A MASTER’S IN ENTERPRISE AND
-				ENTREPRENEURSHIP, BOTH OF WHICH UNDERPIN THE STRUCTURE AND VISION BEHIND REFRACTIONS.
-			</p>
-			<p>
-				REFRACTIONS IS THE CULMINATION OF EVERYTHING I’VE LEARNED SO FAR. IT’S A LABEL BUILT ON
-				QUALITY, IN BOTH PRODUCT AND EXPERIENCE; PROFESSIONALISM, IN HOW WE OPERATE AND INTERACT
-				WITH THE WIDER INDUSTRY; AUTHENTICITY, IN THE PRODUCTS WE SELL AND THE CULTURE WE PUSH; AND
-				INDEPENDENCE, TO MAINTAIN INTEGRITY IN ALL WE DO.
-			</p>
-		</section>
-	</section>
-	<section id="contact-info">
-		<a id="email-link" href="mailto:joe@refractionslabel.com">joe@refractionslabel.com</a>
-		<a href="/" aria-label="Main Website Link"
-			><img src="/Logos/RefractionsLogomarkWhite.svg" alt="Refractions Logomark" width="50" /></a
-		>
-		<p id="rights">
-			Refractions<span>®</span> is a registered trademark of Refractions Label Ltd. All rights reserved.
-		</p>
-	</section>
-{:else}
-	{#if form?.message}
-		<p>{form.message}</p>
+<svelte:window on:scroll={isScrollAtTop} />
+
+<div
+	class="!my-0 w-full bg-cover bg-top bg-no-repeat text-white bg-[url('/WebBackgrounds/InsideBackground.jpg')]"
+>
+	{#if data.unlocked}
+		<div class="mx-auto flex w-full max-w-[90vw] flex-col items-center px-4 py-24 sm:py-32">
+			<section
+				class="mb-14 h-[50vh] gap-6 flex flex-col items-center justify-end text-center sm:mb-32"
+			>
+				<img
+					alt="Main Brand Logo and Title"
+					src="/Logos/RefractionsLogoWhite.svg"
+					class="h-auto w-full max-w-[350px] sm:max-w-[400px]"
+				/>
+				<p class="mt-4 relative !text-sm tracking-wider sm:!text-ml">
+					Presenting a higher calibre of audio, clothing, and events within bass music
+					{#if atTop}
+						<div transition:fade={{ duration: 400 }} class="absolute bottom-[-80px] left-1/2">
+							<MouseScrollIndicator />
+						</div>
+					{/if}
+				</p>
+			</section>
+
+			<div class="flex w-full flex-col items-start gap-24 sm:gap-32">
+				{#each infoSections as section}
+					<section class="w-full">
+						<HighlightedHeader headerText={section.title} />
+						{#each section.points as point}
+							<p class="!mt-4 !text-sm md:!text-ml [font-variation-settings:'wght'_300,'wdth'_100]">
+								{@html point}
+							</p>
+						{/each}
+					</section>
+				{/each}
+			</div>
+
+			<section class="flex flex-col items-center gap-8 text-center sm:mt-48">
+				<a
+					href="mailto:joe@refractionslabel.com"
+					class="text-white text-ml my-32 underline lowercase transition-opacity hover:opacity-80"
+					>joe@refractionslabel.com</a
+				>
+				<a href="/" aria-label="Main Website Link"
+					><img
+						src="/Logos/RefractionsLogomarkWhite.svg"
+						alt="Refractions Logomark"
+						width="40"
+						class="transition-transform hover:scale-110"
+					/></a
+				>
+				<p class="!text-xs text-white">
+					Refractions<span class="font-sans">®</span> is a registered trademark of Refractions Label
+					Ltd. All rights reserved.
+				</p>
+			</section>
+		</div>
+	{:else}
+		<div class="flex h-screen items-center justify-center">
+			{#if form?.message}
+				<p class="absolute top-1/4 text-center">{form.message}</p>
+			{/if}
+			<form method="POST" action="?/unlock">
+				<input type="password" name="password" placeholder="Password" required />
+				<button type="submit">Unlock</button>
+			</form>
+		</div>
 	{/if}
-	<form method="POST" action="?/unlock">
-		<input type="password" name="password" placeholder="Password" required />
-		<button type="submit">Unlock</button>
-	</form>
-{/if}
-
-<style>
-	#logo-section {
-		margin: 25em 0 10em 0;
-		text-align: center;
-	}
-
-	#inside-info {
-		display: flex;
-		flex-direction: column;
-		margin: 15rem;
-	}
-
-	#contact-info {
-		display: flex;
-		flex-direction: column;
-		text-align: center;
-	}
-
-	.info-section {
-		margin-bottom: 15rem;
-	}
-
-	p {
-		margin: 3rem 0;
-	}
-
-	#email-link {
-		text-transform: lowercase;
-		text-decoration: underline;
-		margin-bottom: 3rem;
-	}
-
-	#rights {
-		margin-top: 5rem;
-		font-size: var(--fs-4xs);
-	}
-
-	span {
-		font-family: serif;
-	}
-
-	form {
-		position: fixed;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-	}
-
-	@media (max-width: 600px) {
-		#logo-section {
-			margin: 10em 0 5em 0;
-			max-width: 90vw;
-		}
-		img {
-			max-width: 80vw;
-			height: auto;
-		}
-		#inside-info {
-			margin: 5rem;
-			flex-direction: column;
-		}
-		.info-section {
-			margin-bottom: 5rem;
-		}
-		p {
-			margin: 1rem 0;
-		}
-		#email-link {
-			margin-bottom: 1rem;
-		}
-		#rights {
-			margin-top: 2rem;
-			font-size: var(--fs-5xs);
-		}
-	}
-</style>
+</div>

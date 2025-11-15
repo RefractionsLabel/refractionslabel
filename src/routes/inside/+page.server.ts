@@ -14,11 +14,16 @@ export const actions: Actions = {
 		const formData = await request.formData();
 		const password = formData.get('password');
 
-		if (password !== INSIDE_PASSWORD) {
+		if (!password || password !== INSIDE_PASSWORD) {
 			return fail(400, { message: 'Incorrect password.' });
-		} else {
-			cookies.set('unlocked', 'true', { path: '/inside' });
 		}
-		redirect(303, '/inside');
+
+		cookies.set('unlocked', 'true', {
+			path: '/inside',
+			httpOnly: true,
+			maxAge: 60 * 60 * 24 * 14 // 14 days
+		});
+
+		throw redirect(303, '/inside');
 	}
 };

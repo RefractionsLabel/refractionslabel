@@ -1,62 +1,17 @@
-<script>
+<script lang="ts">
 	import EmailForm from './EmailForm.svelte';
 </script>
 
-<footer>
-	<p>
-		Refractions<span class="registered">®</span> is a registered trademark of Refractions Label Ltd.
+<footer
+	class="flex w-full flex-col md:flex-row items-center justify-center lg:!justify-between gap-4 bg-primary p-4"
+>
+	<p class="mx-4 text-center md:!text-left !text-5xs md:!w-72 lg:!text-xs lg:!w-fit">
+		Refractions<span class="font-sans">®</span> is a registered trademark of Refractions Label Ltd.
 		All rights reserved.
 	</p>
-	<a href="https://ffm.bio/refractionslabel">Connect on Socials</a>
+	<a href="https://ffm.bio/refractionslabel" class="mx-4 text-center text-4xs sm:text-left"
+		>Connect on Socials</a
+	>
+
 	<EmailForm />
 </footer>
-
-<style>
-	footer {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		width: 97vw;
-		padding: 1rem 2rem;
-		background-color: rgba(3, 24, 3);
-	}
-
-	p,
-	a {
-		font-size: 0.8rem;
-		margin: 0 1rem;
-	}
-
-	.registered {
-		font-family: serif;
-	}
-
-	a {
-		text-decoration: underline;
-	}
-
-	@media (max-width: 600px) {
-		footer {
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			gap: 1rem;
-		}
-		p,
-		a {
-			text-align: center;
-		}
-	}
-
-	@media (max-width: 400px) {
-		footer {
-			padding: 1rem 1rem;
-		}
-	}
-
-	@media (max-width: 300px) {
-		footer {
-			padding: 1rem 0.5rem;
-		}
-	}
-</style>

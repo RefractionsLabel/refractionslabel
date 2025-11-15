@@ -27,143 +27,43 @@
 	}
 </script>
 
-<div class="main-content insights-content">
+<div class="main-content w-full px-4 lg:!px-32 lg:py-10">
 	<HighlightedHeader headerText="INSIGHTS"></HighlightedHeader>
 
-	<div class="insights-list">
+	<div class="flex w-full flex-wrap items-center justify-between gap-16 lg:items-stretch">
 		{#each insightsFiles as file}
 			<button
-				class="insight-item"
+				class="relative flex !w-full !h-[300px] md:!h-[400px] !p-4 justify-center gap-4 md:gap-8 !bg-white !text-black hover:!bg-white/80
+               shadow-[0_2px_8px_rgba(0,0,0,0.04)] text-[80%] [font-variation-settings:'wght'_700,'wdth'_50] lg:!p-12"
 				onclick={() => (window.location.href = '/insights/' + file.slug)}
 			>
-				<div class="insight-image-container">
+				<div class="hidden lg:block lg:h-full lg:w-2/5 lg:overflow-hidden">
 					<img
-						class="insight-image"
 						src="/WebBackgrounds/AboutBackground.jpg"
 						alt="Image for {file.attributes.title}"
+						class="h-full w-full object-cover object-center"
 					/>
 				</div>
-				<div class="insight-info-container">
-					<h3 class="insight-title">{file.attributes.title}</h3>
-					<div class="author-and-date">
-						<p class="author">{file.attributes.author}</p>
-						<p class="date">{format(file.attributes.date, 'do MMM yyyy')}</p>
+
+				<div class="flex w-full flex-col justify-start overflow-hidden lg:w-3/5 md:p-4 lg:p-0">
+					<h3 class="text-left !text-black leading-[0.85] !text-l md:!text-lg">
+						{file.attributes.title}
+					</h3>
+
+					<div class="flex gap-4 items-center justify-between md:gap-0">
+						<p class="author">
+							{file.attributes.author}
+						</p>
+						<p class="date">
+							{format(file.attributes.date, 'do MMM yyyy')}
+						</p>
 					</div>
-					<p class="description">{file.attributes.description.slice(0, 60) + '...'}</p>
+
+					<p class="mt-6 text-left !text-sm md:!text-ml normal-case !text-black">
+						{file.attributes.description.slice(0, 60) + '...'}
+					</p>
 				</div>
 			</button>
 		{/each}
 	</div>
 </div>
-
-<style>
-	.insights-content {
-		width: 72vw;
-		padding: 2.5rem 2rem 2.5rem 2rem;
-	}
-
-	.insights-list {
-		display: flex;
-		justify-content: space-between;
-		align-items: stretch;
-		flex-wrap: wrap;
-		width: 100%;
-		gap: 4rem;
-	}
-
-	.insight-item {
-		background-color: white;
-		position: relative;
-		display: flex;
-		gap: 1rem;
-		justify-content: center;
-		font-family: 'podium-sharp-variable', sans-serif;
-		font-variation-settings:
-			'wght' 700,
-			'wdth' 50;
-		font-size: 80%;
-		color: black;
-		width: 100%;
-		padding: 3rem;
-		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-		max-height: 300px;
-	}
-
-	.insight-image-container {
-		height: 100%;
-		width: 50%;
-		overflow: hidden;
-		background-position: center top;
-	}
-
-	.insight-info-container {
-		display: flex;
-		width: 50%;
-		justify-content: flex-start;
-		flex-direction: column;
-		padding: 0 1rem;
-		overflow: hidden;
-	}
-
-	.insight-title {
-		text-align: left;
-		margin: 0;
-		margin-block-start: 0;
-		margin-block-end: 0;
-	}
-
-	.author-and-date {
-		display: flex;
-		color: black;
-		justify-content: space-between;
-
-		p {
-			text-align: left;
-		}
-	}
-
-	.author {
-		margin-right: 2rem;
-	}
-
-	.description {
-		text-transform: none;
-		text-align: left;
-		margin-top: 1.5rem;
-	}
-
-	p {
-		color: black;
-		font-size: var(--fs-sm);
-	}
-
-	@media (max-width: 900px) {
-		.insights-content {
-			padding: 0 1rem;
-		}
-		.insight-item {
-			width: 100%;
-			padding: 1rem;
-		}
-		.insight-info-container {
-			width: 100%;
-		}
-		.insights-list {
-			align-items: center;
-			gap: 4rem;
-		}
-
-		.insight-image-container {
-			display: none;
-		}
-	}
-
-	@media (max-width: 600px) {
-
-		.author-and-date {
-			flex-direction: column;
-			align-items: flex-start;
-			gap: 2rem;
-		}
-	}
-</style>
