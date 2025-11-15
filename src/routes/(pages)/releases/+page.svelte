@@ -33,7 +33,7 @@
 <div class="main-content w-full !px-2 !py-10 sm:!px-4 lg:!px-20">
 	<HighlightedHeader headerText="RELEASES"></HighlightedHeader>
 	<div
-		class="grid w-full grid-cols-1 gap-6
+		class="grid w-full grid-cols-1 gap-12 px-16 md:px-0
            md:grid-cols-2
            lg:grid-cols-3 md:gap-10 lg:gap-20 xl:gap-30"
 	>
@@ -48,8 +48,8 @@
 					src={file.attributes.cover_art}
 					alt="Cover art for {file.attributes.title}"
 				/>
-				<h2 class="my-0 py-0 leading-none text-primary">{file.attributes.artist}</h2>
-				<p class=" py-2 !text-primary">{file.attributes.title}</p>
+				<h2 class="!mt-4 md:my-0 md:py-0 leading-none text-primary">{file.attributes.artist}</h2>
+				<p class=" py-2 !text-primary !text-ml md:!text-md">{file.attributes.title}</p>
 			</button>
 		{/each}
 	</div>

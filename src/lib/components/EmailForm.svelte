@@ -16,7 +16,7 @@
 							<div class="ml-input-horizontal mr-2">
 								<div style="width: 100%;" class="horizontal-fields">
 									<div
-										class="ml-field-group ml-field-email ml-validate-email ml-validate-required w-full sm:max-w-56 md:max-w-92"
+										class="ml-field-group ml-field-email ml-validate-email ml-validate-required w-full"
 									>
 										<input
 											type="email"

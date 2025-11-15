@@ -26,9 +26,11 @@
 <svelte:window on:scroll={isScrollAtTop} />
 
 <header
-	class={`fixed inset-x-0 top-0 z-[99] flex w-full items-center justify-between bg-primary/80 transition-all px-[2%]  duration-400 ${atTop ? 'py-10' : 'py-4'}`}
+	class={`fixed inset-x-0 top-0 z-[99] flex w-full items-center justify-between bg-primary/80 transition-all px-[2%] duration-400 py-10 ${atTop ? 'md:py-10 ' : 'md:py-4'} ${menuOpen ? 'bg-primary/95' : ''}`}
 >
-	<a href="/" aria-label="Home"><div class={'logo ' + (!atTop && 'minimised')}></div></a>
+	<a href="/" aria-label="Home"
+		><div class={'logo ' + (!atTop && !menuOpen && 'minimised')}></div></a
+	>
 
 	<button
 		class="z-50 block cursor-pointer border-none !bg-transparent hover:!bg-transparent p-2 md:hidden"
