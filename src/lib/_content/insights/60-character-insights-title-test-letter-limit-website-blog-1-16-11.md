@@ -1,5 +1,5 @@
 ---
-title: 60 character insights title test letter limit website blog 1
+title: 60 character insights title test letter limit
 date: 2025-11-16T07:08:00.000+00:00
 description: "Getting your head around the complex nature of music royalties can
   be one of the most confusing aspects of launching a record label, but it is
