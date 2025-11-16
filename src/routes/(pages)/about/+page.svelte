@@ -13,7 +13,7 @@
 			name: 'Subtle',
 			logoSrc: '/Logos/SubtleRadioWhite.svg',
 			altText: 'Subtle Logo',
-			href: '#'
+			href: 'https://www.subtleradio.com/residents/refractions'
 		},
 		{
 			name: 'Subvert - The Collectively Owned Music Marketplace',

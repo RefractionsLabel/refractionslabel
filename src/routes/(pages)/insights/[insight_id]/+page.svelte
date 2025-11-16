@@ -1,10 +1,8 @@
 <script lang="ts">
-	import HighlightedHeader from '$lib/components/HighlightedHeader.svelte';
 	import { format } from 'date-fns';
 	const { data } = $props();
 	const { title, author, date } = data.attributes;
-	console.log(data);
-	const text = data.text;
+	const { content } = data;
 </script>
 
 <div
@@ -23,7 +21,11 @@
 		<div
 			class="bg-white my-10 text-primary py-0 px-6 border-0 font-bold uppercase mix-blend-lighten w-fit"
 		>
-			<h1 class="!text-ml leading-none md:!text-l lg:!text-xl !tracking-[4px] font-variation">{title}</h1>
+			<h1
+				class="leading-none text-center py-4 !tracking-[1px] md:!py-0 !text-sm md:!text-md xl:!text-xl md:!tracking-[4px] font-variation"
+			>
+				{title}
+			</h1>
 		</div>
 	</div>
 
@@ -31,11 +33,13 @@
 		class="mt-4 flex w-full flex-col items-start gap-1 text-sm text-black
            lg:flex-row lg:items-center lg:justify-between lg:gap-0"
 	>
-		<p class="author">{author}</p>
-		<p class="date">{format(date, 'do MMMM yyyy')}</p>
+		<p class="author !text-xs md:!text-sm xl:!text-ml">{author}</p>
+		<p class="date !text-xs md:!text-sm xl:!text-ml">{format(new Date(date), 'd MMMM yyyy')}</p>
 	</div>
 
-	<div class="mt-4 text-start w-full normal-case text-primary text-sm md:text-ml lg:text-md min-h-86">
-		{@html text}
+	<div
+		class="mt-4 text-start w-full normal-case text-primary text-xs md:text-sm lg:text-ml min-h-86"
+	>
+		{@html content}
 	</div>
 </div>

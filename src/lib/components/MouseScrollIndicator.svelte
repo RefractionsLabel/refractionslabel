@@ -1,50 +1,18 @@
-<div class="mouse">
-	<div class="scrollWheel"></div>
+<div class="w-14 h-14">
+	<svg viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+		<g
+			fill="none"
+			fill-rule="evenodd"
+			stroke="#fff"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			transform="translate(3 2)"
+		>
+			<circle cx="8.5" cy="8.5" r="8" />
+
+			<path d="m5.5 9.5 3 3 3-3" />
+
+			<path d="m8.5 12.5v-8" />
+		</g>
+	</svg>
 </div>
-
-<style>
-	
-.mouse {
-  height: 60px;
-  width: 32px;
-  border: 3px solid white;
-  border-radius: 32px;
-  position: relative;
-  .scrollWheel {
-    height: 20px;
-    width: 2px;
-    background: white;
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    top: 10px;
-    border-radius: 1px;
-    transform: scaleY(0);
-    animation: scroll 2s linear infinite;
-  }
-}
-
-@keyframes scroll {
-  0% {
-    transform: scaleY(0);
-    transform-origin: top;
-  }
-  25% {
-    transform: scaleY(1);
-    transform-origin: top;
-  }
-  26% {
-    transform-origin: bottom;
-  }
-  50% {
-    transform: scaleY(0);
-    transform-origin: bottom;
-  }
-  100% {
-    transform: scaleY(0);
-    transform-origin: bottom;
-  }
-}
-
-</style>
