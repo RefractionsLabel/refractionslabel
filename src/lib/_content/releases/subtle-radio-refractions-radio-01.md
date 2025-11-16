@@ -1,6 +1,6 @@
 ---
-title: refractions radio 01
-artist: subtle radio
+title: subtle radio
+artist: refractions radio 01
 date: 2025-11-16T07:16:00.000+00:00
 cover_art: /images/uploads/refractions-radio-cover.png
 buy_link: https://www.subtleradio.com/residents/refractions
