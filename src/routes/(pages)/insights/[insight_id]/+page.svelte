@@ -40,9 +40,9 @@
     </p>
   </div>
 
-  <!-- UPDATED TEXT SIZES -->
+  <!-- UPDATED TEXT SIZES (forced smaller) -->
   <div
-    class="article mt-4 text-start w-full normal-case text-primary text-xs md:text-xs lg:text-sm min-h-86"
+    class="article mt-4 text-start w-full normal-case text-primary !text-xs md:!text-xs lg:!text-sm min-h-86"
   >
     {@html content}
   </div>
