@@ -9,8 +9,10 @@ The title of this article is something not many in the music industry would argu
 
 So why do I say that music has no value? First of all, I should clarify what I mean by value in the first place. There are two types of value when it comes to music:
 
-1. Subjective, or ‘soft’, value - emotional meaning that we attach to music, both personally and culturally.
-2. Objective, or ‘hard’, value - economic worth measured in pounds, dollars, euros, etc.
+1.  Subjective, or ‘soft’, value - emotional meaning that we attach to music, both personally and culturally.
+    
+2.  Objective, or ‘hard’, value - economic worth measured in pounds, dollars, euros, etc.
+    
 
 Of course, arguing that music has no subjective, emotional value would be nonsensical, as the very nature of subjectivity means that it is dependent on the personal experience of the perceiver. What I am arguing here is that there is no inherent objective economic value in a piece of music, and the music industry has never been about generating income by selling music.
 
@@ -28,7 +30,7 @@ That brings us to today, where streaming platforms such as Spotify and Apple Mus
 
 From this brief overview of music monetisation, one thing becomes very apparent: recorded music, though currently held to be the core form of economic value in music, is in reality one which has come to exist in only the past century and a half. I argue that we have become used to recorded music being the primary form of music monetisation, and have in turn mistaken it for the form from which all value in music is ultimately derived. In reality, recorded music has only ever been one expression of where the actual economic value of music is, and always has been: access. Through patrons enabling the profession and performance of dedicated musicians in ancient civilisations, wandering minstrels gigging across towns and cities in the Middle Ages, sheet music bringing music to the home, physical and digital formats enabling the performance of the artist to be heard on demand, and streaming putting the entirety of recorded music in the palm of your hand; the thread that connects them all is access.
 
-For as long as it has existed, the music industry has always been in the profession of monetising access. Access to live music, access to the means to reproduce music on demand, access to a deeper connection to the artist. I call this lens through which to view the music industry *the Access Model*.
+For as long as it has existed, the music industry has always been in the profession of monetising access. Access to live music, access to the means to reproduce music on demand, access to a deeper connection to the artist. I call this lens through which to view the music industry _the Access Model_.
 
 What can we take from this shift in how we see value in music? For one, the industry is not in a death spiral caused by the economic devaluation of recorded music. People were earning a living from music long before records existed, and the emotional value of music, the ultimate expression of value, has never changed. The music industry is simply moving towards a different way of operating, perhaps one a lot closer to how it had functioned for thousands of years. Whilst we live in a period of great change in music monetisation, the core value proposition remains the same as ever: access.
 
