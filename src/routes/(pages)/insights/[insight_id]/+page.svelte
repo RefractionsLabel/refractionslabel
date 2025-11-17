@@ -53,7 +53,7 @@
   /* Body text size for paragraphs & list items */
   :global(.article p),
   :global(.article li) {
-    font-size: 1rem !important;
+    font-size: 1.2rem !important;
     line-height: 1.65 !important;
   }
 
