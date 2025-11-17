@@ -1,8 +1,12 @@
 <script lang="ts">
   import { format } from 'date-fns';
+  import { marked } from 'marked';
+
   const { data } = $props();
   const { title, author, date } = data.attributes;
-  const { content } = data;
+
+  // Decap CMS stores markdown in `data.content` → convert to HTML
+  const content = marked.parse(data.content);
 </script>
 
 <div
@@ -41,34 +45,15 @@
   </div>
 
   <div
-    class="article mt-4 text-start w-full normal-case text-primary min-h-86"
+    class="article mt-4 text-start w-full normal-case text-primary text-xs md:text-sm lg:text-ml min-h-86"
   >
     {@html content}
   </div>
 </div>
 
 <style>
-  /* Force all injected article text to a smaller base size */
-  :global(.article) {
-    font-size: 12px !important;
-    line-height: 1.55 !important;
-  }
-
-  /* Ensure bold text stays the same size */
-  :global(.article strong) {
-    font-size: inherit !important;
-    font-weight: 700;
-  }
-
-  /* Paragraph spacing */
+  /* Paragraph spacing between markdown-rendered paragraphs */
   :global(.article p + p) {
-    margin-top: 1.5rem !important;
-  }
-
-  /* Optional: make <small> or <em> very tiny, for inline notes */
-  :global(.article small),
-  :global(.article em) {
-    font-size: 10px !important;
+    margin-top: 1.5rem;
   }
 </style>
-
