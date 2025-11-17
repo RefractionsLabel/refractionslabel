@@ -5,6 +5,7 @@ description: For as long as it has existed, the music industry has always been
   in the profession of monetising access.
 author: Joe Parker
 ---
+<div style="font-size: 14px; line-height: 1.45;">
 The title of this article is something not many in the music industry would argue with a straight face; after all, the music industry is fundamentally built around exploiting music to extract the maximum possible value. But I’d hope that by the end of this article you’d at least understand why I say this, if not agree with my take outright.
 
 So why do I say that music has no value? First of all, I should clarify what I mean by value in the first place. There are two types of value when it comes to music:
@@ -38,3 +39,5 @@ What can we take from this shift in how we see value in music? For one, the indu
 In Part 2 I will be discussing the practical implications of the Access Model: how technology will create entirely new forms of access, the diminished importance of streaming, an answer to the looming threat of AI music, and what this means for the future of music monetisation.
 
 Want future insights delivered straight to your inbox? Subscribe to the Refractions mailing list.
+</div>
+
