@@ -40,16 +40,22 @@
     </p>
   </div>
 
+  <!-- UPDATED TEXT SIZES -->
   <div
-    class="article mt-4 text-start w-full normal-case text-primary text-xs md:text-sm lg:text-ml min-h-86"
+    class="article mt-4 text-start w-full normal-case text-primary text-xs md:text-xs lg:text-sm min-h-86"
   >
     {@html content}
   </div>
 </div>
 
 <style>
+  /* Paragraph spacing */
   :global(.article p + p) {
     margin-top: 1.5rem;
   }
-</style>
 
+  /* Fix bold text rendering / alignment */
+  :global(.article strong) {
+    font-weight: 700;
+  }
+</style>
