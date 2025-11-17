@@ -53,8 +53,8 @@
   /* Body text size for paragraphs & list items */
   :global(.article p),
   :global(.article li) {
-    font-size: 0.9rem !important;
-    line-height: 1.6 !important;
+    font-size: 1rem !important;
+    line-height: 1.65 !important;
   }
 
   /* Consistent vertical spacing between ALL blocks in the article */
