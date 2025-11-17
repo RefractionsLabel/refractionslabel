@@ -44,37 +44,33 @@
     </p>
   </div>
 
-  <div
-    class="article mt-4 text-start w-full normal-case text-primary min-h-86"
-  >
+  <div class="article mt-4 text-start w-full normal-case text-primary min-h-86">
     {@html content}
   </div>
 </div>
 
 <style>
-  /* Make article body text smaller (affects paragraphs & list items) */
+  /* Body text size for paragraphs & list items */
   :global(.article p),
   :global(.article li) {
     font-size: 0.9rem !important;
     line-height: 1.6 !important;
   }
 
-  /* Paragraph spacing between consecutive paragraphs */
-  :global(.article p + p) {
+  /* Consistent vertical spacing between ALL blocks in the article */
+  :global(.article > * + *) {
     margin-top: 1.5rem;
   }
 
-  /* Keep bold text the same size as surrounding text */
+  /* Keep bold text same size as surrounding text */
   :global(.article strong) {
     font-weight: 700;
     font-size: inherit !important;
   }
 
-  /* Optional: give lists a bit of indent & spacing */
+  /* Lists: just indent (spacing handled by the rule above) */
   :global(.article ul),
   :global(.article ol) {
-    margin-top: 1rem;
     padding-left: 1.5rem;
   }
 </style>
-
