@@ -40,22 +40,35 @@
     </p>
   </div>
 
-  <!-- UPDATED TEXT SIZES (forced smaller) -->
   <div
-    class="article mt-4 text-start w-full normal-case text-primary !text-xs md:!text-xs lg:!text-sm min-h-86"
+    class="article mt-4 text-start w-full normal-case text-primary min-h-86"
   >
     {@html content}
   </div>
 </div>
 
 <style>
-  /* Paragraph spacing */
-  :global(.article p + p) {
-    margin-top: 1.5rem;
+  /* Force all injected article text to a smaller base size */
+  :global(.article) {
+    font-size: 12px !important;
+    line-height: 1.55 !important;
   }
 
-  /* Fix bold text rendering / alignment */
+  /* Ensure bold text stays the same size */
   :global(.article strong) {
+    font-size: inherit !important;
     font-weight: 700;
   }
+
+  /* Paragraph spacing */
+  :global(.article p + p) {
+    margin-top: 1.5rem !important;
+  }
+
+  /* Optional: make <small> or <em> very tiny, for inline notes */
+  :global(.article small),
+  :global(.article em) {
+    font-size: 10px !important;
+  }
 </style>
+
