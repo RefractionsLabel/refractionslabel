@@ -9,8 +9,11 @@ The title of this article is something not many in the music industry would argu
 
 So why do I say that music has no value? First of all, I should clarify what I mean by value in the first place. There are two types of value when it comes to music:
 
-- **Subjective, or ‘soft’, value** – emotional meaning that we attach to music, both personally and culturally.  
-- **Objective, or ‘hard’, value** – economic worth measured in pounds, dollars, euros, etc.
+
+**Subjective, or ‘soft’, value** – emotional meaning that we attach to music, both personally and culturally.  
+
+**Objective, or ‘hard’, value** – economic worth measured in pounds, dollars, euros, etc.
+
 
 Of course, arguing that music has no subjective, emotional value would be nonsensical, as the very nature of subjectivity means that it is dependent on the personal experience of the perceiver. What I am arguing here is that there is no inherent objective economic value in a piece of music, and the music industry has never been about generating income by selling music.
 
