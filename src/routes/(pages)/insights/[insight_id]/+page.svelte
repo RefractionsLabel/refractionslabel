@@ -45,15 +45,36 @@
   </div>
 
   <div
-    class="article mt-4 text-start w-full normal-case text-primary text-xs md:text-sm lg:text-ml min-h-86"
+    class="article mt-4 text-start w-full normal-case text-primary min-h-86"
   >
     {@html content}
   </div>
 </div>
 
 <style>
-  /* Paragraph spacing between markdown-rendered paragraphs */
+  /* Make article body text smaller (affects paragraphs & list items) */
+  :global(.article p),
+  :global(.article li) {
+    font-size: 0.9rem !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Paragraph spacing between consecutive paragraphs */
   :global(.article p + p) {
     margin-top: 1.5rem;
   }
+
+  /* Keep bold text the same size as surrounding text */
+  :global(.article strong) {
+    font-weight: 700;
+    font-size: inherit !important;
+  }
+
+  /* Optional: give lists a bit of indent & spacing */
+  :global(.article ul),
+  :global(.article ol) {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+  }
 </style>
+
