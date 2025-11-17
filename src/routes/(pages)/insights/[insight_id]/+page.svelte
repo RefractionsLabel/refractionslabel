@@ -48,7 +48,8 @@
 </div>
 
 <style>
-  .article p + p {
-    margin-top: 1.5rem; /* tweak this spacing if you want more/less */
+  :global(.article p + p) {
+    margin-top: 1.5rem;
   }
 </style>
+
