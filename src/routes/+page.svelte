@@ -1,5 +1,13 @@
 <script lang="ts">
 	import EmailForm from '$lib/components/EmailForm.svelte';
+	import MouseScrollIndicator from '$lib/components/MouseScrollIndicator.svelte';
+	import { fade } from 'svelte/transition';
+
+	let atTop = $state(true);
+
+	const isScrollAtTop = () => {
+		atTop = window.scrollY < 10;
+	};
 
 	let menuItems = [
 		{ title: 'RELEASES', link: '/releases' },
@@ -10,8 +18,10 @@
 	];
 </script>
 
+<svelte:window on:scroll={isScrollAtTop} />
+
 <div class="flex min-h-screen flex-col p-6">
-	<main class="flex flex-1 flex-col items-center justify-center pt-40">
+	<main class="flex flex-1 flex-col items-center justify-center min-h-screen">
 		<img
 			alt="Main Brand Logo and Title"
 			src="/Logos/RefractionsLogoWhite.svg"
@@ -19,7 +29,7 @@
 		/>
 
 		<nav
-			class="mt-12 md:my-12 flex flex-col md:flex-row flex-nowrap md:flex-wrap md:items-center md:justify-center gap-x-6 gap-y-2 md:my-16 md:gap-x-10"
+			class="mt-12 relative md:my-12 flex flex-col md:flex-row flex-nowrap md:flex-wrap md:items-center md:justify-center gap-x-6 gap-y-2 md:my-16 md:gap-x-10"
 		>
 			{#each menuItems as item}
 				<a
@@ -28,6 +38,11 @@
 					>{item.title}</a
 				>
 			{/each}
+			{#if atTop}
+				<div transition:fade={{ duration: 400 }} class="absolute bottom-[-80px] left-1/2">
+					<MouseScrollIndicator />
+				</div>
+			{/if}
 		</nav>
 	</main>
 	<footer

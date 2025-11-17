@@ -2,8 +2,8 @@
 html {
 	font-family: 'podium-sharp-variable', sans-serif;
 	@apply text-[80%] text-white !tracking-wider;
+	overscroll-behavior: none;
 }
-
 @theme {
 	/* Text sizes */
 	--text-xxxl: 10rem;
