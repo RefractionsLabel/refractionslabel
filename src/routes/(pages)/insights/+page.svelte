@@ -33,7 +33,7 @@
 	<div class="flex w-full flex-wrap items-center justify-between gap-16 lg:items-stretch">
 		{#each insightsFiles as file}
 			<button
-				class="relative flex !w-full !h-[200px] md:!h-[340px] !p-4 justify-center gap-4 md:gap-8 !bg-white !text-black
+				class="relative flex !w-full !max-h-[200px] md:!max-h-[340px] !p-4 justify-center gap-4 md:gap-8 !bg-white !text-black
                shadow-[0_2px_8px_rgba(0,0,0,0.04)] text-[80%] [font-variation-settings:'wght'_700,'wdth'_50] lg:!p-12"
 				onclick={() => (window.location.href = '/insights/' + file.slug)}
 			>

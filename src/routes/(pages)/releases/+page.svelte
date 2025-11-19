@@ -4,7 +4,7 @@
 			<h1
 				class="leading-none text-center py-4 !tracking-[1px] md:!py-0 !text-sm md:!text-md xl:!text-xl md:!tracking-[4px] font-variation"
 			>
-				COMING SOON!
+				COMING SOON
 			</h1>
 		</div>
 	</div>

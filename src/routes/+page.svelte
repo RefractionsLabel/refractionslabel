@@ -21,7 +21,7 @@
 <svelte:window on:scroll={isScrollAtTop} />
 
 <div class="flex min-h-screen flex-col p-6">
-	<main class="flex flex-1 flex-col items-center justify-center min-h-screen">
+	<main class="flex flex-1 flex-col items-center justify-center pt-40">
 		<img
 			alt="Main Brand Logo and Title"
 			src="/Logos/RefractionsLogoWhite.svg"
@@ -38,11 +38,11 @@
 					>{item.title}</a
 				>
 			{/each}
-			{#if atTop}
+			<!-- {#if atTop}
 				<div transition:fade={{ duration: 400 }} class="absolute bottom-[-80px] left-1/2">
 					<MouseScrollIndicator />
 				</div>
-			{/if}
+			{/if} -->
 		</nav>
 	</main>
 	<footer
