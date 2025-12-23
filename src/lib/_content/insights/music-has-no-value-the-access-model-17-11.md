@@ -1,5 +1,5 @@
 ---
-title: "Music Has No Value: The Access Model"
+title: "Music Has No Value, Part 1: The Access Model"
 date: 2025-11-17T10:51:00.000+00:00
 description: For as long as it has existed, the music industry has always been
   in the profession of monetising access.
@@ -32,6 +32,6 @@ For as long as it has existed, the music industry has always been in the profess
 
 What can we take from this shift in how we see value in music? For one, the industry is not in a death spiral caused by the economic devaluation of recorded music. People were earning a living from music long before records existed, and the emotional value of music, the ultimate expression of value, has never changed. The music industry is simply moving towards a different way of operating, perhaps one a lot closer to how it had functioned for thousands of years. Whilst we live in a period of great change in music monetisation, the core value proposition remains the same as ever: access.
 
-In **Part 2** I will be discussing the practical implications of the Access Model: how technology will create entirely new forms of access, the diminished importance of streaming, an answer to the looming threat of AI music, and what this means for the future of music monetisation.
+In **Part 2**, I look at the practical implications of the Access Model: how new technologies expand what access can mean, why streaming has become economically peripheral, and how music is monetised through culture, experience, and connection rather than recordings themselves.
 
 Want future insights delivered straight to your inbox? Subscribe to the Refractions mailing list.
