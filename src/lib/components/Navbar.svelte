@@ -29,7 +29,9 @@
 	class={`fixed inset-x-0 top-0 z-[99] flex w-full items-center justify-between bg-primary/80 transition-all px-[2%] duration-400 py-10 ${atTop ? 'md:py-10 ' : 'md:py-4'} ${menuOpen ? 'bg-primary/95' : ''}`}
 >
 	<a href="/" aria-label="Home"
-		><div class={'logo w-[160px] h-[30px] ' + (!atTop && !menuOpen && 'minimised w-[30px]')}></div></a
+		><div
+			class={'logo w-[160px] h-[30px] ' + (!atTop && !menuOpen && 'minimised w-[30px]')}
+		></div></a
 	>
 
 	<button
@@ -64,18 +66,18 @@
 		"
 	>
 		<div class="flex flex-col px-[2%] gap-4 py-6 pb-12 md:flex-row md:p-0 xl:gap-18">
-		{#each navlinks as link}
-			<a
-				href={link.link}
-				target={link.link.startsWith('http') ? '_blank' : undefined}
-				rel={link.link.startsWith('http') ? 'noopener noreferrer' : undefined}
-				class:text-xs={!menuOpen}
-				class="text-xs no-underline [font-variation-settings:'wght'_400,'wdth'_100] lg:text-sm xl:text-ml p-4 hover:bg-white hover:text-primary/80 duration-400 text-white hover:text-gray-300 transition-colors"
-				onclick={closeMenu}
-			>
-				{link.title}
-			</a>
-		{/each}
+			{#each navlinks as link}
+				<a
+					href={link.link}
+					target={link.link.startsWith('http') ? '_blank' : undefined}
+					rel={link.link.startsWith('http') ? 'noopener noreferrer' : undefined}
+					class:text-xs={!menuOpen}
+					class="no-underline [font-variation-settings:'wght'_400,'wdth'_100] text-sm xl:text-ml p-4 hover:bg-white hover:text-primary/80 duration-400 text-white hover:text-gray-300 transition-colors"
+					onclick={closeMenu}
+				>
+					{link.title}
+				</a>
+			{/each}
 		</div>
 	</nav>
 </header>

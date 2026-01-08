@@ -11,7 +11,7 @@
 				class="flex items-center justify-start cursor-pointer rounded-none !text-xs !mb-6 md:!text-sm border !border-primary !bg-primary text-white hover:!bg-white hover:text-primary hover:!border-primary"
 				onclick={() => (window.location.href = '/releases')}>← Back to releases</button
 			>
-			<p class="!text-ml md:!text-md text-primary">{format(date, 'd MMMM yyyy')}</p>
+			<p class="!text-ml md:!text-md text-primary !mb-4">{format(date, 'd MMMM yyyy')}</p>
 		</div>
 		<div class="grid w-full grid-cols-1 gap-4 md:grid-cols-[2fr_3fr] md:gap-12">
 			<div class="flex flex-col">

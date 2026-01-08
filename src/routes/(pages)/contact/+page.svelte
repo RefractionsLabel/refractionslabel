@@ -62,7 +62,7 @@
 				<button
 					id={socialButton.id}
 					onclick={() => window.open(socialButton.url, '_blank')}
-					class={`!border-2 !border-primary !w-full !text-5xs sm:!text-xs lg:!text-ml !bg-primary p-4 md:!py-6 md:!px-6 !text-white !lg:mt-20 hover:!bg-transparent hover:!text-primary hover:!border-primary ${socialButton.lowercase ? '!normal-case' : ''}`}
+					class={`!border-2 !border-primary !w-full !text-xs lg:!text-ml !bg-primary p-4 md:!py-6 md:!px-6 !text-white !lg:mt-20 hover:!bg-transparent hover:!text-primary hover:!border-primary ${socialButton.lowercase ? '!normal-case' : ''}`}
 				>
 					{socialButton.title}
 				</button>

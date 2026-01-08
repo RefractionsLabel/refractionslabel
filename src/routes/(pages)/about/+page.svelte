@@ -38,11 +38,11 @@
 			<h1 class="!text-l sm:!text-lg !tracking-[1px] font-variation">Associations</h1>
 		</div>
 
-		<div class="grid grid-cols-2 gap-4 md:gap-16">
+		<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-16">
 			<a
 				href="https://camdencollective.co.uk/"
 				target="_blank"
-				class="flex aspect-square items-center max-w-[26rem]  justify-center bg-primary p-6 transition-transform duration-300 hover:scale-105 md:p-8"
+				class="flex aspect-square items-center max-w-[26rem] justify-center bg-primary p-6 transition-transform duration-300 hover:scale-105 md:p-8"
 			>
 				<img
 					src="/Logos/camden_collective.png"
@@ -54,8 +54,8 @@
 				<a
 					href={association.href}
 					target="_blank"
-					class="flex aspect-square items-center max-w-[26rem]  justify-center bg-primary p-6 transition-transform duration-300 hover:scale-105 md:p-8"
-					>
+					class="flex aspect-square items-center max-w-[26rem] justify-center bg-primary p-6 transition-transform duration-300 hover:scale-105 md:p-8"
+				>
 					<img src={association.logoSrc} alt={association.altText} class="object-contain" />
 				</a>
 			{/each}

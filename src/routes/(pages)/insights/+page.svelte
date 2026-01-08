@@ -38,7 +38,7 @@
 				onclick={() => (window.location.href = '/insights/' + file.slug)}
 			>
 				<div class="flex w-full flex-col justify-start overflow-hidden md:p-4 lg:p-0">
-					<h3 class="text-left flex-wrap no-wrap !text-black leading-[0.85] !text-ml xl:!text-lg">
+					<h3 class="text-left flex-wrap no-wrap !text-black leading-[0.85] !text-md xl:!text-lg">
 						{file.attributes.title}
 					</h3>
 
