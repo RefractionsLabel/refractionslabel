@@ -38,7 +38,7 @@
 			<h1 class="!text-l sm:!text-lg !tracking-[1px] font-variation">Associations</h1>
 		</div>
 
-		<div class="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-16">
+		<div class="grid grid-cols-2 gap-4 md:gap-16">
 			<a
 				href="https://camdencollective.co.uk/"
 				target="_blank"

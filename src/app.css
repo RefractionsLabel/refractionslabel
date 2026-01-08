@@ -35,7 +35,7 @@ body {
 	@apply flex max-w-fit flex-col justify-center items-center w-full m-auto h-full;
 }
 .main-content {
-	@apply mt-40 mb-32 min-h-[60vh] flex flex-col justify-start items-center min-w-[72vw] py-10 px-8;
+	@apply mt-40 mb-32 min-h-[60vh] flex flex-col justify-start items-center max-w-6xl py-10 px-8;
 }
 
 h1 {
@@ -55,6 +55,14 @@ p {
 
 nav {
 	@apply flex justify-between items-center;
+}
+
+li {
+	@apply list-disc list-inside;
+}
+
+ul {
+	@apply ml-0! pl-0!;
 }
 
 button,

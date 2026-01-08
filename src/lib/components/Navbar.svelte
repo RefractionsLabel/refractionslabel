@@ -64,16 +64,18 @@
 		"
 	>
 		<div class="flex flex-col px-[2%] gap-4 py-6 pb-12 md:flex-row md:p-0 xl:gap-18">
-			{#each navlinks as link}
-				<a
-					href={link.link}
-					class:text-xs={!menuOpen}
-					class="text-xs no-underline [font-variation-settings:'wght'_400,'wdth'_100] lg:text-sm xl:text-ml p-4 hover:bg-white hover:text-primary/80 duration-400 text-white hover:text-gray-300 transition-colors"
-					onclick={closeMenu}
-				>
-					{link.title}
-				</a>
-			{/each}
+		{#each navlinks as link}
+			<a
+				href={link.link}
+				target={link.link.startsWith('http') ? '_blank' : undefined}
+				rel={link.link.startsWith('http') ? 'noopener noreferrer' : undefined}
+				class:text-xs={!menuOpen}
+				class="text-xs no-underline [font-variation-settings:'wght'_400,'wdth'_100] lg:text-sm xl:text-ml p-4 hover:bg-white hover:text-primary/80 duration-400 text-white hover:text-gray-300 transition-colors"
+				onclick={closeMenu}
+			>
+				{link.title}
+			</a>
+		{/each}
 		</div>
 	</nav>
 </header>

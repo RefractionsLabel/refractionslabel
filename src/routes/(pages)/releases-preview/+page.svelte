@@ -35,7 +35,7 @@
 	<div
 		class="grid w-full grid-cols-1 gap-12 px-16 md:px-0
            md:grid-cols-2
-           lg:grid-cols-3 md:gap-10 lg:gap-20 xl:gap-30"
+           lg:grid-cols-3 md:gap-4 lg:gap-8"
 	>
 		{#each releasesFiles as file}
 			<button
@@ -48,8 +48,8 @@
 					src={file.attributes.cover_art}
 					alt="Cover art for {file.attributes.title}"
 				/>
-				<h2 class="!mt-4 md:my-0 md:py-0 leading-none text-primary">{file.attributes.title}</h2>
-				<p class=" py-2 !text-primary !text-ml md:!text-md">{file.attributes.artist}</p>
+				<h2 class="mt-4 md:my-0 md:py-0 leading-none text-primary text-l!">{file.attributes.title}</h2>
+				<p class=" py-2 !text-primary text-sm!">{file.attributes.artist}</p>
 			</button>
 		{/each}
 	</div>

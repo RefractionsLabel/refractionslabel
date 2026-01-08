@@ -24,7 +24,7 @@
     class="flex w-full justify-center mt-4 mb-2 text-ml sm:mb-4 bg-[url('/WebBackgrounds/InsightsBackground.jpg')] bg-cover"
   >
     <div
-      class="bg-white my-10 text-primary py-0 px-6 border-0 font-bold uppercase mix-blend-lighten w-fit"
+      class="bg-white my-10 text-primary py-0 px-6 border-0 font-bold uppercase mix-blend-lighten w-fit max-w-3xl"
     >
       <h1
         class="leading-none text-center py-4 !tracking-[1px] md:!py-0 !text-sm md:!text-md xl:!text-xl md:!tracking-[4px] font-variation"
