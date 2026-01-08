@@ -37,14 +37,6 @@
                shadow-[0_2px_8px_rgba(0,0,0,0.04)] text-[80%] [font-variation-settings:'wght'_700,'wdth'_50] lg:!p-12"
 				onclick={() => (window.location.href = '/insights/' + file.slug)}
 			>
-				<!-- <div class="hidden lg:block lg:h-full lg:w-2/5 lg:overflow-hidden">
-					<img
-						src="/WebBackgrounds/AboutBackground.jpg"
-						alt="Image for {file.attributes.title}"
-						class="h-full w-full object-cover object-center"
-					/>
-				</div> -->
-
 				<div class="flex w-full flex-col justify-start overflow-hidden md:p-4 lg:p-0">
 					<h3 class="text-left flex-wrap no-wrap !text-black leading-[0.85] !text-ml xl:!text-lg">
 						{file.attributes.title}
@@ -60,7 +52,7 @@
 					</div>
 
 					<p class="mt-6 text-left !text-2xs md:!text-sm xl:!text-ml normal-case !text-black">
-						{file.attributes.description.slice(0, 60) + '...'}
+						{file.attributes.description.slice(0, 120) + '...'}
 					</p>
 				</div>
 			</button>

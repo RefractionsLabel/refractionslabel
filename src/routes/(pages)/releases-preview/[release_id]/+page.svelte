@@ -25,15 +25,15 @@
 			<div class="flex flex-col justify-between">
 				<div class="info flex flex-col gap-2 md:gap-4">
 					<div class="text-primary py-0 border-0 font-bold uppercase w-fit">
-						<h1 class="!text-xl md:!text-xxl leading-none !tracking-[4px] font-variation">
+						<h1 class="!text-lg leading-none !tracking-[4px] font-variation">
 							{title}
 						</h1>
 					</div>
-					<div class="text-2xl leading-none uppercase md:!text-3xl lg:!text-5xl">
+					<div class="text-ml leading-none uppercase">
 						{artist}
 					</div>
 
-					<div class="text-ml max-w-none normal-case text-primary mt-4 md:mt-12">
+					<div class="text-sm max-w-none normal-case text-primary mt-4 md:mt-12">
 						{@html description}
 					</div>
 				</div>
@@ -42,7 +42,7 @@
 						href={buy_link}
 						target="_blank"
 						rel="noopener noreferrer"
-						class="flex h-[42px] w-fit cursor-pointer items-center rounded-none border-0 bg-primary px-6 text-center text-ml text-white no-underline transition-transform duration-300 hover:scale-105"
+						class="flex h-[42px] w-fit cursor-pointer items-center rounded-none border-2 border-primary bg-primary px-6 text-center text-ml text-white no-underline transition-all duration-300 hover:bg-transparent hover:text-primary"
 					>
 						Buy / Stream
 					</a>

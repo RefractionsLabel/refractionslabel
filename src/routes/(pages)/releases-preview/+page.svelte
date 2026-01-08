@@ -44,11 +44,13 @@
 				onclick={() => (window.location.href = '/releases-preview/' + file.slug)}
 			>
 				<img
-					class="mx-auto lg:my-6 xl:my-12 block h-auto w-4/5 border border-primary/20"
+					class="mx-auto lg:mt-2 lg:mb-6 xl:mb-12 block h-auto border border-primary/20"
 					src={file.attributes.cover_art}
 					alt="Cover art for {file.attributes.title}"
 				/>
-				<h2 class="mt-4 md:my-0 md:py-0 leading-none text-primary text-l!">{file.attributes.title}</h2>
+				<h2 class="mt-4 md:my-0 md:py-0 leading-none text-primary text-l!">
+					{file.attributes.title}
+				</h2>
 				<p class=" py-2 !text-primary text-sm!">{file.attributes.artist}</p>
 			</button>
 		{/each}
