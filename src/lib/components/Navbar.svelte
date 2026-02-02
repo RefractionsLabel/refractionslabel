@@ -17,7 +17,7 @@
 	let navlinks = [
 		{ title: 'RELEASES', link: '/releases' },
 		{ title: 'INSIGHTS', link: '/insights' },
-		{ title: 'RADIO', link: 'https://www.subtleradio.com/residents/refractions' },
+		{ title: 'RADIO', link: 'https://ref.ract.fm/radio' },
 		{ title: 'ABOUT', link: '/about' },
 		{ title: 'CONTACT', link: '/contact' }
 	];
@@ -26,13 +26,9 @@
 <svelte:window on:scroll={isScrollAtTop} />
 
 <header
-	class={`fixed inset-x-0 top-0 z-[99] flex w-full items-center justify-between bg-primary/80 transition-all px-[2%] duration-400 py-10 ${atTop ? 'md:py-10 ' : 'md:py-4'} ${menuOpen ? 'bg-primary/95' : ''}`}
+	class={`fixed inset-x-0 top-0 z-[99] flex w-full items-center justify-between bg-primary/80 transition-all px-[2%] duration-400 py-4 ${menuOpen ? 'bg-primary/95' : ''}`}
 >
-	<a href="/" aria-label="Home"
-		><div
-			class={'logo w-[160px] h-[30px] ' + (!atTop && !menuOpen && 'minimised w-[30px]')}
-		></div></a
-	>
+	<a href="/" aria-label="Home"><div class={'logo w-[160px] h-[30px]'}></div></a>
 
 	<button
 		class="z-50 block cursor-pointer border-none !bg-transparent hover:!bg-transparent p-2 md:hidden"
@@ -72,7 +68,7 @@
 					target={link.link.startsWith('http') ? '_blank' : undefined}
 					rel={link.link.startsWith('http') ? 'noopener noreferrer' : undefined}
 					class:text-xs={!menuOpen}
-					class="no-underline [font-variation-settings:'wght'_400,'wdth'_100] text-sm xl:text-ml p-4 hover:bg-white hover:text-primary/80 duration-400 text-white hover:text-gray-300 transition-colors"
+					class="no-underline [font-variation-settings:'wght'_400,'wdth'_100] text-sm xl:text-ml p-4 hover:bg-white duration-400 text-white hover:text-gray-300 transition-colors"
 					onclick={closeMenu}
 				>
 					{link.title}
@@ -88,9 +84,5 @@
 		background-repeat: no-repeat;
 		transition: 0.4s;
 		margin-left: 2%;
-	}
-
-	.logo.minimised {
-		background-image: url(/Logos/RefractionsLogomarkWhite.svg);
 	}
 </style>

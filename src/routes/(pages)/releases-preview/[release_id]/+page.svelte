@@ -6,12 +6,12 @@
 
 <div class="main-content flex w-full flex-col gap-8 lg:w-[72vw]">
 	<div class="text-primary bg-white p-6 md:p-12">
-		<div class="flex w-full flex-col md:flex-row md:justify-between">
+		<div class="flex w-full flex-col md:flex-row md:justify-between items-center">
 			<button
 				class="flex items-center justify-start cursor-pointer rounded-none !text-xs !mb-6 md:!text-sm border !border-primary !bg-primary text-white hover:!bg-white hover:text-primary hover:!border-primary"
 				onclick={() => (window.location.href = '/releases')}>← Back to releases</button
 			>
-			<p class="!text-ml md:!text-md text-primary !mb-4">{format(date, 'd MMMM yyyy')}</p>
+			<p class="!text-sm text-primary !mb-4">{format(date, 'd MMMM yyyy')}</p>
 		</div>
 		<div class="grid w-full grid-cols-1 gap-4 md:grid-cols-[2fr_3fr] md:gap-12">
 			<div class="flex flex-col">
@@ -25,7 +25,7 @@
 			<div class="flex flex-col justify-between">
 				<div class="info flex flex-col gap-2 md:gap-4">
 					<div class="text-primary py-0 border-0 font-bold uppercase w-fit">
-						<h1 class="!text-lg leading-none !tracking-[4px] font-variation">
+						<h1 class="!text-[42px] leading-none font-variation">
 							{title}
 						</h1>
 					</div>
@@ -42,7 +42,7 @@
 						href={buy_link}
 						target="_blank"
 						rel="noopener noreferrer"
-						class="flex h-[42px] w-fit cursor-pointer items-center rounded-none border-2 border-primary bg-primary px-6 text-center text-ml text-white no-underline transition-all duration-300 hover:bg-transparent hover:text-primary"
+						class="flex h-[42px] w-fit cursor-pointer items-center rounded-none border-2 border-primary bg-transparent px-6 text-center text-ml text-primary no-underline transition-all duration-300 hover:bg-primary hover:text-white"
 					>
 						Buy / Stream
 					</a>

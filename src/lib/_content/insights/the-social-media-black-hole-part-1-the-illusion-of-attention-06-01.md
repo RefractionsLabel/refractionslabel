@@ -1,11 +1,10 @@
 ---
-title: "The Social Media Black Hole, Part 1: The Illusion of Attention"
+title: 'The Social Media Black Hole, Part 1: The Illusion of Attention'
 date: 2026-01-06T12:00:00.000+00:00
-description: Just as information cannot escape a black hole once it has entered,
-  attention rarely escapes the scroll of a social media feed engineered to keep
-  you in for as long as possible.
+description: Just as information cannot escape a black hole once it has entered, attention rarely escapes the scroll of a social media feed engineered to keep you in for as long as possible.
 author: Joe Parker
 ---
+
 Just as information cannot escape a black hole once it has entered, attention rarely escapes the scroll of a social media feed engineered to keep you in for as long as possible.
 
 Recently, whilst at my co-working space, I found myself overhearing the complaints of a team of people working in marketing at a major label. Their artist had invested a five-figure sum into a social media campaign, and was upset with the poor ROI they were seeing in terms of engagement. I overheard the name of the artist and out of curiosity looked them up. What I saw was an artist who clearly wasn’t geared for social media marketing - the wrong music, the wrong image - a personal brand and style at odds with a marketing channel that requires immediately engaging, easily digestible content produced on a regular basis.

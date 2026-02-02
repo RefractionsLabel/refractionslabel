@@ -12,8 +12,8 @@
 	const socialButtons: socialButton[] = [
 		{
 			id: 'connect',
-			title: 'CONNECT ON SOCIALS',
-			url: 'https://www.instagram.com/refractionslabel/'
+			title: 'ELSEWHERE',
+			url: 'http://ref.ract.fm/links/'
 		},
 		{
 			id: 'email',
