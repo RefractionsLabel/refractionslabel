@@ -25,4 +25,4 @@ Fittingly, I believe the best way to assuage such risk is to take another look a
 
 Want future insights delivered straight to your inbox? Subscribe to the Refractions mailing list.
 
-[Click here to read The Social Media Black Hole, Part 1: The Illusion of Attention.](https://refractionslabel.com/insights/the-social-media-black-hole-part-1-the-illusion-of-attention-06-01)
+**[Click here to read The Social Media Black Hole, Part 1: The Illusion of Attention.](https://refractionslabel.com/insights/the-social-media-black-hole-part-1-the-illusion-of-attention-06-01)**
