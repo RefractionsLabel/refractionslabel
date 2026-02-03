@@ -5,9 +5,6 @@ description: In recent months and years, there have been a few moments where the
   operations of a social media platform have seemed to be hanging by a thread.
 author: Joe Parker
 ---
-
-
-
 In Part 1 of this series, we discussed attention trapped beyond the event horizon of the social media black hole. In Part 2, we will take a creative break from the laws of physics, and discuss the possibility of this social media black hole collapsing in on itself completely.
 
 In recent months and years, there have been a few moments where the operations of a social media platform have seemed to be hanging by a thread. In early 2025, the United States implemented a nationwide ban of TikTok. Whilst the severing of this thread in the case of the US lasted only three days, TikTok is currently banned in a handful of countries worldwide, the most notable of which is India.
@@ -28,4 +25,4 @@ Fittingly, I believe the best way to assuage such risk is to take another look a
 
 Want future insights delivered straight to your inbox? Subscribe to the Refractions mailing list.
 
-[Click here](https://refractionslabel.com/insights/the-social-media-black-hole-part-1-the-illusion-of-attention-06-01) to read The Social Media Black Hole, Part 1: The Illusion of Attention.
+[Click here to read The Social Media Black Hole, Part 1: The Illusion of Attention.](https://refractionslabel.com/insights/the-social-media-black-hole-part-1-the-illusion-of-attention-06-01)
