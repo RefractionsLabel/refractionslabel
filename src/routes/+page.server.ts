@@ -4,26 +4,25 @@ import type { Actions } from './$types';
 import { INSIDE_PASSWORD } from '$env/static/private';
 
 export const load = async ({ cookies }) => {
-	const unlocked: boolean = cookies.get('unlocked') === 'true';
-
-	return { error: false, unlocked };
+  const unlocked: boolean = cookies.get('unlocked') === 'true';
+  return { error: false, unlocked };
 };
 
 export const actions: Actions = {
-	unlock: async ({ request, cookies }) => {
-		const formData = await request.formData();
-		const password = formData.get('password');
+  unlock: async ({ request, cookies }) => {
+    const formData = await request.formData();
+    const password = formData.get('password');
 
-		if (!password || password !== INSIDE_PASSWORD) {
-			return fail(400, { message: 'Incorrect password.' });
-		}
+    if (!password || password !== INSIDE_PASSWORD) {
+      return fail(400, { message: 'Incorrect password.' });
+    }
 
-		cookies.set('unlocked', 'true', {
-			path: '/inside',
-			httpOnly: true,
-			maxAge: 60 * 60 * 24 * 14 // 14 days
-		});
+    cookies.set('unlocked', 'true', {
+      path: '/',              // <-- change this
+      httpOnly: true,
+      maxAge: 60 * 60 * 24 * 14
+    });
 
-		throw redirect(303, '/inside');
-	}
+    throw redirect(303, '/'); // <-- and change this
+  }
 };
