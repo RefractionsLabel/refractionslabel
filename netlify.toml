@@ -2,6 +2,19 @@
 command = "npm run build"
 publish = "build"
 
+# Allow SvelteKit form actions through
+[[redirects]]
+from = "/?/*"
+to = "/.netlify/functions/sveltekit-render"
+status = 200
+
+# (Optional) allow internal app assets too (usually not needed)
+[[redirects]]
+from = "/_app/*"
+to = "/.netlify/functions/sveltekit-render"
+status = 200
+
+# Bouncer: everything else snaps back to /
 [[redirects]]
 from = "/*"
 to = "/"
