@@ -55,30 +55,34 @@
 
 <svelte:window on:scroll={isScrollAtTop} />
 
-<div
-	class="!my-0 w-full bg-cover bg-top bg-no-repeat text-white bg-[url('/WebBackgrounds/InsideBackground.jpg')]"
->
+<div class="!my-0 w-full bg-cover bg-top bg-no-repeat text-white bg-[url('/WebBackgrounds/InsideNewBG.webp')]">
 	{#if data.unlocked}
-		<div class="mx-auto flex w-full max-w-[90vw] flex-col items-center px-4 py-24 sm:py-32">
+		<div class="mx-auto flex w-full max-w-[90vw] flex-col items-center px-4">
 			<section
-				class="mb-14 h-[50vh] gap-6 flex flex-col items-center justify-end text-center sm:mb-32"
+				class="relative flex min-h-screen w-full flex-col items-center justify-center py-24 text-center sm:py-32"
 			>
-				<img
-					alt="Main Brand Logo and Title"
-					src="/Logos/RefractionsLogoWhite.svg"
-					class="h-auto w-full max-w-[350px] sm:max-w-[400px]"
-				/>
-				<p class="mt-4 relative !text-sm tracking-wider sm:!text-ml">
-					Presenting a higher calibre of audio, clothing, and events within bass music
-					{#if atTop}
-						<div transition:fade={{ duration: 400 }} class="absolute bottom-[-80px] left-1/2">
-							<MouseScrollIndicator />
-						</div>
-					{/if}
+				<a href="https://ref.ract.fm/links" target="_blank" rel="noopener noreferrer" class="block w-full max-w-[350px] sm:max-w-[400px] transition-opacity hover:opacity-80">
+					<img
+						alt="Main Brand Logo and Title"
+						src="/Logos/RefractionsLogoWhite.svg"
+						class="h-auto w-full max-w-[350px] sm:max-w-[400px]"
+					/>
+				</a>
+
+				<div class="py-2 sm:py-4"></div>
+
+				<p class="!text-sm tracking-wider sm:!text-ml">
+					London-Based Bass Music Label & Culture Brand
 				</p>
+
+				{#if atTop}
+					<div transition:fade={{ duration: 400 }} class="absolute bottom-10 left-1/2 -translate-x-1/2">
+						<MouseScrollIndicator />
+					</div>
+				{/if}
 			</section>
 
-			<div class="flex w-full flex-col items-start gap-24 sm:gap-32">
+			<div class="flex w-full flex-col items-start gap-24 py-24 sm:gap-32 sm:py-32">
 				{#each infoSections as section}
 					<section class="w-full">
 						<HighlightedHeader headerText={section.title} />
@@ -94,20 +98,20 @@
 			<section class="flex flex-col items-center gap-8 text-center sm:mt-48">
 				<a
 					href="mailto:joe@refractionslabel.com"
-					class="text-white text-ml my-32 underline lowercase transition-opacity hover:opacity-80"
+					class="my-32 text-ml lowercase underline text-white transition-opacity hover:opacity-80"
 					>joe@refractionslabel.com</a
 				>
-				<a href="/" aria-label="Main Website Link"
-					><img
+				<a href="/" aria-label="Main Website Link">
+					<img
 						src="/Logos/RefractionsLogomarkWhite.svg"
 						alt="Refractions Logomark"
 						width="40"
 						class="transition-transform hover:scale-110"
-					/></a
-				>
+					/>
+				</a>
 				<p class="!text-xs text-white">
-					Refractions<span class="font-sans">®</span> is a registered trademark of Refractions Label
-					Ltd. All rights reserved.
+					Refractions<span class="font-sans">®</span> is a registered trademark of Refractions Label Ltd.
+					All rights reserved.
 				</p>
 			</section>
 		</div>
