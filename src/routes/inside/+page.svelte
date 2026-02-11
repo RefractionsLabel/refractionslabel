@@ -123,3 +123,13 @@
 		</div>
 	{/if}
 </div>
+
+<style>
+	form {
+		display: flex;
+		gap: 1rem;
+	}
+	input {
+		width: 100%;
+	}
+</style>
