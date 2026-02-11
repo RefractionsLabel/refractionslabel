@@ -25,7 +25,7 @@
 			<div class="flex flex-col justify-between">
 				<div class="info flex flex-col gap-2 md:gap-4">
 					<div class="text-primary py-0 border-0 font-bold uppercase w-fit">
-						<h1 class="!text-[42px] leading-none font-variation">
+						<h1 class="!text-lg leading-none font-variation">
 							{title}
 						</h1>
 					</div>
