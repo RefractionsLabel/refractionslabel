@@ -55,13 +55,20 @@
 
 <svelte:window on:scroll={isScrollAtTop} />
 
-<div class="!my-0 w-full bg-cover bg-top bg-no-repeat text-white bg-[url('/WebBackgrounds/InsideNewBG.webp')]">
+<div
+	class="!my-0 w-full bg-cover bg-top bg-no-repeat text-white bg-[url('/WebBackgrounds/InsideNewBG.webp')]"
+>
 	{#if data.unlocked}
 		<div class="mx-auto flex w-full max-w-[90vw] flex-col items-center px-4">
 			<section
 				class="relative flex min-h-screen w-full flex-col items-center justify-center py-24 text-center sm:py-32"
 			>
-				<a href="https://refractionslabel.com/" target="_blank" rel="noopener noreferrer" class="block w-full max-w-[350px] sm:max-w-[400px] transition-opacity hover:opacity-80">
+				<a
+					href="https://refractionslabel.com/"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="block w-full max-w-[350px] sm:max-w-[400px] transition-opacity hover:opacity-80"
+				>
 					<img
 						alt="Main Brand Logo and Title"
 						src="/Logos/RefractionsLogoWhite.svg"
@@ -76,7 +83,10 @@
 				</p>
 
 				{#if atTop}
-					<div transition:fade={{ duration: 400 }} class="absolute bottom-10 left-1/2 -translate-x-1/2">
+					<div
+						transition:fade={{ duration: 400 }}
+						class="absolute bottom-10 left-1/2 -translate-x-1/2"
+					>
 						<MouseScrollIndicator />
 					</div>
 				{/if}
@@ -109,21 +119,38 @@
 						class="transition-transform hover:opacity-80"
 					/>
 				</a>
-				<p class="!text-xs text-white">
-					Refractions<span class="font-sans">®</span> is a registered trademark of Refractions Label Ltd.
-					All rights reserved.
+				<p class="!text-xs text-white footer-readable">
+					Refractions<span class="font-sans">®</span> is a registered trademark of Refractions Label
+					Ltd. All rights reserved.
 				</p>
 			</section>
 		</div>
 	{:else}
-		<div class="flex h-screen items-center justify-center">
-			{#if form?.message}
-				<p class="absolute top-1/4 text-center">{form.message}</p>
-			{/if}
-			<form method="POST" action="?/unlock">
-				<input type="password" name="password" placeholder="Password" required />
-				<button type="submit">Unlock</button>
-			</form>
+		<div class="grid h-screen place-items-center">
+			<div class="grid grid-rows-[1fr_auto_auto_1fr] items-center text-center">
+				<div></div>
+
+				<img
+					src="/Logos/RefractionsLogomarkWhite.svg"
+					alt="Refractions"
+					class="mx-auto h-18 w-18 opacity-100"
+				/>
+
+				<form method="POST" action="?/unlock" class="mt-10 flex items-center gap-4">
+					<input type="password" name="password" placeholder="Password" required />
+					<button type="submit">Unlock</button>
+				</form>
+
+				<div></div>
+			</div>
 		</div>
 	{/if}
 </div>
+
+<style>
+	.footer-readable {
+		text-shadow:
+			0 1px 2px rgba(0, 0, 0, 0.7),
+			0 0 12px rgba(0, 0, 0, 0.4);
+	}
+</style>
