@@ -101,12 +101,12 @@
 					class="my-32 text-ml lowercase underline text-white transition-opacity hover:opacity-80"
 					>joe@refractionslabel.com</a
 				>
-				<a href="/" aria-label="Main Website Link">
+				<a href="https://refractionslabel.com/" aria-label="Main Website Link">
 					<img
 						src="/Logos/RefractionsLogomarkWhite.svg"
 						alt="Refractions Logomark"
 						width="40"
-						class="transition-transform hover:scale-110"
+						class="transition-transform hover:opacity-80"
 					/>
 				</a>
 				<p class="!text-xs text-white">
