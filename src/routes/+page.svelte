@@ -61,7 +61,7 @@
 			<section
 				class="relative flex min-h-screen w-full flex-col items-center justify-center py-24 text-center sm:py-32"
 			>
-				<a href="https://ref.ract.fm/links" target="_blank" rel="noopener noreferrer" class="block w-full max-w-[350px] sm:max-w-[400px] transition-opacity hover:opacity-80">
+				<a href="https://refractionslabel.com/" target="_blank" rel="noopener noreferrer" class="block w-full max-w-[350px] sm:max-w-[400px] transition-opacity hover:opacity-80">
 					<img
 						alt="Main Brand Logo and Title"
 						src="/Logos/RefractionsLogoWhite.svg"
@@ -101,7 +101,7 @@
 					class="my-32 text-ml lowercase underline text-white transition-opacity hover:opacity-80"
 					>joe@refractionslabel.com</a
 				>
-				<a href="https://refractionslabel.com/" aria-label="Main Website Link">
+				<a href="https://ref.ract.fm/links" aria-label="Main Website Link">
 					<img
 						src="/Logos/RefractionsLogomarkWhite.svg"
 						alt="Refractions Logomark"
