@@ -49,16 +49,73 @@
 </div>
 
 <style>
-	/* Body text size for paragraphs & list items */
+	/* Apply app.css design system to article content */
+
+	/* Paragraphs & list items: body text size and line height */
 	:global(.article p),
 	:global(.article li) {
 		font-size: 1.2rem !important;
 		line-height: 1.65 !important;
+		font-variation-settings:
+			'wght' 400,
+			'wdth' 100;
+	}
+
+	/* List items: use same list styling as app.css (list-disc list-inside) */
+	:global(.article ul) {
+		list-style-type: disc;
+		list-style-position: inside;
+		padding-left: 1.5rem;
+		margin-left: 0;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	:global(.article ol) {
+		list-style-type: decimal;
+		list-style-position: inside;
+		padding-left: 1.5rem;
+		margin-left: 0;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	:global(.article li) {
+		list-style-type: inherit;
+		list-style-position: inherit;
 	}
 
 	/* Consistent vertical spacing between ALL blocks in the article */
 	:global(.article > * + *) {
 		margin-top: 1.5rem;
+	}
+
+	/* Headings in article: align with app.css h1/h2/h3 */
+	:global(.article h1) {
+		font-size: var(--text-l);
+		margin: 0;
+		letter-spacing: 0.4rem;
+	}
+	@media (min-width: 768px) {
+		:global(.article h1) {
+			font-size: var(--text-lg);
+		}
+	}
+	@media (min-width: 1024px) {
+		:global(.article h1) {
+			font-size: var(--text-xxxl);
+		}
+	}
+	:global(.article h2) {
+		font-size: var(--text-l);
+		margin: 0;
+	}
+	@media (min-width: 768px) {
+		:global(.article h2) {
+			font-size: var(--text-lg);
+		}
+	}
+	:global(.article h3) {
+		font-size: var(--text-lg);
+		margin: 0;
 	}
 
 	/* Keep bold text same size as surrounding text */
@@ -67,9 +124,9 @@
 		font-size: inherit !important;
 	}
 
-	/* Lists: just indent (spacing handled by the rule above) */
-	:global(.article ul),
-	:global(.article ol) {
-		padding-left: 1.5rem;
+	/* Links in article */
+	:global(.article a) {
+		text-decoration: underline;
+		color: inherit;
 	}
 </style>
