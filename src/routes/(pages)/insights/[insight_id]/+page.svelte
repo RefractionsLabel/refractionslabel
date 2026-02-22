@@ -118,9 +118,12 @@
 		margin: 0;
 	}
 
-	/* Keep bold text same size as surrounding text */
+	/* Bold text: variable font needs wght axis; same size as surrounding text */
 	:global(.article strong) {
 		font-weight: 700;
+		font-variation-settings:
+			'wght' 700,
+			'wdth' 100;
 		font-size: inherit !important;
 	}
 
