@@ -12,7 +12,7 @@
 	const socialButtons: socialButton[] = [
 		{
 			id: 'connect',
-			title: 'ELSEWHERE',
+			title: 'ALL LINKS',
 			url: 'http://ref.ract.fm/links/'
 		},
 		{
