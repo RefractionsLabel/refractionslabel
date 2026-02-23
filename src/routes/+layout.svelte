@@ -5,7 +5,7 @@
 
 	let { children } = $props();
 
-	let bgURL = $state('url(/WebBackgrounds/RefractionsBackground.jpg)');
+	let bgURL = $state('url(WebBackgrounds/InsideNewBG.webp)');
 	let pageTitle = $state('Refractions');
 
 	afterNavigate(() => {
@@ -19,7 +19,7 @@
 <svelte:head><title>{pageTitle}</title></svelte:head>
 
 <div
-	class="overflow-hidden sm:overflow-visible sm:bg-top fixed top-0 left-0 m-0 h-full w-full bg-white p-0 z-[-1] bg-cover bg-no-repeat transition-width duration-300"
+	class="overflow-hidden sm:overflow-visible sm:bg-top fixed top-0 left-0 m-0 h-full w-full bg-black p-0 z-[-1] bg-cover bg-no-repeat transition-width duration-300"
 	style:background-image={bgURL}
 ></div>
 

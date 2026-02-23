@@ -129,13 +129,13 @@
 		<div class="grid h-screen place-items-center">
 			<div class="grid grid-rows-[1fr_auto_auto_1fr] items-center text-center">
 				<div></div>
-
-				<img
-					src="/Logos/RefractionsLogomarkWhite.svg"
-					alt="Refractions"
-					class="mx-auto h-18 w-18 opacity-100"
-				/>
-
+				<a href="https://www.refractionslabel.com" title="Home">
+					<img
+						src="/Logos/RefractionsLogomarkWhite.svg"
+						alt="Refractions"
+						class="mx-auto h-18 w-18 opacity-100 transition-transform hover:opacity-80"
+					/>
+				</a>
 				<form method="POST" action="?/unlock" class="mt-10 flex items-center gap-4">
 					<input type="password" name="password" placeholder="Password" required />
 					<button type="submit">Unlock</button>
