@@ -26,9 +26,11 @@
 <svelte:window on:scroll={isScrollAtTop} />
 
 <header
-	class={`fixed inset-x-0 top-0 z-[99] flex w-full items-center justify-between bg-primary/80 transition-all px-[2%] duration-400 py-4 ${menuOpen ? 'bg-primary/95' : ''}`}
+	class={`fixed inset-x-0 top-0 z-[99] flex w-full items-center justify-between bg-primary/80 transition-all px-[2%] duration-400 py-10 ${atTop ? 'md:py-10 ' : 'md:py-4'} ${menuOpen ? 'bg-primary/95' : ''}`}
 >
-	<a href="/" aria-label="Home"><div class={'logo w-[160px] h-[30px]'}></div></a>
+	<a href="/" aria-label="Home"
+		><div class={'logo w-[160px] h-[30px] ' + (!atTop && !menuOpen && 'minimised w-[30px]')}></div></a
+	>
 
 	<button
 		class="z-50 block cursor-pointer border-none !bg-transparent hover:!bg-transparent p-2 md:hidden"
@@ -84,5 +86,9 @@
 		background-repeat: no-repeat;
 		transition: 0.4s;
 		margin-left: 2%;
+	}
+
+	.logo.minimised {
+		background-image: url(/Logos/RefractionsLogomarkWhite.svg);
 	}
 </style>
