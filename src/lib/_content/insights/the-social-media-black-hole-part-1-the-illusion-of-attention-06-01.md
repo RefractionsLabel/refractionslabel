@@ -24,9 +24,10 @@ Social media should be the final destination of the fan journey, not the startin
 
 This reversal is important, because it determines which of the two types of music discovery you create:
 
-**1 - Active, mindful, high-quality discovery:** The result of an engaged audience, one which is there with intent and attention.
+1. Active, mindful, high-quality discovery: The result of an engaged audience, one which is there with intent and attention.
 
-**2 - Passive, mindless, low-quality discovery:** The result of an audience which just so happens to be there when you shout from the megaphone. An audience which - whilst not necessarily disinterested in what you want them to hear – is nevertheless just passing through on their way to somewhere else.
+
+2. Passive, mindless, low-quality discovery: The result of an audience which just so happens to be there when you shout from the megaphone. An audience which - whilst not necessarily disinterested in what you want them to hear – is nevertheless just passing through on their way to somewhere else.
 
 Now, if social media really is the digital town square, then in this square I could shout to everyone passing through, or I could find where interested listeners gather first. Once I've built those relationships, my megaphone becomes more effective - people who already know me are now primed to listen when they encounter me again in the square.
 
