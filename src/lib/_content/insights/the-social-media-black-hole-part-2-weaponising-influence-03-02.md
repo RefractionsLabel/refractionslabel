@@ -23,6 +23,7 @@ This leaves me with one question. Do you want to leave your marketing strategy e
 
 Fittingly, I believe the best way to assuage such risk is to take another look at the current geopolitical landscape. When overreliance rears its ugly head, the smart move is to diversify. If the response to a changing world order is to forge new alliances, perhaps similar lessons can be applied to marketing too.
 
-Want future insights delivered straight to your inbox? Subscribe to the Refractions mailing list.
-
 **[Click here to read The Social Media Black Hole, Part 1: The Illusion of Attention.](https://refractionslabel.com/insights/the-social-media-black-hole-part-1-the-illusion-of-attention-06-01)**
+
+
+Want future insights delivered straight to your inbox? Subscribe to the Refractions mailing list.
