@@ -52,6 +52,7 @@ Given the partial coverage and limited functionality, it is advisable to handle 
 I discussed this topic with the founder of a royalty accounting platform, and the conclusion I came to was that the most time- and cost-effective way to handle US download DSP and D2C mechanicals is:
 
 * Include mechanical licensing terms directly in the artist contract (e.g., via a controlled composition clause),
+
 * Handle royalty payments through a platform that offers complete royalty management, rather than using HFA.
 
 This avoids the need to estimate digital download sales in advance and gives the label more flexibility and control over how mechanical royalties are managed.
