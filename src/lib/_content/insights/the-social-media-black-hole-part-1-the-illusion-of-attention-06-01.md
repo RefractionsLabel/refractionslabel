@@ -24,9 +24,7 @@ Social media should be the final destination of the fan journey, not the startin
 
 This reversal is important, because it determines which of the two types of music discovery you create:
 
-
 1. Active, mindful, high-quality discovery: The result of an engaged audience, one which is there with intent and attention.
-
 
 2. Passive, mindless, low-quality discovery: The result of an audience which just so happens to be there when you shout from the megaphone. An audience which - whilst not necessarily disinterested in what you want them to hear – is nevertheless just passing through on their way to somewhere else.
 
