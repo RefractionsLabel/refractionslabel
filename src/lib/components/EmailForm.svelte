@@ -97,9 +97,6 @@
 			.ml-form-formContent.horozintalForm {
 			padding: 0 0 10px 0 !important;
 		}
-		.ml-hide-horizontal {
-			display: none !important;
-		}
 		.ml-form-formContent.horozintalForm .ml-button-horizontal {
 			display: none !important;
 		}

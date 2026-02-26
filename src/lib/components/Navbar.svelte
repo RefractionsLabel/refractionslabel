@@ -17,7 +17,7 @@
 	let navlinks = [
 		{ title: 'RELEASES', link: '/releases' },
 		{ title: 'INSIGHTS', link: '/insights' },
-		{ title: 'RADIO', link: 'https://www.subtleradio.com/residents/refractions' },
+		{ title: 'RADIO', link: 'https://ref.ract.fm/radio' },
 		{ title: 'ABOUT', link: '/about' },
 		{ title: 'CONTACT', link: '/contact' }
 	];
@@ -67,8 +67,10 @@
 			{#each navlinks as link}
 				<a
 					href={link.link}
+					target={link.link.startsWith('http') ? '_blank' : undefined}
+					rel={link.link.startsWith('http') ? 'noopener noreferrer' : undefined}
 					class:text-xs={!menuOpen}
-					class="text-xs no-underline [font-variation-settings:'wght'_400,'wdth'_100] lg:text-sm xl:text-ml p-4 hover:bg-white hover:text-primary/80 duration-400 text-white hover:text-gray-300 transition-colors"
+					class="no-underline [font-variation-settings:'wght'_400,'wdth'_100] text-sm xl:text-ml p-4 hover:bg-white duration-400 text-white hover:text-gray-300 transition-colors"
 					onclick={closeMenu}
 				>
 					{link.title}

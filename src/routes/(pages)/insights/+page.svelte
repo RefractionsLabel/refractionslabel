@@ -18,13 +18,19 @@
 	let insightsFiles: Array<Insight> = $state([]);
 
 	const insightsImport = import.meta.glob('$lib/_content/insights/*.md');
-	for (const path in insightsImport) {
-		insightsImport[path]().then((mod) => {
-			const slug = path.split('/').at(-1)?.replace('.md', '') || '';
-			const { attributes, markdown } = mod as Insight;
-			insightsFiles.push({ slug, attributes, markdown } as Insight);
+	Promise.all(
+		Object.entries(insightsImport).map(([path, importFn]) =>
+			(importFn as () => Promise<Insight>)().then((mod) => {
+				const slug = path.split('/').at(-1)?.replace('.md', '') || '';
+				const { attributes, markdown } = mod;
+				return { slug, attributes, markdown } as Insight;
+			})
+		)
+	).then((insights) => {
+		insightsFiles = insights.sort((a, b) => {
+			return new Date(b.attributes.date).getTime() - new Date(a.attributes.date).getTime();
 		});
-	}
+	});
 </script>
 
 <div class="main-content w-full px-4 lg:!px-32 lg:py-10">
@@ -33,20 +39,12 @@
 	<div class="flex w-full flex-wrap items-center justify-between gap-16 lg:items-stretch">
 		{#each insightsFiles as file}
 			<button
-				class="relative flex !w-full !max-h-[200px] md:!max-h-[340px] !p-4 justify-center gap-4 md:gap-8 !bg-white !text-black
+				class="relative flex !w-full !max-h-[320px] md:!max-h-[360px] !p-4 justify-center gap-4 md:gap-8 !bg-white !text-black
                shadow-[0_2px_8px_rgba(0,0,0,0.04)] text-[80%] [font-variation-settings:'wght'_700,'wdth'_50] lg:!p-12"
 				onclick={() => (window.location.href = '/insights/' + file.slug)}
 			>
-				<!-- <div class="hidden lg:block lg:h-full lg:w-2/5 lg:overflow-hidden">
-					<img
-						src="/WebBackgrounds/AboutBackground.jpg"
-						alt="Image for {file.attributes.title}"
-						class="h-full w-full object-cover object-center"
-					/>
-				</div> -->
-
 				<div class="flex w-full flex-col justify-start overflow-hidden md:p-4 lg:p-0">
-					<h3 class="text-left flex-wrap no-wrap !text-black leading-[0.85] !text-ml xl:!text-lg">
+					<h3 class="text-left flex-wrap no-wrap !text-black leading-[0.85] !text-md xl:!text-lg">
 						{file.attributes.title}
 					</h3>
 
@@ -59,8 +57,8 @@
 						</p>
 					</div>
 
-					<p class="mt-6 text-left !text-2xs md:!text-sm xl:!text-ml normal-case !text-black">
-						{file.attributes.description.slice(0, 60) + '...'}
+					<p class="mt-6 text-left !text-2xs md:!text-sm normal-case !text-black">
+						{file.attributes.description.slice(0, 240) + '...'}
 					</p>
 				</div>
 			</button>

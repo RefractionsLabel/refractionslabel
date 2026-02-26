@@ -1,4 +1,3 @@
-
 <div id="mlb2-25336436" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-25336436">
 	<div class="ml-form-align-center">
 		<div class="ml-form-embedWrapper embedForm">
@@ -16,10 +15,12 @@
 						<div class="ml-form-horizontalRow">
 							<div class="ml-input-horizontal w-full mr-2">
 								<div style="width: 100%;" class="horizontal-fields">
-									<div class="ml-field-group ml-field-email ml-validate-email ml-validate-required w-full sm:max-w-56 md:max-w-full ">
+									<div
+										class="ml-field-group ml-field-email ml-validate-email ml-validate-required w-full sm:max-w-56 md:max-w-full"
+									>
 										<input
 											type="email"
-											class="form-control !w-full placeholder:text-center placeholder:text-primary !py-4 sm:!py-6 !text-xs lg:!text-ml !text-primary "
+											class="form-control !w-full placeholder:text-center placeholder:text-primary !py-4 sm:!py-6 !text-xs lg:!text-ml !text-primary"
 											data-inputmask=""
 											name="fields[email]"
 											placeholder="Email Address"
@@ -30,7 +31,11 @@
 							</div>
 
 							<div class="ml-button-horizontal primary">
-								<button type="submit" class="primary !py-4 sm:!py-6 !text-xs lg:!text-ml">Subscribe</button>
+								<button
+									type="submit"
+									class="primary !py-4 sm:!py-6 !text-xs lg:!text-ml hover:!bg-primary hover:!text-white"
+									>Subscribe</button
+								>
 
 								<button disabled style="display: none;" type="button" class="loading">
 									<div class="ml-form-embedSubmitLoad"></div>
@@ -90,13 +95,8 @@
 	}
 
 	@media only screen and (max-width: 400px) {
-		#mlb2-25336436.ml-form-embedContainer
-			.ml-form-embedWrapper
-			.ml-form-embedBody {
+		#mlb2-25336436.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody {
 			padding: 0 0 10px 0 !important;
-		}
-		.ml-hide-horizontal {
-			display: none !important;
 		}
 		.ml-form-formContent.horozintalForm .ml-button-horizontal {
 			display: none !important;
