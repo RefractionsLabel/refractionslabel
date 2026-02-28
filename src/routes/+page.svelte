@@ -105,18 +105,18 @@
 				{/each}
 			</div>
 
-			<section class="flex flex-col items-center gap-8 text-center sm:mt-48">
+			<section class="flex flex-col items-center pb-8 text-center sm:mt-48">
 				<a
 					href="mailto:joe@refractionslabel.com"
-					class="my-32 text-ml lowercase underline text-white transition-opacity hover:opacity-80"
+					class="mb-10 border-2 border-white bg-[#031704] p-[0.6em] text-white transition-all duration-400 hover:cursor-pointer hover:bg-white hover:text-[rgb(3,24,3)]"
 					>joe@refractionslabel.com</a
 				>
-				<a href="https://ref.ract.fm/links" aria-label="Main Website Link">
+				<a href="https://ref.ract.fm/links" aria-label="Main Website Link" class="mb-8">
 					<img
 						src="/Logos/RefractionsLogomarkWhite.svg"
 						alt="Refractions Logomark"
 						width="40"
-						class="transition-transform hover:opacity-80"
+						class="block transition-transform hover:opacity-80"
 					/>
 				</a>
 				<p class="!text-xs text-white footer-readable">
@@ -136,8 +136,8 @@
 						class="mx-auto h-18 w-18 opacity-100 transition-transform hover:opacity-80"
 					/>
 				</a>
-				<form method="POST" action="?/unlock" class="mt-10 flex items-center gap-4">
-					<input type="password" name="password" placeholder="Password" required />
+				<form method="POST" action="?/unlock" class="mt-10 flex w-full max-w-xs flex-col items-center gap-4 px-4 sm:w-auto sm:max-w-none sm:flex-row sm:px-0">
+					<input type="password" name="password" placeholder="Password" required class="w-full sm:w-56" />
 					<button type="submit">Unlock</button>
 				</form>
 
