@@ -12,10 +12,10 @@ The title of this article is something not many in the music industry would argu
 
 So why do I say that music has no value? First of all, I should clarify what I mean by value in the first place. There are two types of value when it comes to music:
 
-* Subjective, or ‘soft’, value: emotional meaning that we attach to music, both personally and culturally.
+1. Subjective, or ‘soft’, value: emotional meaning that we attach to music, both personally and culturally.
 
 
-* Objective, or ‘hard’, value: economic worth measured in pounds, dollars, euros, etc.
+2. Objective, or ‘hard’, value: economic worth measured in pounds, dollars, euros, etc.
 
 Of course, arguing that music has no subjective, emotional value would be nonsensical, as the very nature of subjectivity means that it is dependent on the personal experience of the perceiver. What I am arguing here is that there is no inherent objective economic value in a piece of music, and the music industry has never been about generating income by selling music.
 
@@ -37,6 +37,6 @@ For as long as it has existed, the music industry has always been in the profess
 
 What can we take from this shift in how we see value in music? For one, the industry is not in a death spiral caused by the economic devaluation of recorded music. People were earning a living from music long before records existed, and the emotional value of music, the ultimate expression of value, has never changed. The music industry is simply moving towards a different way of operating, perhaps one a lot closer to how it had functioned for thousands of years. Whilst we live in a period of great change in music monetisation, the core value proposition remains the same as ever: access.
 
-In Part 2, I look at the practical implications of the Access Model: how new technologies expand what access can mean, why streaming has become economically peripheral, and how music is monetised through culture, experience, and connection rather than recordings themselves.
+In Part 2, I look at the two developments most frequently cited as existential threats to the music industry – algorithms and AI – and whether these fears hold up when viewed through the lens of The Access Model.
 
 Want future insights delivered straight to your inbox? Subscribe to the Refractions mailing list.
