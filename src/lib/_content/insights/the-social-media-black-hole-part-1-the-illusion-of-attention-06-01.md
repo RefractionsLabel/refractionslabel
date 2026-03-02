@@ -29,15 +29,13 @@ Social media should be the final destination of the fan journey, not the startin
 This reversal is important, because it determines which of the two types of music discovery you create:
 
 1. Active, mindful, high-quality discovery: The result of an engaged audience, one which is there with intent and attention.
-
-
 2. Passive, mindless, low-quality discovery: The result of an audience which just so happens to be there when you shout from the megaphone. An audience which - whilst not necessarily disinterested in what you want them to hear – is nevertheless just passing through on their way to somewhere else.
 
 Now, if social media really is the digital town square, then in this square I could shout to everyone passing through, or I could find where interested listeners gather first. Once I've built those relationships, my megaphone becomes more effective - people who already know me are now primed to listen when they encounter me again in the square.
 
 By treating social media as the final destination on the journey, we stop fighting against the platform for attention and engagement and start to consider how we might better generate discovery through other avenues. This loosens the view of social media as the default, primary marketing method of the modern industry, encouraging us to find better ways to reach and engage new fans.
 
-In part 2 I will be discussing how recent geopolitical fractures and grey-zone tactics could see the social media black hole collapse in on itself completely, and what this would mean for an industry reliant on such marketing channels.
+In Part 2 I will be discussing how recent geopolitical fractures and grey-zone tactics could see the social media black hole collapse in on itself completely, and what this would mean for an industry reliant on such marketing channels.
 
 [<u>**Click here to read The Social Media Black Hole, Part 2: Weaponising Influence.**</u>](https://refractionslabel.com/insights/the-social-media-black-hole-part-2-weaponising-influence-03-02)
 
