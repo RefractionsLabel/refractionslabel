@@ -3,6 +3,10 @@ title: "The Social Media Black Hole, Part 2: Weaponising Influence"
 date: 2026-02-03T07:28:00.000+00:00
 description: In recent months and years, there have been a few moments where the
   operations of a social media platform have seemed to be hanging by a thread.
+  In early 2025, the United States implemented a nationwide ban of TikTok.
+  Whilst the severing of this thread in the case of the US lasted only three
+  days, TikTok is currently banned in a handful of countries worldwide, the most
+  notable of which is India.
 author: Joe Parker
 ---
 In Part 1 of this series, we discussed attention trapped beyond the event horizon of the social media black hole. In Part 2, we will take a creative break from the laws of physics, and discuss the possibility of this social media black hole collapsing in on itself completely.
