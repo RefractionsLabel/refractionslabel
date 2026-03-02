@@ -1,27 +1,12 @@
 <script lang="ts">
 	import '../app.css';
-	import { afterNavigate } from '$app/navigation';
-	import { page } from '$app/state';
 
 	let { children } = $props();
-
-	let bgURL = $state('url(WebBackgrounds/InsideNewBG.webp)');
-	let pageTitle = $state('Refractions');
-
-	afterNavigate(() => {
-		window.scrollTo(0, 0);
-		const path = page.url.pathname.split('/')[1] || 'Refractions';
-		pageTitle = path.charAt(0).toUpperCase() + path.slice(1);
-		bgURL = `url(/WebBackgrounds/${pageTitle}Background.jpg)`;
-	});
 </script>
 
-<svelte:head><title>{pageTitle}</title></svelte:head>
+<svelte:head><title>Refractions</title></svelte:head>
 
-<div
-	class="overflow-hidden sm:overflow-visible sm:bg-top fixed top-0 left-0 m-0 h-full w-full bg-black p-0 z-[-1] bg-cover bg-no-repeat transition-width duration-300"
-	style:background-image={bgURL}
-></div>
+<div class="fixed top-0 left-0 m-0 h-full w-full bg-[#031704] p-0 z-[-1]"></div>
 
 <div class="min-h-screen">
 	{@render children()}

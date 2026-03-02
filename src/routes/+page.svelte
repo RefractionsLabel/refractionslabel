@@ -1,3 +1,7 @@
+<svelte:head>
+	<link rel="preload" as="image" href="/WebBackgrounds/InsideNewBG.webp" />
+</svelte:head>
+
 <script lang="ts">
 	import HighlightedHeader from '$lib/components/HighlightedHeader.svelte';
 	import MouseScrollIndicator from '$lib/components/MouseScrollIndicator.svelte';
