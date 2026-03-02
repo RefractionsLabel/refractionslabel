@@ -61,21 +61,19 @@
 			'wdth' 100;
 	}
 
-	/* List items: use same list styling as app.css (list-disc list-inside) */
+	/* List items: outside position so wrapped lines align under text, not bullet */
 	:global(.article ul) {
 		list-style-type: disc;
-		list-style-position: inside;
-		padding-left: 1.5rem;
+		list-style-position: outside;
+		padding-left: 1.5rem !important;
 		margin-left: 0;
-		margin-top: 0;
 		margin-bottom: 0;
 	}
 	:global(.article ol) {
 		list-style-type: decimal;
-		list-style-position: inside;
-		padding-left: 1.5rem;
+		list-style-position: outside;
+		padding-left: 1.5rem !important;
 		margin-left: 0;
-		margin-top: 0;
 		margin-bottom: 0;
 	}
 	:global(.article li) {
@@ -88,39 +86,43 @@
 		margin-top: 0.25rem;
 		margin-bottom: 0;
 		margin-left: 1.5rem;
-		padding-left: 2rem;
+		padding-left: 1.5rem !important;
 		list-style-type: circle;
-		list-style-position: inside;
+		list-style-position: outside;
 	}
 	:global(.article ul ul ul),
 	:global(.article ol ul ul),
 	:global(.article ol ol ul) {
 		list-style-type: square;
 		margin-left: 1.5rem;
-		padding-left: 2rem;
+		padding-left: 1.5rem !important;
 	}
 	:global(.article ol ol),
 	:global(.article ul ol) {
 		margin-top: 0.25rem;
 		margin-bottom: 0;
 		margin-left: 1.5rem;
-		padding-left: 2rem;
+		padding-left: 1.5rem !important;
 		list-style-type: lower-alpha;
-		list-style-position: inside;
+		list-style-position: outside;
 	}
 	:global(.article ol ol ol),
 	:global(.article ul ol ol) {
 		list-style-type: lower-roman;
 		margin-left: 1.5rem;
-		padding-left: 2rem;
+		padding-left: 1.5rem !important;
 	}
 
 	/* Consistent vertical spacing between ALL blocks in the article */
 	:global(.article > * + *) {
 		margin-top: 1.5rem;
 	}
-	:global(.article li ul li) {
-		margin-left: 24px;
+	/* Loose list items: blank lines between items in markdown cause marked to wrap in <p> */
+	:global(.article li > p) {
+		margin-bottom: 1rem;
+	}
+	:global(.article li:last-child > p) {
+		margin-bottom: 0;
 	}
 
 	/* Headings in article: align with app.css h1/h2/h3 */

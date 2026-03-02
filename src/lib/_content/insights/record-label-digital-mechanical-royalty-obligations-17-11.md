@@ -34,7 +34,6 @@ For download sales, however, the label is required to secure a mechanical licenc
 
 1. Obtain a licence via the Harry Fox Agency (HFA) – you can pre-purchase a licence for a set number of digital download sales. This requires estimating your expected sales and comes with upfront costs and administrative overhead.
 
-
 2. Direct licensing – you can negotiate directly with the rightsholder to obtain the necessary mechanical licence. This can be managed in the contract between the label and the rightsholder, where a controlled composition clause may be included. Controlled composition clauses are legally valid in the digital realm and commonly used to simplify the licensing of downloads, especially when the artist is also the writer.
 
 **D2C - World**
