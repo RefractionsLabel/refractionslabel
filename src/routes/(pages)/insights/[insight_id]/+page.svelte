@@ -128,7 +128,7 @@
 	/* Headings in article: align with app.css h1/h2/h3 */
 	:global(.article h1) {
 		font-size: var(--text-l);
-		margin: 0;
+		margin-bottom: 0;
 		letter-spacing: 0.4rem;
 	}
 	@media (min-width: 768px) {
@@ -143,7 +143,7 @@
 	}
 	:global(.article h2) {
 		font-size: var(--text-l);
-		margin: 0;
+		margin-bottom: 0;
 	}
 	@media (min-width: 768px) {
 		:global(.article h2) {
@@ -152,19 +152,19 @@
 	}
 	:global(.article h3) {
 		font-size: var(--text-l);
-		margin: 0;
+		margin-bottom: 0;
 	}
 	:global(.article h4) {
 		font-size: var(--text-ml);
-		margin: 0;
+		margin-bottom: 0;
 	}
 	:global(.article h5) {
 		font-size: var(--text-sm);
-		margin: 0;
+		margin-bottom: 0;
 	}
 	:global(.article h6) {
 		font-size: var(--text-xs);
-		margin: 0;
+		margin-bottom: 0;
 	}
 
 	/* Bold: variable font wght axis */
