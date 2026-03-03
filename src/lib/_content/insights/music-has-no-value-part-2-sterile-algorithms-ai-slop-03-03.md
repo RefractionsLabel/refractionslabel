@@ -11,7 +11,7 @@ author: Joe Parker
 ---
 In Part 1 of this series I introduced the concept of *The Access Model*; a view of the music industry that sees the economic value of music rooted in access, not inherent to the music itself. In this article I will be applying *The Access Model* to what are often considered the two largest threats to the contemporary music industry – Streaming and AI – and assessing the reality of such fears when viewed through this lens.
 
-#### Sterile Algorithms
+#### **Sterile Algorithms**
 
 In 2025, Luminate's Year-End Report documented that 106,000 tracks were delivered each day to DSPs. Over the span of one year, 38.6M new tracks became available to stream, representing an 18% catalogue growth from 2024. 88% of the available catalogue achieved 1000 streams or less in 2025, meaning that only 12% of tracks crossed the royalty payment threshold currently employed by Spotify.
 
@@ -27,7 +27,7 @@ Now this is not to say that there is no place for a lowest common denominator 't
 
 An algorithm that functions based on the logic of what has already been is unable to produce something that has not already come. A world where music is driven entirely by algorithms is a world where music is not driven at all. There would be no new genres, no artists who push the bounds of what already exists, no music that challenges; a sterile industry incapable of reproduction. This is where applying *The Access Model* serves to assuage fears of the all-powerful algorithm dictating the music industry of the future. For those who simply want access to lowest common denominator music, the algorithm will serve the same role that charts and music TV played previously, however for those who want access to music beyond this, the algorithm offers them nothing of value.
 
-#### AI Slop
+#### **AI Slop**
 
 In assessing algorithms through the lens of *The Access Model*, the similarities they share with generative AI in regard to their function in the music industry become strikingly clear. The fears of many in the industry, that AI generated music will replace artist created music, are based on the presupposition that people want access to AI generated music. But if we take the arguments made in the previous section and transpose them to here, what do we see?
 
