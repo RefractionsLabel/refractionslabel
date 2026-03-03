@@ -22,20 +22,22 @@ Through this process of trying to understand the mechanical obligations of Refra
 
 What follows is the result of my research into the current state of digital mechanical royalty obligations for record labels.
 
-### DSPs - World excl. US
+#### **DSPs - World excl. US**
 
 In all territories other than the US, digital service providers (DSPs) directly handle mechanical royalties for both streaming and downloads. The DSP will have a direct relationship with a local mechanical rights organisation (MRO) and will pay mechanicals out automatically to the relevant organisation. When music is streamed or downloaded through DSPs, the label has no mechanical royalty responsibility, even if the writer is unpublished or unaffiliated with an MRO.
 
-### DSPs - US
+#### **DSPs - US**
 
 For streaming, DSPs automatically handle the payment of mechanical royalties via an agreement with the Mechanical Licensing Collective (MLC). There is no responsibility on the label to obtain or manage a mechanical licence for streaming income in the US.
 
 For download sales, however, the label is required to secure a mechanical licence for the reproduction of the musical composition. This can be done in one of two ways:
 
 1. **Obtain a licence via the Harry Fox Agency (HFA)** – you can pre-purchase a licence for a set number of digital download sales. This requires estimating your expected sales and comes with upfront costs and administrative overhead.
+
+
 2. **Direct licensing** – you can negotiate directly with the rightsholder to obtain the necessary mechanical licence. This can be managed in the contract between the label and the rightsholder, where a controlled composition clause may be included. Controlled composition clauses are legally valid in the digital realm and commonly used to simplify the licensing of downloads, especially when the artist is also the writer.
 
-### D2C - World
+#### **D2C - World**
 
 Direct-to-Consumer (D2C) download platforms such as Bandcamp operate differently to DSPs in that they do not automatically handle mechanical royalties. Instead, mechanical royalties for D2C downloads are typically the responsibility of the label. As such, you should work under the assumption that for any D2C platform, the label will need to secure mechanical licences through either HFA or direct negotiation.
 
@@ -45,7 +47,7 @@ Bandcamp now offers an optional mechanical royalty payment feature, but it is cu
 
 Given the partial coverage and limited functionality, it is advisable to handle mechanicals for Bandcamp and other D2C platforms independently to ensure compliance and complete coverage.
 
-### Label Approach in Practice
+#### **Label Approach in Practice**
 
 I discussed this topic with the founder of a royalty accounting platform, and the conclusion I came to was that the most time- and cost-effective way to handle US download DSP and D2C mechanicals is:
 
@@ -54,7 +56,7 @@ I discussed this topic with the founder of a royalty accounting platform, and th
 
 This avoids the need to estimate digital download sales in advance and gives the label more flexibility and control over how mechanical royalties are managed.
 
-### Territorial Summary
+#### **Territorial Summary**
 
 * **Streaming DSPs (World)** - Mechanical royalties handled by DSPs/MROs.
 * **Download DSPs (World excl. US)** - Handled by DSPs/MROs, no label responsibility.
