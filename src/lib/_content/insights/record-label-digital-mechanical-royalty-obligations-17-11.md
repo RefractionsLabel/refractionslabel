@@ -33,7 +33,6 @@ For streaming, DSPs automatically handle the payment of mechanical royalties via
 For download sales, however, the label is required to secure a mechanical licence for the reproduction of the musical composition. This can be done in one of two ways:
 
 1. Obtain a licence via the Harry Fox Agency (HFA) – you can pre-purchase a licence for a set number of digital download sales. This requires estimating your expected sales and comes with upfront costs and administrative overhead.
-
 2. Direct licensing – you can negotiate directly with the rightsholder to obtain the necessary mechanical licence. This can be managed in the contract between the label and the rightsholder, where a controlled composition clause may be included. Controlled composition clauses are legally valid in the digital realm and commonly used to simplify the licensing of downloads, especially when the artist is also the writer.
 
 **D2C - World**
@@ -50,9 +49,8 @@ Given the partial coverage and limited functionality, it is advisable to handle 
 
 I discussed this topic with the founder of a royalty accounting platform, and the conclusion I came to was that the most time- and cost-effective way to handle US download DSP and D2C mechanicals is:
 
-* Include mechanical licensing terms directly in the artist contract (e.g., via a controlled composition clause),
-
-* Handle royalty payments through a platform that offers complete royalty management, rather than using HFA.
+1. Include mechanical licensing terms directly in the artist contract (e.g., via a controlled composition clause)
+2. Handle royalty payments through a platform that offers complete royalty management, rather than using HFA
 
 This avoids the need to estimate digital download sales in advance and gives the label more flexibility and control over how mechanical royalties are managed.
 
