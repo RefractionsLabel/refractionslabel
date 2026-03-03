@@ -12,10 +12,10 @@ The title of this article is something not many in the music industry would argu
 
 So why do I say that music has no value? First of all, I should clarify what I mean by value in the first place. There are two types of value when it comes to music:
 
-1. Subjective, or ‘soft’, value: emotional meaning that we attach to music, both personally and culturally.
+1. **Subjective, or ‘soft’, value** - Emotional meaning that we attach to music, both personally and culturally.
 
 
-2. Objective, or ‘hard’, value: economic worth measured in pounds, dollars, euros, etc.
+2. **Objective, or ‘hard’, value** - Economic worth measured in pounds, dollars, euros, etc.
 
 Of course, arguing that music has no subjective, emotional value would be nonsensical, as the very nature of subjectivity means that it is dependent on the personal experience of the perceiver. What I am arguing here is that there is no inherent objective economic value in a piece of music, and the music industry has never been about generating income by selling music.
 
@@ -38,5 +38,7 @@ For as long as it has existed, the music industry has always been in the profess
 What can we take from this shift in how we see value in music? For one, the industry is not in a death spiral caused by the economic devaluation of recorded music. People were earning a living from music long before records existed, and the emotional value of music, the ultimate expression of value, has never changed. The music industry is simply moving towards a different way of operating, perhaps one a lot closer to how it had functioned for thousands of years. Whilst we live in a period of great change in music monetisation, the core value proposition remains the same as ever: access.
 
 In Part 2, I look at the two developments most frequently cited as existential threats to the music industry – algorithms and AI – and whether these fears hold up when viewed through the lens of The Access Model.
+
+<u>**[Click here to read Music Has No Value, Part 2: Sterile Algorithms & AI Slop.](https://refractionslabel.com/insights/music-has-no-value-part-2-sterile-algorithms-ai-slop-03-03)**</u>
 
 Want future insights delivered straight to your inbox? Subscribe to the Refractions mailing list.
