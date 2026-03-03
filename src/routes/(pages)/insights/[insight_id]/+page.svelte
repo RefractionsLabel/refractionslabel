@@ -3,10 +3,12 @@
 	import { marked } from 'marked';
 
 	const { data } = $props();
-	const { title, author, date } = data.attributes;
 
-	// Decap CMS stores markdown in `data.content` → convert to HTML
-	const content = marked.parse(data.content);
+	// Use $derived so these update reactively when navigating between articles
+	const content = $derived(marked.parse(data.content));
+	const title = $derived(data.attributes.title);
+	const author = $derived(data.attributes.author);
+	const date = $derived(data.attributes.date);
 </script>
 
 <div

@@ -6,7 +6,7 @@
 
 <div class="page-wrapper">
 	<Navbar />
-	<div class="content">{@render children()}</div>
+	<div class="content px-8">{@render children()}</div>
 	<Footer />
 </div>
 
@@ -21,17 +21,8 @@
 		flex: 1;
 		width: 100%;
 		max-width: 100vw;
-		left: 0;
-		right: 0;
 		box-sizing: border-box;
 		margin: auto;
-		padding: 0 2rem;
-		justify-content: center;
-		align-items: center;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;

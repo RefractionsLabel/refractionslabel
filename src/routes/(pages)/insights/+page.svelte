@@ -15,22 +15,14 @@
 		markdown: string;
 	};
 
-	let insightsFiles: Array<Insight> = $state([]);
-
-	const insightsImport = import.meta.glob('$lib/_content/insights/*.md');
-	Promise.all(
-		Object.entries(insightsImport).map(([path, importFn]) =>
-			(importFn as () => Promise<Insight>)().then((mod) => {
-				const slug = path.split('/').at(-1)?.replace('.md', '') || '';
-				const { attributes, markdown } = mod;
-				return { slug, attributes, markdown } as Insight;
-			})
-		)
-	).then((insights) => {
-		insightsFiles = insights.sort((a, b) => {
-			return new Date(b.attributes.date).getTime() - new Date(a.attributes.date).getTime();
-		});
-	});
+	const insightsImport = import.meta.glob('$lib/_content/insights/*.md', { eager: true });
+	const insightsFiles: Array<Insight> = Object.entries(insightsImport)
+		.map(([path, mod]: [string, any]) => {
+			const slug = path.split('/').at(-1)?.replace('.md', '') || '';
+			const { attributes, markdown } = mod;
+			return { slug, attributes, markdown } as Insight;
+		})
+		.sort((a, b) => new Date(b.attributes.date).getTime() - new Date(a.attributes.date).getTime());
 </script>
 
 <div class="main-content w-full px-4 lg:!px-32 lg:py-10">

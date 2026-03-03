@@ -18,16 +18,14 @@
 		markdown: string;
 	};
 
-	let releasesFiles: Array<Release> = $state([]);
-
-	const releasesImport = import.meta.glob('$lib/_content/releases/*.md');
-	for (const path in releasesImport) {
-		releasesImport[path]().then((mod) => {
+	const releasesImport = import.meta.glob('$lib/_content/releases/*.md', { eager: true });
+	const releasesFiles: Array<Release> = Object.entries(releasesImport)
+		.map(([path, mod]: [string, any]) => {
 			const slug = path.split('/').at(-1)?.replace('.md', '') || '';
-			const { attributes, markdown } = mod as Release;
-			releasesFiles.push({ slug, attributes, markdown } as Release);
-		});
-	}
+			const { attributes, markdown } = mod;
+			return { slug, attributes, markdown } as Release;
+		})
+		.sort((a, b) => new Date(b.attributes.date).getTime() - new Date(a.attributes.date).getTime());
 </script>
 
 <div class="main-content w-full !px-2 !py-10 sm:!px-4 lg:!px-20">
