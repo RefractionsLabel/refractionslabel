@@ -33,23 +33,23 @@
 	>
 
 	<button
-		class="z-50 block cursor-pointer border-none !bg-transparent hover:!bg-transparent p-2 md:hidden"
+		class="z-50 cursor-pointer !bg-transparent hover:!bg-transparent mr-[2%] md:!hidden"
 		aria-label="Toggle menu"
 		aria-expanded={menuOpen}
 		onclick={toggleMenu}
 	>
 		<span
-			class="block h-0.5 w-7 bg-white transition-all duration-300 ease-in-out my-1.5
+			class="block h-0.5 w-7 bg-white transition-all duration-300 ease-in-out my-[3px]
 				{menuOpen ? 'translate-y-2 rotate-45' : ''}
 			"
 		></span>
 		<span
-			class="block h-0.5 w-7 bg-white transition-all duration-300 ease-in-out my-1.5
+			class="block h-0.5 w-7 bg-white transition-all duration-300 ease-in-out my-[3px]
 				{menuOpen ? 'opacity-0' : ''}
 			"
 		></span>
 		<span
-			class="block h-0.5 w-7 bg-white transition-all duration-300 ease-in-out my-1.5
+			class="block h-0.5 w-7 bg-white transition-all duration-300 ease-in-out my-[3px]
 				{menuOpen ? '-translate-y-2 -rotate-45' : ''}
 			"
 		></span>
@@ -81,6 +81,15 @@
 </header>
 
 <style>
+	button {
+		height: 30px;
+		padding: 0 0.5rem;
+		border: none;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
 	.logo {
 		background-image: url(/Logos/RefractionsLogoWhite.svg);
 		background-repeat: no-repeat;
