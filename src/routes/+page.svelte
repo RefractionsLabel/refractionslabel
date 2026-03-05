@@ -1,5 +1,5 @@
 <svelte:head>
-	<link rel="preload" as="image" href="/WebBackgrounds/InsideNewBG.webp" />
+	<link rel="preload" as="image" href="/WebBackgrounds/InsideBackground.avif" />
 </svelte:head>
 
 <script lang="ts">
@@ -60,7 +60,7 @@
 <svelte:window on:scroll={isScrollAtTop} />
 
 <div
-	class="!my-0 w-full bg-cover bg-top bg-no-repeat text-white bg-[url('/WebBackgrounds/InsideNewBG.webp')]"
+	class="!my-0 w-full bg-cover bg-top bg-no-repeat text-white bg-[url('/WebBackgrounds/InsideBackground.avif')]"
 >
 	{#if data.unlocked}
 		<div class="mx-auto flex w-full max-w-[90vw] flex-col items-center px-4">
