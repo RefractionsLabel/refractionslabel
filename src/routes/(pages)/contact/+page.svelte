@@ -39,13 +39,13 @@
 	>
 		<div>
 			<h3
-				class="!text-l md:!text-l xl:!text-xl !tracking-[1px] xl:!tracking-[2px] font-variation leading-none"
+				class="!text-ml md:!text-ml xl:!text-l !tracking-[0.5px] xl:!tracking-[1px] font-variation leading-none"
 			>
 				REFRACTIONS LABEL LTD
 			</h3>
 
 			<address
-				class="!text-sm md:!text-ml xl:!text-md font-normal not-italic md:leading-10 uppercase-case"
+				class="!text-xs md:!text-sm xl:!text-ml font-normal not-italic leading-6 md:leading-7 uppercase-case"
 			>
 				Collective Auction Rooms<br />
 				5-7 Buck Street<br />

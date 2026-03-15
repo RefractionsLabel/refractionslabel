@@ -9,7 +9,7 @@
 		Refractions<span class="font-sans">®</span> is a registered trademark of Refractions Label Ltd.
 		All rights reserved.
 	</p>
-	<button class="primary !py-3 !text-xs xl:!text-sm">
+	<button class="primary !py-3 !px-13 !text-xs xl:!text-sm">
 		<a href="http://ref.ract.fm/links" target="_blank">ALL LINKS</a></button
 	>
 
