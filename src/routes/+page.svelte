@@ -83,7 +83,7 @@
 				<div class="py-2 sm:py-4"></div>
 
 				<p class="!text-sm tracking-wider sm:!text-ml">
-					London-Based Bass Music Label & Culture Brand
+					Presenting a higher calibre of bass music
 				</p>
 
 				{#if atTop}
