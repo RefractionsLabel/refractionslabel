@@ -31,7 +31,7 @@ For much of the past year, Refractions has been a Founding Label member of [Subv
 
 This question received 60 responses, and opened up multiple conversations among members about how they consume music and where they perceive value to lie. After reading through the thoughts of the community, a number of trends and interesting perspectives came to light. This series of Insights, *Why Should I Pay For Music?*, will look at some of the themes discussed in the responses, and consider how these could influence how we create and understand value in the post-scarcity music industry of the 21st century.
 
-Part 1 of this series, Raised on Piracy, is an examination of the industry landscape I personally grew up in, and how my relationship with music began and continues to this day. The trigger for this line of thinking came from one member (I will be keeping responses anonymous to respect the private nature of the forum) who said the following:
+Part 1 of this series, *Raised on Piracy*, is an examination of the industry landscape I personally grew up in, and how my relationship with music began and continues to this day. The trigger for this line of thinking came from one member (I will be keeping responses anonymous to respect the private nature of the forum) who said the following:
 
 > *being a kid with no money i did do a bit of ‘downloading’ when i wanted to put things on my mp3 player.*
 
