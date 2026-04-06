@@ -13,7 +13,7 @@ description: I grew up in the era just before the ubiquity of smartphones and
   shop, and an inescapable exchange of money.
 author: Joe Parker
 ---
-For much of the past year, Refractions has been a Founding Label member of Subvert, a cooperative that aims to create a collectively owned Bandcamp successor. During this period, we have engaged with other members in discussing the music industry as it is today, where it might go, and how we might influence its direction. Back in January we posed a sharp question to cooperative members, in the interest of understanding how listeners of today consume music:
+For much of the past year, Refractions has been a Founding Label member of [Subvert](https://subvert.fm/), a cooperative that aims to create a collectively owned Bandcamp successor. During this period, we have engaged with other members in discussing the music industry as it is today, where it might go, and how we might influence its direction. Back in January we posed a sharp question to cooperative members, in the interest of understanding how listeners of today consume music:
 
 > **Why Should I Pay For Music?**
 >
