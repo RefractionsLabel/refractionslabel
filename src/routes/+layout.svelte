@@ -5,10 +5,11 @@
 
 	let { children } = $props();
 
-	/** Same hero bg as /releases (no dedicated Events/Store assets). */
+	/** Same hero bg as /releases (no dedicated Events/Store/Radio assets). */
 	const backgroundKeyBySegment: Record<string, string> = {
 		events: 'Releases',
-		store: 'Releases'
+		store: 'Releases',
+		radio: 'Releases'
 	};
 
 	const pageTitle = $derived.by(() => {
