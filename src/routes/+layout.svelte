@@ -8,10 +8,11 @@
 	let bgURL = $state('url(/WebBackgrounds/RefractionsBackground.jpg)');
 	let pageTitle = $state('Refractions');
 
-	/** Same hero bg as /releases (no dedicated Events/Store assets). */
+	/** Same hero bg as /releases (no dedicated Events/Store/Radio assets). */
 	const backgroundKeyBySegment: Record<string, string> = {
 		events: 'Releases',
-		store: 'Releases'
+		store: 'Releases',
+		radio: 'Releases'
 	};
 
 	afterNavigate(() => {

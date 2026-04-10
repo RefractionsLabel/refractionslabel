@@ -32,3 +32,17 @@ collections:
       - { label: "Embed Player Snippet", name: "embed_snippet", widget: "markdown" }
       - { label: "Description", name: "description", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list", required: false }
+  - name: "radio"
+    label: "Radio"
+    folder: "src/lib/_content/radio"
+    create: true
+    slug: "{{series}}-{{title}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Series / Episode", name: "series", widget: "string" }
+      - { label: "Episode Date", name: "date", widget: "datetime" }
+      - { label: "Episode Artwork", name: "episode_art", widget: "image" }
+      - { label: "Listen Link", name: "listen_link", widget: "string" }
+      - { label: "Embed Player Snippet", name: "embed_snippet", widget: "markdown", required: false }
+      - { label: "Description", name: "description", widget: "markdown" }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
