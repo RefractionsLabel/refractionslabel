@@ -16,9 +16,10 @@
 
 	let navlinks = [
 		{ title: 'RELEASES', link: '/releases' },
-		{ title: 'INSIGHTS', link: '/insights' },
 		{ title: 'RADIO', link: 'https://ref.ract.fm/radio' },
-		{ title: 'ABOUT', link: '/about' },
+		{ title: 'EVENTS', link: '/events' },
+		{ title: 'INSIGHTS', link: '/insights' },
+		{ title: 'STORE', link: '/store' },
 		{ title: 'CONTACT', link: '/contact' }
 	];
 </script>

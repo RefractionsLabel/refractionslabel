@@ -5,11 +5,24 @@
 
 	let { children } = $props();
 
+	/** Same hero bg as /releases (no dedicated Events/Store assets). */
+	const backgroundKeyBySegment: Record<string, string> = {
+		events: 'Releases',
+		store: 'Releases'
+	};
+
 	const pageTitle = $derived.by(() => {
 		const path = page.url.pathname.split('/')[1] || 'Refractions';
 		return path.charAt(0).toUpperCase() + path.slice(1);
 	});
-	const bgURL = $derived(`url(/WebBackgrounds/${pageTitle}Background.jpg)`);
+
+	const bgURL = $derived.by(() => {
+		const segment = page.url.pathname.split('/')[1] || 'Refractions';
+		const bgKey =
+			backgroundKeyBySegment[segment.toLowerCase()] ??
+			segment.charAt(0).toUpperCase() + segment.slice(1);
+		return `url(/WebBackgrounds/${bgKey}Background.jpg)`;
+	});
 
 	afterNavigate(() => {
 		window.scrollTo(0, 0);
