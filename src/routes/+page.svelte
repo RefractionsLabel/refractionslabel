@@ -11,9 +11,10 @@
 
 	let menuItems = [
 		{ title: 'RELEASES', link: '/releases' },
+		{ title: 'RADIO', link: 'https://ref.ract.fm/radio' },
+		{ title: 'EVENTS', link: '/events' },
 		{ title: 'INSIGHTS', link: '/insights' },
-		{ title: 'RADIO', link: 'https://www.subtleradio.com/residents/refractions' },
-		{ title: 'ABOUT', link: '/about' },
+		{ title: 'STORE', link: '/store' },
 		{ title: 'CONTACT', link: '/contact' }
 	];
 </script>

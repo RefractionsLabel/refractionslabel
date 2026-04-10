@@ -3,15 +3,13 @@
 </script>
 
 <footer
-	class="flex w-full flex-col md:flex-row items-center justify-center lg:!justify-between gap-4 bg-primary p-4"
+	class="flex w-full flex-col items-center gap-6 bg-primary p-4 md:flex-row md:items-center md:justify-between md:gap-4"
 >
-	<p class="mx-4 text-center md:!text-left !text-3xs md:!w-72 lg:!text-xs lg:!w-fit">
+	<p class="mx-4 max-w-md shrink-0 text-center !text-3xs md:!text-left lg:!text-xs">
 		Refractions<span class="font-sans">®</span> is a registered trademark of Refractions Label Ltd.
 		All rights reserved.
 	</p>
-	<button class="primary !py-3 !text-xs xl:!text-sm">
-		<a href="http://ref.ract.fm/links" target="_blank">ALL LINKS</a></button
-	>
-
-	<EmailForm />
+	<div class="flex w-full min-w-0 flex-col items-end md:flex-1 md:items-end">
+		<EmailForm alignEnd />
+	</div>
 </footer>

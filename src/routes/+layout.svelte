@@ -8,11 +8,20 @@
 	let bgURL = $state('url(/WebBackgrounds/RefractionsBackground.jpg)');
 	let pageTitle = $state('Refractions');
 
+	/** Same hero bg as /releases (no dedicated Events/Store assets). */
+	const backgroundKeyBySegment: Record<string, string> = {
+		events: 'Releases',
+		store: 'Releases'
+	};
+
 	afterNavigate(() => {
 		window.scrollTo(0, 0);
-		const path = page.url.pathname.split('/')[1] || 'Refractions';
-		pageTitle = path.charAt(0).toUpperCase() + path.slice(1);
-		bgURL = `url(/WebBackgrounds/${pageTitle}Background.jpg)`;
+		const segment = page.url.pathname.split('/')[1] || 'Refractions';
+		pageTitle = segment.charAt(0).toUpperCase() + segment.slice(1);
+		const bgKey =
+			backgroundKeyBySegment[segment.toLowerCase()] ??
+			segment.charAt(0).toUpperCase() + segment.slice(1);
+		bgURL = `url(/WebBackgrounds/${bgKey}Background.jpg)`;
 	});
 </script>
 
