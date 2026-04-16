@@ -27,7 +27,7 @@
 					href={`${item.link}`}
 					target={item.link.startsWith('http') ? '_blank' : undefined}
 					rel={item.link.startsWith('http') ? 'noopener noreferrer' : undefined}
-					class="text-xs no-underline [font-variation-settings:'wght'_400,'wdth'_100] lg:text-sm xl:text-ml p-4 hover:bg-white duration-400 text-white hover:text-gray-300 transition-colors lg:mx-8"
+					class="text-xs no-underline [font-variation-settings:'wght'_400,'wdth'_100] lg:text-sm xl:text-ml p-4 hover:bg-white duration-400 text-white hover:text-gray-800 transition-colors lg:mx-8"
 					>{item.title}</a
 				>
 			{/each}
