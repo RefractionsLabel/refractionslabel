@@ -1,57 +1,5 @@
 <script lang="ts">
-	import { tick } from 'svelte';
-
 	let { alignEnd = false }: { alignEnd?: boolean } = $props();
-
-	let subscribeHorizBtn: HTMLButtonElement | undefined = $state();
-	let subscribeMobileBtn: HTMLButtonElement | undefined = $state();
-	let allLinksBtn: HTMLButtonElement | undefined = $state();
-
-	function openAllLinks() {
-		const w = window.open('http://ref.ract.fm/links', '_blank');
-		if (w) w.opener = null;
-	}
-
-	function syncAllLinksWidth() {
-		if (!allLinksBtn) return;
-		const h = subscribeHorizBtn?.getBoundingClientRect().width ?? 0;
-		const m = subscribeMobileBtn?.getBoundingClientRect().width ?? 0;
-		const source = Math.max(h, m);
-		if (source > 0) {
-			allLinksBtn.style.width = `${Math.ceil(source)}px`;
-		}
-	}
-
-	$effect(() => {
-		if (!alignEnd) {
-			if (allLinksBtn) allLinksBtn.style.width = '';
-			return;
-		}
-
-		subscribeHorizBtn;
-		subscribeMobileBtn;
-		allLinksBtn;
-
-		let ro: ResizeObserver | undefined;
-		const onResize = () => syncAllLinksWidth();
-		let cancelled = false;
-
-		void tick().then(() => {
-			if (cancelled) return;
-			syncAllLinksWidth();
-			ro = new ResizeObserver(syncAllLinksWidth);
-			if (subscribeHorizBtn) ro.observe(subscribeHorizBtn);
-			if (subscribeMobileBtn) ro.observe(subscribeMobileBtn);
-			window.addEventListener('resize', onResize);
-		});
-
-		return () => {
-			cancelled = true;
-			ro?.disconnect();
-			window.removeEventListener('resize', onResize);
-			if (allLinksBtn) allLinksBtn.style.width = '';
-		};
-	});
 </script>
 
 <div
@@ -107,7 +55,6 @@
 								<button
 									type="submit"
 									class="primary !py-3 !text-xs xl:!text-sm"
-									bind:this={subscribeHorizBtn}
 								>
 									Subscribe
 								</button>
@@ -127,7 +74,6 @@
 							style="border-radius: none;"
 							type="submit"
 							class="primary"
-							bind:this={subscribeMobileBtn}
 						>
 							Subscribe
 						</button>
@@ -149,17 +95,6 @@
 		</div>
 	</div>
 	</div>
-
-	{#if alignEnd}
-		<button
-			type="button"
-			class="primary mt-3 shrink-0 self-end !py-3 !text-xs uppercase xl:!text-sm"
-			bind:this={allLinksBtn}
-			onclick={openAllLinks}
-		>
-			ALL LINKS
-		</button>
-	{/if}
 </div>
 
 <style>

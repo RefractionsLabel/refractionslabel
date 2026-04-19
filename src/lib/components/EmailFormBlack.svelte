@@ -1,4 +1,10 @@
-<div id="mlb2-25336436" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-25336436">
+<div class="flex w-full max-w-full min-w-0 flex-col gap-2">
+	<p
+		class="m-0 w-full !text-3xs uppercase tracking-wider text-primary xl:!text-xs [font-variation-settings:'wght'_400,'wdth'_100] text-left"
+	>
+		Mailing list
+	</p>
+	<div id="mlb2-25336436" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-25336436 w-full min-w-0 max-w-full">
 	<div class="ml-form-align-center">
 		<div class="ml-form-embedWrapper embedForm">
 			<div class="ml-form-embedBody ml-form-embedBodyHorizontal row-form">
@@ -16,11 +22,11 @@
 							<div class="ml-input-horizontal w-full mr-2">
 								<div style="width: 100%;" class="horizontal-fields">
 									<div
-										class="ml-field-group ml-field-email ml-validate-email ml-validate-required w-full sm:max-w-56 md:max-w-full"
+										class="ml-field-group ml-field-email ml-validate-email ml-validate-required min-w-72 !w-full"
 									>
 										<input
 											type="email"
-											class="form-control !w-full placeholder:text-center placeholder:text-primary !py-4 sm:!py-6 !text-xs lg:!text-ml !text-primary"
+											class="form-control !w-full placeholder:text-center placeholder:text-primary !py-3 !text-xs xl:!text-sm !text-primary"
 											data-inputmask=""
 											name="fields[email]"
 											placeholder="Email Address"
@@ -33,9 +39,10 @@
 							<div class="ml-button-horizontal primary">
 								<button
 									type="submit"
-									class="primary !py-4 sm:!py-6 !text-xs lg:!text-ml hover:!bg-primary hover:!text-white"
-									>Subscribe</button
+									class="primary !py-3 !text-xs xl:!text-sm hover:!bg-primary hover:!text-white"
 								>
+									Subscribe
+								</button>
 
 								<button disabled style="display: none;" type="button" class="loading">
 									<div class="ml-form-embedSubmitLoad"></div>
@@ -66,6 +73,7 @@
 			</div>
 		</div>
 	</div>
+	</div>
 </div>
 
 <style>
@@ -94,8 +102,11 @@
 		border-radius: none;
 	}
 
-	@media only screen and (max-width: 400px) {
-		#mlb2-25336436.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody {
+	@media only screen and (max-width: 300px) {
+		#mlb2-25336436.ml-form-embedContainer
+			.ml-form-embedWrapper
+			.ml-form-embedBody
+			.ml-form-formContent.horozintalForm {
 			padding: 0 0 10px 0 !important;
 		}
 		.ml-form-formContent.horozintalForm .ml-button-horizontal {
@@ -123,7 +134,7 @@
 		color: black;
 	}
 
-	@media only screen and (max-width: 400px) {
+	@media only screen and (max-width: 300px) {
 		.ml-form-formContent.horozintalForm .ml-form-horizontalRow .horizontal-fields {
 			margin-bottom: 10px !important;
 			width: 100% !important;

@@ -32,6 +32,11 @@
 		const w = window.open(href, '_blank');
 		if (w) w.opener = null;
 	}
+
+	function openAllLinks() {
+		const w = window.open('http://ref.ract.fm/links', '_blank');
+		if (w) w.opener = null;
+	}
 </script>
 
 <footer
@@ -42,7 +47,7 @@
 		All rights reserved.
 	</p>
 	<div
-		class="grid w-full max-w-xl grid-cols-2 place-items-center gap-3 md:flex-1 md:grid-cols-2 xl:grid-cols-4"
+		class="grid w-full max-w-xl grid-cols-2 place-items-center gap-x-1 gap-y-1 md:flex-1 md:grid-cols-2 xl:grid-cols-4"
 	>
 		{#each footerLogos as logo (logo.src)}
 			<button
@@ -55,7 +60,14 @@
 			</button>
 		{/each}
 	</div>
-	<div class="w-fit">
+	<button
+		type="button"
+		class="primary shrink-0 !py-3 !text-xs uppercase xl:!text-sm"
+		onclick={openAllLinks}
+	>
+		ALL LINKS
+	</button>
+	<div class="min-w-0 w-full max-w-full lg:w-fit">
 		<EmailForm alignEnd />
 	</div>
 </footer>
@@ -65,8 +77,8 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 7.7rem;
-		height: 3.3rem;
+		width: 7rem;
+		height: 3rem;
 		padding: 0;
 		border: 0;
 		background: transparent;
