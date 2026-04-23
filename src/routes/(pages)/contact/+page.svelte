@@ -11,11 +11,6 @@
 
 	const socialButtons: socialButton[] = [
 		{
-			id: 'connect',
-			title: 'ALL LINKS',
-			url: 'http://ref.ract.fm/links/'
-		},
-		{
 			id: 'email',
 			title: 'hello@refractionslabel.com',
 			url: 'mailto:hello@refractionslabel.com',
@@ -26,6 +21,11 @@
 			title: 'demo@refractionslabel.com',
 			url: 'mailto:demo@refractionslabel.com',
 			lowercase: true
+		},
+		{
+			id: 'connect',
+			title: 'ALL LINKS',
+			url: 'http://ref.ract.fm/links/'
 		}
 	];
 </script>
@@ -35,7 +35,7 @@
 
 	<section
 		class="h-auto w-full md:box-border
-    bg-white text-primary flex flex-col gap-8 justify-center min-h-[50vh] md:min-h-[60vh] p-6 md:p-10 xl:p-16"
+    bg-white text-primary flex flex-col gap-8 justify-center p-6 md:p-10 xl:p-16"
 	>
 		<div>
 			<h3
@@ -55,14 +55,14 @@
 			</address>
 		</div>
 
-		<div class="flex flex-col gap-4 lg:gap-6 mt-10 md:mt-0">
+		<div class="mt-10 flex flex-col gap-2 md:mt-0">
 			<EmailFormBlack />
 
 			{#each socialButtons as socialButton}
 				<button
 					id={socialButton.id}
 					onclick={() => window.open(socialButton.url, '_blank')}
-					class={`!border-2 !border-primary !w-full !text-xs lg:!text-ml !bg-primary p-4 md:!py-6 md:!px-6 !text-white !lg:mt-20 hover:!bg-transparent hover:!text-primary hover:!border-primary ${socialButton.lowercase ? '!normal-case' : ''}`}
+					class={`!w-full !border-2 !border-primary !bg-primary !py-3 !text-xs !text-white xl:!text-sm hover:!border-primary hover:!bg-transparent hover:!text-primary ${socialButton.lowercase ? '!normal-case' : ''}`}
 				>
 					{socialButton.title}
 				</button>

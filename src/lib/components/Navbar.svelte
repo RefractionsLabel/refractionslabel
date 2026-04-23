@@ -16,9 +16,10 @@
 
 	let navlinks = [
 		{ title: 'RELEASES', link: '/releases' },
+		{ title: 'RADIO', link: '/radio' },
+		{ title: 'EVENTS', link: '/events' },
 		{ title: 'INSIGHTS', link: '/insights' },
-		{ title: 'RADIO', link: 'https://ref.ract.fm/radio' },
-		{ title: 'ABOUT', link: '/about' },
+		{ title: 'STORE', link: '/store' },
 		{ title: 'CONTACT', link: '/contact' }
 	];
 </script>
@@ -70,7 +71,7 @@
 					target={link.link.startsWith('http') ? '_blank' : undefined}
 					rel={link.link.startsWith('http') ? 'noopener noreferrer' : undefined}
 					class:text-xs={!menuOpen}
-					class="no-underline [font-variation-settings:'wght'_400,'wdth'_100] text-sm xl:text-ml p-4 hover:bg-white duration-400 text-white hover:text-gray-300 transition-colors"
+					class="no-underline [font-variation-settings:'wght'_400,'wdth'_100] text-sm xl:text-ml p-4 hover:bg-white duration-400 text-white hover:text-gray-800 transition-colors"
 					onclick={closeMenu}
 				>
 					{link.title}

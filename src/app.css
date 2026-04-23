@@ -22,6 +22,8 @@ html {
 
 	/* Colors */
 	--color-primary: rgb(3, 24, 3);
+	/** Footer: darker green than page background for clear separation */
+	--color-footer: rgb(1, 12, 1);
 
 	/* Font Classes */
 	--font-sans: 'sans-serif';

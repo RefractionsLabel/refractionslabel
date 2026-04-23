@@ -1,24 +1,15 @@
 <script lang="ts">
 	import EmailForm from '$lib/components/EmailForm.svelte';
-	import MouseScrollIndicator from '$lib/components/MouseScrollIndicator.svelte';
-	import { fade } from 'svelte/transition';
-
-	let atTop = $state(true);
-
-	const isScrollAtTop = () => {
-		atTop = window.scrollY < 10;
-	};
 
 	let menuItems = [
 		{ title: 'RELEASES', link: '/releases' },
+		{ title: 'RADIO', link: '/radio' },
+		{ title: 'EVENTS', link: '/events' },
 		{ title: 'INSIGHTS', link: '/insights' },
-		{ title: 'RADIO', link: 'https://ref.ract.fm/radio' },
-		{ title: 'ABOUT', link: '/about' },
+		{ title: 'STORE', link: '/store' },
 		{ title: 'CONTACT', link: '/contact' }
 	];
 </script>
-
-<svelte:window on:scroll={isScrollAtTop} />
 
 <div class="flex min-h-screen flex-col p-6">
 	<main class="flex flex-1 flex-col items-center justify-center pt-40">
@@ -29,14 +20,14 @@
 		/>
 
 		<nav
-			class="mt-12 relative md:my-12 flex flex-col md:flex-row flex-nowrap md:flex-wrap md:items-center md:justify-center gap-x-6 gap-y-2 md:my-16 md:gap-x-10"
+			class="mt-12 relative flex flex-col md:flex-row flex-nowrap md:flex-wrap md:items-center md:justify-center gap-x-6 gap-y-2 md:my-16 md:gap-x-10"
 		>
-			{#each menuItems as item}
+			{#each menuItems as item (item.title)}
 				<a
 					href={`${item.link}`}
 					target={item.link.startsWith('http') ? '_blank' : undefined}
 					rel={item.link.startsWith('http') ? 'noopener noreferrer' : undefined}
-					class="text-xs no-underline [font-variation-settings:'wght'_400,'wdth'_100] lg:text-sm xl:text-ml p-4 hover:bg-white hover:text-primary/80 duration-400 text-white hover:text-gray-300 transition-colors lg:mx-8"
+					class="text-xs no-underline [font-variation-settings:'wght'_400,'wdth'_100] lg:text-sm xl:text-ml p-4 hover:bg-white duration-400 text-white hover:text-gray-800 transition-colors lg:mx-8"
 					>{item.title}</a
 				>
 			{/each}
