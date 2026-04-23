@@ -1,9 +1,4 @@
 <div class="flex w-full max-w-full min-w-0 flex-col gap-2">
-	<p
-		class="m-0 w-full !text-3xs uppercase tracking-wider text-primary xl:!text-xs [font-variation-settings:'wght'_400,'wdth'_100] text-left"
-	>
-		Mailing list
-	</p>
 	<div id="mlb2-25336436" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-25336436 w-full min-w-0 max-w-full">
 	<div class="ml-form-align-center">
 		<div class="ml-form-embedWrapper embedForm">
@@ -29,7 +24,7 @@
 											class="form-control !w-full placeholder:text-center placeholder:text-primary !py-3 !text-xs xl:!text-sm !text-primary"
 											data-inputmask=""
 											name="fields[email]"
-											placeholder="Email Address"
+											placeholder="Mailing List Email"
 											autocomplete="email"
 										/>
 									</div>

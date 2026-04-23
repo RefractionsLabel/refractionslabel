@@ -36,7 +36,7 @@
 			<div class="flex flex-col justify-between">
 				<div class="info flex flex-col gap-2 md:gap-4">
 					<div class="text-primary py-0 border-0 font-bold uppercase w-fit">
-						<h1 class="!text-lg !tracking-wider leading-none font-variation">
+						<h1 class="!text-lg !tracking-[2px] leading-none font-variation">
 							{title}
 						</h1>
 					</div>
@@ -55,7 +55,7 @@
 						rel="noopener noreferrer"
 						class="flex h-[42px] w-fit cursor-pointer items-center rounded-none border-2 border-primary bg-transparent px-6 text-center text-ml text-primary no-underline transition-all duration-300 hover:bg-primary hover:text-white"
 					>
-						Listen
+						Stream/Download
 					</a>
 				</div>
 			</div>

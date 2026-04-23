@@ -1,19 +1,12 @@
 <script lang="ts">
-	let { alignEnd = false }: { alignEnd?: boolean } = $props();
+	let { alignEnd = false, compact = false }: { alignEnd?: boolean; compact?: boolean } = $props();
 </script>
 
 <div
-	class="flex w-fit max-w-full min-w-0 flex-col gap-2 {alignEnd
-		? 'self-end items-end'
-		: 'mx-auto items-center'}"
+	class="flex w-fit max-w-full min-w-0 gap-2 {compact
+		? 'flex-row items-center'
+		: `flex-col ${alignEnd ? 'items-end' : 'items-center'}`} {alignEnd ? 'self-end' : 'mx-auto'}"
 >
-	<p
-		class="m-0 w-full !text-3xs uppercase tracking-wider text-white xl:!text-xs [font-variation-settings:'wght'_400,'wdth'_100] {alignEnd
-			? 'text-left'
-			: 'text-center'}"
-	>
-		Mailing list
-	</p>
 	<div
 		id="mlb2-25336436"
 		class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-25336436 w-full min-w-0 max-w-full {alignEnd
@@ -41,10 +34,10 @@
 									>
 										<input
 											type="email"
-											class="form-control !w-full placeholder:text-center placeholder:text-white !py-3 !text-xs xl:!text-sm"
+											class="form-control !w-full placeholder:text-center placeholder:text-white {compact ? '!py-2 !text-[0.75rem] xl:!text-3xs' : '!py-3 !text-xs xl:!text-sm'}"
 											data-inputmask=""
 											name="fields[email]"
-											placeholder="Email Address"
+											placeholder="Mailing List Email"
 											autocomplete="email"
 										/>
 									</div>
@@ -54,7 +47,7 @@
 							<div class="ml-button-horizontal primary">
 								<button
 									type="submit"
-									class="primary !py-3 !text-xs xl:!text-sm"
+									class="primary {compact ? '!py-2 !text-[0.75rem] xl:!text-3xs' : '!py-3 !text-xs xl:!text-sm'}"
 								>
 									Subscribe
 								</button>

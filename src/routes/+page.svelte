@@ -45,7 +45,6 @@
 
 		<p class="!text-[12px]">
 			Refractions<span class="font-sans">®</span> is a registered trademark of Refractions Label Ltd.
-			All rights reserved.
 		</p>
 	</footer>
 </div>
