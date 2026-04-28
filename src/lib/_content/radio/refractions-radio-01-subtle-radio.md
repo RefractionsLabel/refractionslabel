@@ -1,6 +1,6 @@
 ---
 title: Esther Mae
-series: SUBTLE RADIO
+series: Episode 6
 date: 2026-04-21T02:00:00.000+01:00
 episode_art: /images/uploads/esther-mae-soundcloud-cover.png
 listen_link: https://ref.ract.fm/e06
