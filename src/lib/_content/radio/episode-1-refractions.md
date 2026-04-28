@@ -1,7 +1,7 @@
 ---
 title: Refractions
 series: Episode 1
-date: 2025-11-19T02:00:00.000+00:00
+date: 2025-11-18T02:00:00.000+00:00
 episode_art: /images/uploads/refractions-radio-cover.png
 listen_link: https://ref.ract.fm/e01
 embed_snippet: ""
