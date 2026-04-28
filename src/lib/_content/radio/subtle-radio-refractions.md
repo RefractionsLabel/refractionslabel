@@ -1,6 +1,6 @@
 ---
 title: Refractions
-series: Subtle Radio
+series: Episode 5
 date: 2026-03-17T02:00:00.000+00:00
 episode_art: /images/uploads/refractions-radio-cover.png
 listen_link: https://ract.fm/e05
