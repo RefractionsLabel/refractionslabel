@@ -48,7 +48,7 @@
 						{@html description}
 					</div>
 				</div>
-				<div class="mt-20 md:mt-0">
+				<div class="mt-10 lg:mt-0 flex justify-center md:justify-start">
 					<a
 						href={listen_link}
 						target="_blank"

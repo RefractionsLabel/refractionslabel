@@ -46,11 +46,11 @@
 				onclick={() => (window.location.href = '/radio/' + file.slug)}
 			>
 				<img
-					class="mx-auto lg:mt-2 lg:mb-6 xl:mb-12 block h-auto border border-primary/20"
+					class="mx-auto mb-4 lg:mt-2 lg:mb-6 xl:mb-12 block h-auto border border-primary/20"
 					src={file.attributes.episode_art}
 					alt="Artwork for {file.attributes.title}"
 				/>
-				<h2 class="mt-4 md:my-0 md:py-0 leading-none text-primary text-l!">
+				<h2 class="md:py-0 leading-none text-primary text-l!">
 					{file.attributes.title}
 				</h2>
 				<p class=" py-2 !text-primary text-sm!">{file.attributes.series}</p>

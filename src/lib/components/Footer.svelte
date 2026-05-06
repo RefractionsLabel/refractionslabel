@@ -48,7 +48,7 @@
 <footer
 	class="flex w-full flex-col items-center gap-6 bg-footer p-4 lg:flex-row lg:items-center lg:justify-between lg:gap-4"
 >
-	<p class="text-center !text-[0.675rem] lg:!text-[0.75rem] whitespace-nowrap shrink-0">
+	<p class="text-center !text-[0.55rem] sm:!text-[0.675rem] lg:!text-[0.75rem] whitespace-nowrap shrink-0">
 		Refractions<span class="font-sans">®</span> is a registered trademark of Refractions Label Ltd.
 	</p>
 	<button
@@ -66,14 +66,14 @@
 				type="button"
 				aria-label={logo.name}
 				class="footer-logo-link {logo.small ? 'footer-logo-link--small' : ''}"
-				style={logo.nudge ? `transform: translateX(${logo.nudge})` : ''}
+				style={logo.nudge ? `--logo-nudge: ${logo.nudge}` : ''}
 				onclick={() => openLogoLink(logo.href)}
 			>
 				<img src={logo.src} alt={logo.name} class="footer-logo-image" />
 			</button>
 		{/each}
 	</div>
-	<div class="min-w-0 w-full max-w-full lg:w-fit">
+	<div class="min-w-0 w-full max-w-full lg:w-fit flex justify-center lg:block">
 		<EmailForm alignEnd compact />
 	</div>
 </footer>
@@ -95,6 +95,12 @@
 
 	.footer-logo-link:hover {
 		opacity: 1;
+	}
+
+	@media (min-width: 1024px) {
+		.footer-logo-link {
+			transform: translateX(var(--logo-nudge, 0));
+		}
 	}
 
 	.footer-logo-link--small {

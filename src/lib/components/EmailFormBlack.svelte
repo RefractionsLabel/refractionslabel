@@ -17,7 +17,7 @@
 							<div class="ml-input-horizontal w-full mr-2">
 								<div style="width: 100%;" class="horizontal-fields">
 									<div
-										class="ml-field-group ml-field-email ml-validate-email ml-validate-required min-w-72 !w-full"
+										class="ml-field-group ml-field-email ml-validate-email ml-validate-required !w-full"
 									>
 										<input
 											type="email"
@@ -97,7 +97,7 @@
 		border-radius: none;
 	}
 
-	@media only screen and (max-width: 300px) {
+	@media only screen and (max-width: 480px) {
 		#mlb2-25336436.ml-form-embedContainer
 			.ml-form-embedWrapper
 			.ml-form-embedBody
@@ -108,12 +108,17 @@
 			display: none !important;
 		}
 		.ml-mobileButton-horizontal {
-			display: inline-block !important;
+			display: flex !important;
+			justify-content: center;
 			margin-bottom: 20px;
 			width: 100%;
 		}
 		.ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal > div {
 			padding-bottom: 0px !important;
+		}
+		.ml-form-formContent.horozintalForm .ml-form-horizontalRow .horizontal-fields {
+			margin-bottom: 10px !important;
+			width: 100% !important;
 		}
 	}
 
@@ -127,12 +132,5 @@
 		border-radius: none;
 		border-color: black;
 		color: black;
-	}
-
-	@media only screen and (max-width: 300px) {
-		.ml-form-formContent.horozintalForm .ml-form-horizontalRow .horizontal-fields {
-			margin-bottom: 10px !important;
-			width: 100% !important;
-		}
 	}
 </style>
