@@ -49,8 +49,10 @@ In the era of music streaming, the listener’s relationship with the music they
 
 By choosing to own the music that constitutes my library, and to store and play it back from my own hardware, I choose a mode of music consumption that gives me the security to emotionally engage with my library – fully, and on my own terms.
 
----
+- - -
 
 Whilst we can undoubtedly credit some of the resurgence of the MP3 player to the current Y2K aesthetic revival, this revival has not driven a resurgence of other technologies from the era. People are not ditching their broadband for dial-up or installing a stand-alone sat-nav in their car, suggesting there is something deeper than simply nostalgia at play. Beyond the aesthetics of the era, the real revival I believe the MP3 player represents is that of intentionality. Just as physical media was the conduit for intentionality in the 20th century, the MP3 player is increasingly finding itself filling that role today. The MP3 player may well fade again as the wheel of fashion revolves once more, but the desire for intentionality will remain. The question then is, how do we build a lasting conduit of intentionality for the 21st century?
+
+**[Click here to read Why Should I Pay for Music?, Part 1: Raised on Piracy](https://refractionslabel.com/insights/why-should-i-pay-for-music-part-1-raised-on-piracy-07-04)**
 
 Want future insights delivered straight to your inbox? Subscribe to the Refractions mailing list.
