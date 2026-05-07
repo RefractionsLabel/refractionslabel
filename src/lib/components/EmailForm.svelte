@@ -1,9 +1,9 @@
 <script lang="ts">
-	let { alignEnd = false, compact = false }: { alignEnd?: boolean; compact?: boolean } = $props();
+	let { alignEnd, compact }: { alignEnd?: boolean; compact?: boolean } = $props();
 </script>
 
 <div
-	class="flex w-fit max-w-full min-w-0 gap-2 {compact
+	class="flex w-fit max-w-full min-w-[22rem] gap-2 {compact
 		? 'flex-row items-center'
 		: `flex-col ${alignEnd ? 'items-end' : 'items-center'}`} {alignEnd ? 'self-end' : 'mx-auto'}"
 >
@@ -102,12 +102,26 @@
 
 	.ml-form-horizontalRow {
 		display: flex;
+		width: 100%;
+	}
+
+	.ml-input-horizontal {
+		flex: 1;
+		min-width: 0;
 	}
 
 	/* Right-align MailerLite row when footer uses alignEnd */
 	:global(.email-form--align-end) :global(.ml-form-align-center) {
 		display: flex;
 		justify-content: flex-end;
+		width: 100%;
+	}
+
+	/* Safari: flex children lose definite width — restore the chain */
+	:global(.email-form--align-end) :global(.ml-form-embedWrapper),
+	:global(.email-form--align-end) :global(.ml-form-embedBody),
+	:global(.email-form--align-end) :global(.ml-block-form),
+	:global(.email-form--align-end) :global(.ml-form-formContent) {
 		width: 100%;
 	}
 

@@ -46,9 +46,9 @@
 </script>
 
 <footer
-	class="flex w-full flex-col items-center gap-6 bg-footer p-4 lg:flex-row lg:items-center lg:justify-between lg:gap-4"
+	class="flex w-full flex-col items-center gap-6 bg-footer p-4 min-[1366px]:flex-row min-[1366px]:items-center min-[1366px]:justify-between min-[1366px]:gap-4"
 >
-	<p class="text-center !text-[0.55rem] sm:!text-[0.675rem] lg:!text-[0.75rem] whitespace-nowrap shrink-0">
+	<p class="text-center !text-[0.55rem] sm:!text-[0.675rem] min-[1366px]:!text-[0.75rem] whitespace-nowrap shrink-0">
 		Refractions<span class="font-sans">®</span> is a registered trademark of Refractions Label Ltd.
 	</p>
 	<button
@@ -59,13 +59,13 @@
 		ALL LINKS
 	</button>
 	<div
-		class="grid w-full max-w-xl grid-cols-2 place-items-center gap-x-1 gap-y-1 md:grid-cols-2 xl:grid-cols-4"
+		class="grid min-[1366px]:w-full min-[1366px]:max-w-xl [grid-template-columns:repeat(4,auto)] min-[1366px]:grid-cols-4 place-items-center gap-x-1 gap-y-1"
 	>
-		{#each footerLogos as logo (logo.src)}
+		{#each footerLogos as logo, i (logo.src)}
 			<button
 				type="button"
 				aria-label={logo.name}
-				class="footer-logo-link {logo.small ? 'footer-logo-link--small' : ''}"
+				class="footer-logo-link {logo.small ? 'footer-logo-link--small' : ''} {i === 1 ? 'footer-logo-gap' : ''}"
 				style={logo.nudge ? `--logo-nudge: ${logo.nudge}` : ''}
 				onclick={() => openLogoLink(logo.href)}
 			>
@@ -73,7 +73,7 @@
 			</button>
 		{/each}
 	</div>
-	<div class="min-w-0 w-full max-w-full lg:w-fit flex justify-center lg:block">
+	<div class="min-w-0 w-full max-w-full min-[1366px]:w-fit flex justify-center min-[1366px]:block">
 		<EmailForm alignEnd compact />
 	</div>
 </footer>
@@ -97,7 +97,7 @@
 		opacity: 1;
 	}
 
-	@media (min-width: 1024px) {
+	@media (min-width: 1366px) {
 		.footer-logo-link {
 			transform: translateX(var(--logo-nudge, 0));
 		}
@@ -106,6 +106,16 @@
 	.footer-logo-link--small {
 		width: 5.5rem;
 		height: 2.25rem;
+	}
+
+	.footer-logo-gap {
+		margin-left: 1.6rem;
+	}
+
+	@media (min-width: 1366px) {
+		.footer-logo-gap {
+			margin-left: 0;
+		}
 	}
 
 	.footer-logo-image {
