@@ -55,4 +55,6 @@ Over the past few years, an interesting trend has emerged. Gen Z, a generation t
 
 In Part 2 I will be discussing the return of intentionality to music consumption in the modern world, and how this may serve as one mechanism to return the lost value to recorded music.
 
+**[Click here to read Why Should I Pay for Music?, Part 2: Returning to Intentionality](https://refractionslabel.com/insights/why-should-i-pay-for-music-part-2-returning-to-intentionality-05-05)**
+
 Want future insights delivered straight to your inbox? Subscribe to the Refractions mailing list.
