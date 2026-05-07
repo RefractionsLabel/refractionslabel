@@ -13,8 +13,6 @@ The title of this article is something not many in the music industry would argu
 So why do I say that music has no value? First of all, I should clarify what I mean by value in the first place. There are two types of value when it comes to music:
 
 1. **Subjective, or ‘soft’, value** - Emotional meaning that we attach to music, both personally and culturally.
-
-
 2. **Objective, or ‘hard’, value** - Economic worth measured in pounds, dollars, euros, etc.
 
 Of course, arguing that music has no subjective, emotional value would be nonsensical, as the very nature of subjectivity means that it is dependent on the personal experience of the perceiver. What I am arguing here is that there is no inherent objective economic value in a piece of music, and the music industry has never been about generating income by selling music.
@@ -39,6 +37,6 @@ What can we take from this shift in how we see value in music? For one, the indu
 
 In Part 2, I look at the two developments most frequently cited as existential threats to the music industry – algorithms and AI – and whether these fears hold up when viewed through the lens of The Access Model.
 
-<u>**[Click here to read Music Has No Value, Part 2: Sterile Algorithms & AI Slop.](https://refractionslabel.com/insights/music-has-no-value-part-2-sterile-algorithms-ai-slop-03-03)**</u>
+<u>**[Click here to read Music Has No Value, Part 2: Sterile Algorithms & AI Slop](https://refractionslabel.com/insights/music-has-no-value-part-2-sterile-algorithms-ai-slop-03-03)**</u>
 
 Want future insights delivered straight to your inbox? Subscribe to the Refractions mailing list.
