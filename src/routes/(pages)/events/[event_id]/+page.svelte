@@ -11,7 +11,6 @@
 		start_time,
 		end_time,
 		event_art,
-		lineup,
 		ticket_link,
 		description
 	} = data.attributes;
@@ -29,11 +28,6 @@
 	};
 
 	const times = [toTime(start_time), toTime(end_time)].filter(Boolean).join(' – ');
-	// Decap writes the lineup list as [{ artist: 'Name' }]; older entries may be plain strings.
-	const acts: string[] = (Array.isArray(lineup) ? lineup : [])
-		.map((a: string | { artist?: string }) => (typeof a === 'string' ? a : (a?.artist ?? '')))
-		.map((a: string) => a.trim())
-		.filter(Boolean);
 	const body = marked.parse(description ?? '');
 </script>
 
@@ -80,11 +74,6 @@
 					<div class="text-ml leading-none uppercase">
 						{venue}{location ? ', ' + location : ''}
 					</div>
-					{#if acts.length}
-						<div class="text-sm leading-none uppercase text-primary">
-							{acts.join(' · ')}
-						</div>
-					{/if}
 
 					<div
 						class="event-description text-sm max-w-none normal-case text-primary mt-4 md:mt-12"

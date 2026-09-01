@@ -11,7 +11,6 @@
 		end_time: string;
 		description: string;
 		event_art: string;
-		lineup: string[];
 		ticket_link: string;
 	};
 
