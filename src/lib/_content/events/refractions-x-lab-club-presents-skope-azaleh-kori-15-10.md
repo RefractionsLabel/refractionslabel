@@ -8,6 +8,10 @@ end_time: 00:00
 event_art: /images/uploads/refractions-general-poster-a4.png
 lineup:
   - Skope
+  - Azaleh
+  - Kori
+  - Esther Mae
+  - Refractions
 ticket_link: https://ra.co/events/2526181
 description: >-
   London record label Refractions, in partnership with Lab.Club, presents a
