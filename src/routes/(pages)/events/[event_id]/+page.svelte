@@ -16,8 +16,24 @@
 		description
 	} = data.attributes;
 
-	const times = [start_time, end_time].filter(Boolean).join(' – ');
-	const acts: string[] = Array.isArray(lineup) ? lineup.filter(Boolean) : [];
+	// YAML 1.1 parses an unquoted 19:00 as a base-60 integer (19*60 = 1140),
+	// so a time may arrive as a number of minutes rather than a string.
+	const toTime = (v: string | number | null | undefined): string => {
+		if (v === null || v === undefined || v === '') return '';
+		if (typeof v === 'number') {
+			const h = Math.floor(v / 60);
+			const m = v % 60;
+			return `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}`;
+		}
+		return String(v).trim();
+	};
+
+	const times = [toTime(start_time), toTime(end_time)].filter(Boolean).join(' – ');
+	// Decap writes the lineup list as [{ artist: 'Name' }]; older entries may be plain strings.
+	const acts: string[] = (Array.isArray(lineup) ? lineup : [])
+		.map((a: string | { artist?: string }) => (typeof a === 'string' ? a : (a?.artist ?? '')))
+		.map((a: string) => a.trim())
+		.filter(Boolean);
 	const body = marked.parse(description ?? '');
 </script>
 
@@ -41,8 +57,20 @@
 						class="aspect-[210/297] w-full object-cover"
 					/>
 				</div>
+				{#if ticket_link}
+					<div class="mt-6 flex justify-center md:justify-start">
+						<a
+							href={ticket_link}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="flex h-[42px] w-fit cursor-pointer items-center rounded-none border-2 border-primary bg-transparent px-6 text-center text-ml text-primary no-underline transition-all duration-300 hover:bg-primary hover:text-white"
+						>
+							Tickets
+						</a>
+					</div>
+				{/if}
 			</div>
-			<div class="flex flex-col justify-between">
+			<div class="flex flex-col">
 				<div class="info flex flex-col gap-2 md:gap-4">
 					<div class="text-primary py-0 border-0 font-bold uppercase w-fit">
 						<h1 class="!text-lg !tracking-[2px] leading-none font-variation">
@@ -64,18 +92,6 @@
 						{@html body}
 					</div>
 				</div>
-				{#if ticket_link}
-					<div class="mt-10 lg:mt-0 flex justify-center md:justify-start">
-						<a
-							href={ticket_link}
-							target="_blank"
-							rel="noopener noreferrer"
-							class="flex h-[42px] w-fit cursor-pointer items-center rounded-none border-2 border-primary bg-transparent px-6 text-center text-ml text-primary no-underline transition-all duration-300 hover:bg-primary hover:text-white"
-						>
-							Tickets
-						</a>
-					</div>
-				{/if}
 			</div>
 		</div>
 	</div>
@@ -93,5 +109,17 @@
 	}
 	:global(.event-description a) {
 		text-decoration: underline;
+	}
+	/* Bold: variable font wght axis overrides font-weight, so set it explicitly */
+	:global(.event-description strong) {
+		font-weight: 700;
+		font-variation-settings:
+			'wght' 700,
+			'wdth' 100;
+		font-size: inherit !important;
+	}
+	/* Italic */
+	:global(.event-description em) {
+		font-style: italic;
 	}
 </style>

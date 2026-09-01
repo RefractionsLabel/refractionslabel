@@ -59,7 +59,12 @@ collections:
       - { label: "Start Time", name: "start_time", widget: "string", hint: "e.g. 21:00", required: false }
       - { label: "End Time", name: "end_time", widget: "string", hint: "e.g. 03:00", required: false }
       - { label: "Event Artwork", name: "event_art", widget: "image" }
-      - { label: "Lineup", name: "lineup", widget: "list", required: false }
+      - label: "Lineup"
+        name: "lineup"
+        widget: "list"
+        required: false
+        summary: "{{fields.artist}}"
+        field: { label: "Artist", name: "artist", widget: "string" }
       - { label: "Ticket Link", name: "ticket_link", widget: "string", required: false }
       - { label: "Description", name: "description", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list", required: false }
