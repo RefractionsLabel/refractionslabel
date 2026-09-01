@@ -8,6 +8,7 @@ end_time: 00:00
 event_art: /images/uploads/refractions-general-poster-a4.png
 lineup:
   - Skope
+ticket_link: https://ra.co/events/2526181
 description: >-
   London record label Refractions, in partnership with Lab.Club, presents a
   Funktion-One powered showcase of artists pushing the bounds of bass music
