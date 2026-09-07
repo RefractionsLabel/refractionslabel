@@ -12,7 +12,7 @@ title: "Refractions x Lab.Club presents: Skope, Azaleh & Kori"
 venue: Bricks
 location: London
 end_time: 00:00
-event_art: /images/uploads/instagram-poster-4x5-2400x3000.jpg
+event_art: /images/uploads/instagram-poster-4x5-1200x1500.jpg
 description: >-
   London record label Refractions, in partnership with Lab.Club, presents a
   Funktion-One powered showcase of artists pushing the bounds of bass music
