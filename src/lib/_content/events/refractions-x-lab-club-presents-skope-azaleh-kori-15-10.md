@@ -1,18 +1,18 @@
 ---
-title: "Refractions x Lab.Club presents: Skope, Azaleh & Kori"
-venue: Basing House
-location: London
 date: 2026-10-15T19:00:00.000+01:00
 start_time: 19:00
-end_time: 00:00
-event_art: /images/uploads/refractions-general-poster-a4.png
+ticket_link: https://ra.co/events/2526181
 lineup:
   - Skope
   - Azaleh
   - Kori
   - Esther Mae
   - Refractions
-ticket_link: https://ra.co/events/2526181
+title: "Refractions x Lab.Club presents: Skope, Azaleh & Kori"
+venue: Bricks
+location: London
+end_time: 00:00
+event_art: /images/uploads/instagram-poster-4x5-2400x3000.jpg
 description: >-
   London record label Refractions, in partnership with Lab.Club, presents a
   Funktion-One powered showcase of artists pushing the bounds of bass music
