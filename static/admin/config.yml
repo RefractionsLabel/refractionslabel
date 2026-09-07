@@ -26,6 +26,7 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Artist", name: "artist", widget: "string" }
+      - { label: "Catalogue Number", name: "cat_no", widget: "string", hint: "e.g. REF001", required: false }
       - { label: "Release Date", name: "date", widget: "datetime" }
       - { label: "Cover Art", name: "cover_art", widget: "image"}
       - { label: "Buy/Stream Link", name: "buy_link", widget: "string"}

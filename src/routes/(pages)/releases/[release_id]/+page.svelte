@@ -16,7 +16,10 @@
 	};
 
 	const { data } = $props();
-	const { title, artist, date, cover_art, buy_link, embed_snippet, description } = data.attributes;
+	const { title, artist, cat_no, date, cover_art, buy_link, embed_snippet, description } =
+		data.attributes;
+
+	const catNo = String(cat_no ?? '').trim();
 
 	const tracklist: Track[] = Array.isArray(data.attributes.tracklist)
 		? data.attributes.tracklist.filter((t: Track) => t && t.title)
@@ -62,7 +65,9 @@
 				class="flex items-center justify-start cursor-pointer rounded-none !text-xs !mb-6 md:!text-sm border !border-primary !bg-primary text-white hover:!bg-white hover:text-primary hover:!border-primary"
 				onclick={() => (window.location.href = '/releases')}>← Back to releases</button
 			>
-			<p class="!text-sm text-primary !mb-4">{format(date, 'd MMMM yyyy')}</p>
+			<p class="!text-sm text-primary !mb-4">
+				{catNo ? catNo + ' · ' : ''}{format(date, 'd MMMM yyyy')}
+			</p>
 		</div>
 		<div class="grid w-full grid-cols-1 gap-4 md:grid-cols-[2fr_3fr] md:gap-12">
 			<div class="flex flex-col">
