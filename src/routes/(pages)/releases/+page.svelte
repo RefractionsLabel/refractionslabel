@@ -55,7 +55,7 @@
 				<h2 class="md:py-0 leading-none text-primary text-l!">
 					{file.attributes.title}
 				</h2>
-				<p class=" py-2 !text-primary text-sm! normal-case">{file.attributes.artist}</p>
+				<p class=" py-2 !text-primary text-sm! uppercase">{file.attributes.artist}</p>
 			</button>
 		{/each}
 	</div>
