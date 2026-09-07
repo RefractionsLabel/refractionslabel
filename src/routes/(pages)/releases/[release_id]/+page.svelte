@@ -101,18 +101,20 @@
 							{title}
 						</h1>
 					</div>
-					<div class="text-ml leading-none normal-case">
+					<!-- The release artist is always shown in caps; track artists and the
+					     listing cards keep whatever casing was typed in the CMS. -->
+					<div class="text-ml leading-none uppercase">
 						{artist}
 					</div>
 
-					<div
-						class="release-description text-sm max-w-none normal-case text-primary mt-4 md:mt-12"
-					>
+					<div class="release-description text-sm max-w-none normal-case text-primary mt-2 md:mt-4">
 						{@html body}
 					</div>
 				</div>
 				{#if buy_link}
-					<div class="mt-10 lg:mt-0 flex justify-center md:justify-start">
+					<!-- justify-between drops the gap to zero once the description fills the
+					     column, so keep a floor under the button rather than lg:mt-0. -->
+					<div class="mt-10 md:mt-12 flex justify-center md:justify-start">
 						<a
 							href={buy_link}
 							target="_blank"
