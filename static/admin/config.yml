@@ -31,6 +31,17 @@ collections:
       - { label: "Buy/Stream Link", name: "buy_link", widget: "string"}
       - { label: "Embed Player Snippet", name: "embed_snippet", widget: "markdown" }
       - { label: "Description", name: "description", widget: "markdown" }
+      - label: "Tracklist"
+        name: "tracklist"
+        widget: "list"
+        required: false
+        label_singular: "Track"
+        summary: "{{fields.side}} {{fields.artist}} - {{fields.title}}"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Artist", name: "artist", widget: "string", required: false }
+          - { label: "Duration", name: "duration", widget: "string", hint: "e.g. 5:42", required: false }
+          - { label: "Side / Disc", name: "side", widget: "string", hint: "e.g. A, B, Disc 1 - leave blank for a single ungrouped list", required: false }
       - { label: "Tags", name: "tags", widget: "list", required: false }
   - name: "radio"
     label: "Radio"

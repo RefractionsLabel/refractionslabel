@@ -2,8 +2,47 @@
 	import { format } from 'date-fns';
 	import { marked } from 'marked';
 
+	type Track = {
+		title: string;
+		artist?: string;
+		duration?: string | number;
+		side?: string;
+	};
+
+	/** Consecutive tracks sharing a side/disc label, e.g. "A" or "Disc 1". */
+	type TrackGroup = {
+		label: string;
+		tracks: Track[];
+	};
+
 	const { data } = $props();
 	const { title, artist, date, cover_art, buy_link, embed_snippet, description } = data.attributes;
+
+	const tracklist: Track[] = Array.isArray(data.attributes.tracklist)
+		? data.attributes.tracklist.filter((t: Track) => t && t.title)
+		: [];
+
+	// Tracks keep their order and are grouped by the side/disc label they carry,
+	// so a release can be flat (no labels), A/B sides, or Disc 1 / Disc 2.
+	const groups: TrackGroup[] = tracklist.reduce((acc: TrackGroup[], track: Track) => {
+		const label = String(track.side ?? '').trim();
+		const current = acc.at(-1);
+		if (current && current.label === label) current.tracks.push(track);
+		else acc.push({ label, tracks: [track] });
+		return acc;
+	}, []);
+
+	// YAML 1.1 parses an unquoted 5:42 as a base-60 integer (5*60 + 42 = 342),
+	// so a duration may arrive as a number of seconds rather than a string.
+	const toDuration = (v: string | number | null | undefined): string => {
+		if (v === null || v === undefined || v === '') return '';
+		if (typeof v === 'number') {
+			const m = Math.floor(v / 60);
+			const s = v % 60;
+			return `${m}:${String(s).padStart(2, '0')}`;
+		}
+		return String(v).trim();
+	};
 
 	// The CMS writes "N/A" when a release has no player, so treat that as empty.
 	const embedHtml =
@@ -71,6 +110,48 @@
 				{/if}
 			</div>
 		</div>
+		{#if tracklist.length}
+			<div class="tracklist mt-10 border-t border-primary/20 pt-3 md:mt-16 md:pt-4">
+				<!-- Tracking matches the release title: its 2px at text-lg is 0.03125em. -->
+				<h2 class="!text-ml font-variation leading-none uppercase !tracking-[0.03125em]">
+					Tracklist
+				</h2>
+				{#each groups as group, g (g)}
+					{#if group.label}
+						<!-- The global `h3 { margin: 0 }` in app.css is unlayered, so these
+						     margins need `!` to apply. Each label hugs its own tracks. -->
+						<h3
+							class="!text-sm font-variation !-mb-1 uppercase !tracking-[2px] text-primary/60 {g ===
+							0
+								? '!mt-4'
+								: '!mt-6 md:!mt-7'}"
+						>
+							{group.label}
+						</h3>
+					{/if}
+					<ol class="!m-0 flex flex-col !p-0 {group.label ? '' : '!mt-4 md:!mt-6'}">
+						{#each group.tracks as track, i (i)}
+							<li
+								class="flex items-baseline gap-3 border-b border-primary/10 py-2 !text-sm normal-case !list-none last:border-b-0"
+							>
+								<span class="w-6 shrink-0 tabular-nums text-primary/50">
+									{String(i + 1).padStart(2, '0')}
+								</span>
+								<span class="grow">
+									{#if track.artist}<span class="uppercase">{track.artist}</span> —
+									{/if}{track.title}
+								</span>
+								{#if toDuration(track.duration)}
+									<span class="shrink-0 tabular-nums text-primary/50"
+										>{toDuration(track.duration)}</span
+									>
+								{/if}
+							</li>
+						{/each}
+					</ol>
+				{/each}
+			</div>
+		{/if}
 	</div>
 </div>
 
