@@ -30,7 +30,8 @@ collections:
       - { label: "Release Date", name: "date", widget: "datetime" }
       - { label: "Cover Art", name: "cover_art", widget: "image"}
       - { label: "Buy/Stream Link", name: "buy_link", widget: "string"}
-      - { label: "Embed Player Snippet", name: "embed_snippet", widget: "markdown" }
+      - { label: "Buy/Stream Button Text", name: "buy_label", widget: "string", hint: "Defaults to 'Buy / Stream'", required: false }
+      - { label: "Embed Player Snippet", name: "embed_snippet", widget: "markdown", required: false }
       - { label: "Description", name: "description", widget: "markdown" }
       - label: "Tracklist"
         name: "tracklist"

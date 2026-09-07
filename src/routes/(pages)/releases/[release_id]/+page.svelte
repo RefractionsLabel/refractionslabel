@@ -16,10 +16,20 @@
 	};
 
 	const { data } = $props();
-	const { title, artist, cat_no, date, cover_art, buy_link, embed_snippet, description } =
-		data.attributes;
+	const {
+		title,
+		artist,
+		cat_no,
+		date,
+		cover_art,
+		buy_link,
+		buy_label,
+		embed_snippet,
+		description
+	} = data.attributes;
 
 	const catNo = String(cat_no ?? '').trim();
+	const buyLabel = String(buy_label ?? '').trim() || 'Buy / Stream';
 
 	const tracklist: Track[] = Array.isArray(data.attributes.tracklist)
 		? data.attributes.tracklist.filter((t: Track) => t && t.title)
@@ -91,7 +101,7 @@
 							{title}
 						</h1>
 					</div>
-					<div class="text-ml leading-none uppercase">
+					<div class="text-ml leading-none normal-case">
 						{artist}
 					</div>
 
@@ -109,7 +119,7 @@
 							rel="noopener noreferrer"
 							class="flex h-[42px] w-fit cursor-pointer items-center rounded-none border-2 border-primary bg-transparent px-6 text-center text-ml text-primary no-underline transition-all duration-300 hover:bg-primary hover:text-white"
 						>
-							Buy / Stream
+							{buyLabel}
 						</a>
 					</div>
 				{/if}
@@ -143,8 +153,7 @@
 									{String(i + 1).padStart(2, '0')}
 								</span>
 								<span class="grow">
-									{#if track.artist}<span class="uppercase">{track.artist}</span> —
-									{/if}{track.title}
+									{#if track.artist}{track.artist}{' — '}{/if}{track.title}
 								</span>
 								{#if toDuration(track.duration)}
 									<span class="shrink-0 tabular-nums text-primary/50"
