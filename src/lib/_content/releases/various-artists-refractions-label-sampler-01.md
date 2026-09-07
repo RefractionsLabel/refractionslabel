@@ -5,8 +5,12 @@ cat_no: RFCNV001
 date: 2026-10-15T19:00:00.000+01:00
 cover_art: /images/uploads/ex3a1703.jpeg
 buy_link: https://ra.co/events/2526181
+buy_label: only available here
 embed_snippet: ""
-description: DESC
+description: |-
+  Includes WAV download
+
+  Only available in person
 tracklist:
   - title: ID (feat. Rakjay)
     artist: Fraught
