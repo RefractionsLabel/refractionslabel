@@ -48,7 +48,7 @@
 					<img
 						src={event_art}
 						alt="Artwork for {title}"
-						class="aspect-[210/297] w-full object-cover"
+						class="aspect-[4/5] w-full object-cover"
 					/>
 				</div>
 				{#if ticket_link}

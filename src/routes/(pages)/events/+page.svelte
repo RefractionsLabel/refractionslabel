@@ -49,7 +49,7 @@
 				onclick={() => (window.location.href = '/events/' + file.slug)}
 			>
 				<img
-					class="mb-4 lg:mb-6 xl:mb-12 block aspect-[210/297] w-full object-cover border border-primary/20"
+					class="mb-4 lg:mb-6 xl:mb-12 block aspect-[4/5] w-full object-cover border border-primary/20"
 					src={file.attributes.event_art}
 					alt="Artwork for {file.attributes.title}"
 				/>
