@@ -1,12 +1,15 @@
 <script lang="ts">
 	import { format } from 'date-fns';
 	import { marked } from 'marked';
+	import TrackPreview from '$lib/components/TrackPreview.svelte';
 
 	type Track = {
 		title: string;
 		artist?: string;
 		duration?: string | number;
 		side?: string;
+		/** Path to a short audio clip uploaded through the CMS. */
+		preview?: string;
 	};
 
 	/** Consecutive tracks sharing a side/disc label, e.g. "A" or "Disc 1". */
@@ -56,6 +59,10 @@
 		}
 		return String(v).trim();
 	};
+
+	// An untouched CMS file field is saved as "" rather than omitted.
+	const previewSrc = (v: string | null | undefined): string =>
+		typeof v === 'string' ? v.trim() : '';
 
 	// The CMS writes "N/A" when a release has no player, so treat that as empty.
 	const embedHtml =
@@ -149,18 +156,29 @@
 					<ol class="!m-0 flex flex-col !p-0 {group.label ? '' : '!mt-4 md:!mt-6'}">
 						{#each group.tracks as track, i (i)}
 							<li
-								class="flex items-baseline gap-3 border-b border-primary/10 py-2 !text-sm normal-case !list-none last:border-b-0"
+								class="flex flex-col border-b border-primary/10 py-2 !text-sm normal-case !list-none last:border-b-0"
 							>
-								<span class="w-6 shrink-0 tabular-nums text-primary/50">
-									{String(i + 1).padStart(2, '0')}
-								</span>
-								<span class="grow">
-									{#if track.artist}{track.artist}{' — '}{/if}{track.title}
-								</span>
-								{#if toDuration(track.duration)}
-									<span class="shrink-0 tabular-nums text-primary/50"
-										>{toDuration(track.duration)}</span
-									>
+								<div class="flex items-baseline gap-3">
+									<span class="w-6 shrink-0 tabular-nums text-primary/50">
+										{String(i + 1).padStart(2, '0')}
+									</span>
+									<span class="grow">
+										{#if track.artist}{track.artist}{' — '}{/if}{track.title}
+									</span>
+									{#if toDuration(track.duration)}
+										<span class="shrink-0 tabular-nums text-primary/50"
+											>{toDuration(track.duration)}</span
+										>
+									{/if}
+								</div>
+								{#if previewSrc(track.preview)}
+									<!-- pl-9 = the number column (w-6) + gap-3, so the player sits under the title. -->
+									<div class="pt-2 pl-9">
+										<TrackPreview
+											src={previewSrc(track.preview)}
+											label={track.artist ? `${track.artist} — ${track.title}` : track.title}
+										/>
+									</div>
 								{/if}
 							</li>
 						{/each}

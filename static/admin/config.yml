@@ -44,6 +44,7 @@ collections:
           - { label: "Artist", name: "artist", widget: "string", required: false }
           - { label: "Duration", name: "duration", widget: "string", hint: "e.g. 5:42", required: false }
           - { label: "Side / Disc", name: "side", widget: "string", hint: "e.g. A, B, Disc 1 - leave blank for a single ungrouped list", required: false }
+          - { label: "Audio Preview", name: "preview", widget: "file", required: false, media_folder: "/static/audio/previews", public_folder: "/audio/previews", hint: "Short MP3 clip (~30-60s, 128-192kbps). Anyone can download it, so upload a clip, not the full track." }
       - { label: "Tags", name: "tags", widget: "list", required: false }
   - name: "radio"
     label: "Radio"
