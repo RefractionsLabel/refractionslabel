@@ -17,20 +17,25 @@ tracklist:
     artist: Fraught
     side: A
     duration: 03:17
+    preview: /audio/previews/fraughtpreview.mp3
   - title: ID
     artist: Pike
     side: A
     duration: 03:46
+    preview: /audio/previews/pikepreview.mp3
   - title: ID
     artist: VYON
     side: A
     duration: 03:21
+    preview: /audio/previews/vyonpreview.mp3
   - title: ID
     artist: Vorso
     side: B
     duration: 04:08
+    preview: /audio/previews/vorsopreview.mp3
   - title: ID
     artist: Azaleh & Kori
     side: B
     duration: 05:22
+    preview: /audio/previews/azalehkoripreview.mp3
 ---
