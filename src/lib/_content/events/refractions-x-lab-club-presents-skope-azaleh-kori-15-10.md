@@ -8,7 +8,7 @@ lineup:
   - Kori
   - Esther Mae
   - Refractions
-title: "Refractions x Lab.Club presents: Skope, Azaleh & Kori"
+title: "Refractions x Lab.Club present: Skope, Azaleh & Kori"
 venue: Bricks
 location: London
 end_time: 00:00
