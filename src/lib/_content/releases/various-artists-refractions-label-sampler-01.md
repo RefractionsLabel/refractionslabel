@@ -5,13 +5,16 @@ cat_no: RFCNV001
 date: 2026-10-15T19:00:00.000+01:00
 cover_art: /images/uploads/vinylsmall.jpg
 buy_link: https://ra.co/events/2526181
-buy_label: only available here
+buy_label: Available Here
 embed_snippet: ""
 description: >-
   Incl. WAV
 
 
   Only available in person @ *Refractions x Lab.Club presents: Skope, Azaleh & Kori* (Bricks, London - 15th Oct 2026)
+
+
+  Use code *vinyl* for 1/3 off tickets
 tracklist:
   - title: ID (feat. Rakjay)
     artist: Fraught
