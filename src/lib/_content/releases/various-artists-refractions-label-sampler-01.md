@@ -8,6 +8,9 @@ buy_link: https://ra.co/events/2526181
 buy_label: Available Here
 embed_snippet: ""
 description: >-
+  12" 45RPM 180g
+
+
   Incl. WAV
 
 
