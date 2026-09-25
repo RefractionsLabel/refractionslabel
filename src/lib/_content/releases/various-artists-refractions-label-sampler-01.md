@@ -14,7 +14,7 @@ description: >-
   Incl. WAV download
 
 
-  Available in person @ *Refractions x Lab.Club presents: Skope, Azaleh & Kori* (Bricks, London - 15th Oct 2026)
+  Available in person @ **Refractions x Lab.Club presents: Skope, Azaleh & Kori** (Bricks, London - 15th Oct 2026)
 
 
   Use code *vinyl* for 1/3 off tickets
@@ -39,7 +39,7 @@ tracklist:
     side: B
     duration: 04:08
     preview: /audio/previews/vorsopreview.mp3
-  - title: ID
+  - title: Umbra
     artist: Azaleh & Kori
     side: B
     duration: 05:22
