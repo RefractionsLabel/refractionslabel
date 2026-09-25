@@ -8,13 +8,13 @@ buy_link: https://ra.co/events/2526181
 buy_label: Available Here
 embed_snippet: ""
 description: >-
-  12" 45RPM 180g
+  12" 180g 45RPM
 
 
-  Incl. WAV
+  Incl. WAV download
 
 
-  Only available in person @ *Refractions x Lab.Club presents: Skope, Azaleh & Kori* (Bricks, London - 15th Oct 2026)
+  Available in person @ *Refractions x Lab.Club presents: Skope, Azaleh & Kori* (Bricks, London - 15th Oct 2026)
 
 
   Use code *vinyl* for 1/3 off tickets
