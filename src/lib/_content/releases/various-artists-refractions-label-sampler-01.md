@@ -8,7 +8,7 @@ buy_link: https://ra.co/events/2526181
 buy_label: Available Here
 embed_snippet: ""
 description: >-
-  12" 180g 45RPM
+  12" 180g 45RPM Vinyl Record
 
 
   Incl. WAV download
