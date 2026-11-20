@@ -4,8 +4,8 @@ artist: Various Artists
 cat_no: RFCNV001
 date: 2026-10-15T19:00:00.000+01:00
 cover_art: /images/uploads/ex3a20401-web.jpg
-buy_link: https://soundcloud.com/refractionslabel/refractions-label-sampler-01
-buy_label: Available Soon
+buy_link: https://square.link/u/TWHGfDYS
+buy_label: Buy now
 embed_snippet: ""
 description: |-
   12" 180g 45RPM Vinyl Record
