@@ -3,7 +3,7 @@ title: Refractions Label Sampler 01
 artist: Various Artists
 cat_no: RFCNV001
 date: 2026-10-15T19:00:00.000+01:00
-cover_art: /images/uploads/vinyltab_600.jpg
+cover_art: /images/uploads/ex3a20401-web.jpg
 buy_link: https://soundcloud.com/refractionslabel/refractions-label-sampler-01
 buy_label: Available Soon
 embed_snippet: ""
