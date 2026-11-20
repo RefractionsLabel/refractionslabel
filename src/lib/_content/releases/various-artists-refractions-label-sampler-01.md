@@ -8,9 +8,9 @@ buy_link: https://square.link/u/TWHGfDYS
 buy_label: Buy now
 embed_snippet: ""
 description: |-
-  12" 180g 45RPM Vinyl Record
+  12" 180g 45RPM black vinyl record
 
-  Incl. WAV download
+  Includes Bandcamp download code
 tracklist:
   - title: ID (feat. Rakjay)
     artist: Fraught
