@@ -67,6 +67,13 @@
 					{socialButton.title}
 				</button>
 			{/each}
+
+			<a
+				href="/returns"
+				class="!w-full box-border border-2 border-primary bg-primary py-3 text-center !text-xs text-white no-underline transition-all duration-400 xl:!text-sm hover:bg-transparent hover:text-primary"
+			>
+				RETURNS & CANCELLATIONS
+			</a>
 		</div>
 	</section>
 </div>

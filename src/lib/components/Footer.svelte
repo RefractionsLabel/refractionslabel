@@ -48,8 +48,12 @@
 <footer
 	class="flex w-full flex-col items-center gap-6 bg-footer p-4 min-[1366px]:flex-row min-[1366px]:items-center min-[1366px]:justify-between min-[1366px]:gap-4"
 >
-	<p class="text-center !text-[0.55rem] sm:!text-[0.675rem] min-[1366px]:!text-[0.75rem] whitespace-nowrap shrink-0">
+	<p
+		class="text-center !text-[0.55rem] sm:!text-[0.675rem] min-[1366px]:!text-[0.75rem] whitespace-nowrap shrink-0"
+	>
 		Refractions<span class="font-sans">®</span> is a registered trademark of Refractions Label Ltd.
+		<span aria-hidden="true">·</span>
+		<a href="/returns" class="underline underline-offset-2 hover:opacity-80">Returns</a>
 	</p>
 	<button
 		type="button"
@@ -65,7 +69,9 @@
 			<button
 				type="button"
 				aria-label={logo.name}
-				class="footer-logo-link {logo.small ? 'footer-logo-link--small' : ''} {i === 1 ? 'footer-logo-gap' : ''}"
+				class="footer-logo-link {logo.small ? 'footer-logo-link--small' : ''} {i === 1
+					? 'footer-logo-gap'
+					: ''}"
 				style={logo.nudge ? `--logo-nudge: ${logo.nudge}` : ''}
 				onclick={() => openLogoLink(logo.href)}
 			>
