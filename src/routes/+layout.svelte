@@ -13,8 +13,14 @@
 		returns: 'Releases'
 	};
 
+	/** Tab titles that differ from the capitalised URL segment. */
+	const titleBySegment: Record<string, string> = {
+		returns: 'Returns & Cancellations'
+	};
+
 	const pageTitle = $derived.by(() => {
 		const path = page.url.pathname.split('/')[1] || 'Refractions';
+		if (titleBySegment[path]) return titleBySegment[path];
 		return path.charAt(0).toUpperCase() + path.slice(1);
 	});
 

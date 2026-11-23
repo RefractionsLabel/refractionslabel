@@ -1,6 +1,4 @@
 <script lang="ts">
-	import HighlightedHeader from '$lib/components/HighlightedHeader.svelte';
-
 	// Keep this page in step with the packing slip. If one changes, change the other.
 	const ordersEmail = 'orders@refractionslabel.com';
 
@@ -23,7 +21,17 @@
 </svelte:head>
 
 <div class="main-content w-full px-4 lg:!px-32 lg:py-10">
-	<HighlightedHeader headerText="RETURNS" />
+	<!-- Same look as HighlightedHeader, scaled down on smaller screens so
+	     "CANCELLATIONS" fits across a phone. -->
+	<div
+		class="bg-white my-10 text-primary py-0 px-6 border-0 font-bold uppercase mix-blend-lighten w-fit max-w-full"
+	>
+		<h1
+			class="!text-l sm:!text-xl lg:!text-xxl !tracking-[2px] sm:!tracking-[4px] font-variation leading-[0.9] py-3"
+		>
+			RETURNS &amp;<br />CANCELLATIONS
+		</h1>
+	</div>
 
 	<section class="returns w-full bg-white p-6 text-primary normal-case md:p-10 xl:p-16">
 		<h2>Cancellations</h2>

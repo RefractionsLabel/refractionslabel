@@ -11,7 +11,6 @@
 
 	// Update each href with the destination you want for that logo.
 	const footerLogos: FooterLogo[] = [
-		{ name: 'Subvert', src: '/Logos/SubvertWhite.png', href: 'https://subvert.fm/' },
 		{
 			name: 'Subtle Radio',
 			src: '/Logos/SubtleRadioWhite.svg',
@@ -38,40 +37,40 @@
 		const w = window.open(href, '_blank');
 		if (w) w.opener = null;
 	}
-
-	function openAllLinks() {
-		const w = window.open('http://ref.ract.fm/links', '_blank');
-		if (w) w.opener = null;
-	}
 </script>
 
 <footer
 	class="flex w-full flex-col items-center gap-6 bg-footer p-4 min-[1366px]:flex-row min-[1366px]:items-center min-[1366px]:justify-between min-[1366px]:gap-4"
 >
-	<p
-		class="text-center !text-[0.55rem] sm:!text-[0.675rem] min-[1366px]:!text-[0.75rem] whitespace-nowrap shrink-0"
-	>
-		Refractions<span class="font-sans">®</span> is a registered trademark of Refractions Label Ltd.
-		<span aria-hidden="true">·</span>
-		<a href="/returns" class="underline underline-offset-2 hover:opacity-80">Returns</a>
+	<p class="text-center !text-[0.55rem] sm:!text-[0.675rem] min-[1366px]:!text-[0.75rem] shrink-0">
+		<!-- Each part stays on one line; on narrow phones the links drop below. -->
+		<span class="whitespace-nowrap"
+			>Refractions<span class="font-sans">®</span> is a registered trademark of Refractions Label Ltd.</span
+		>
+		<span class="ml-1 whitespace-nowrap"
+			><span aria-hidden="true" class="mx-2">·</span>
+			<a href="/returns" class="underline underline-offset-2 hover:opacity-80"
+				>Returns & cancellations</a
+			>
+			<span aria-hidden="true" class="mx-2">·</span>
+			<a
+				href="http://ref.ract.fm/links"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="underline underline-offset-2 hover:opacity-80">All links</a
+			></span
+		>
 	</p>
-	<button
-		type="button"
-		class="primary !py-2 !px-12 !text-[0.75rem] uppercase xl:!text-3xs shrink-0"
-		onclick={openAllLinks}
-	>
-		ALL LINKS
-	</button>
+	<!-- Three columns at the old per-logo width (max-w-xl / 4 × 3 = 27rem), so the
+	     logos keep the spacing they had when Subvert was the fourth. -->
 	<div
-		class="grid min-[1366px]:w-full min-[1366px]:max-w-xl [grid-template-columns:repeat(4,auto)] min-[1366px]:grid-cols-4 place-items-center gap-x-1 gap-y-1"
+		class="grid min-[1366px]:w-full min-[1366px]:max-w-[27rem] [grid-template-columns:repeat(3,auto)] min-[1366px]:grid-cols-3 place-items-center gap-x-1 gap-y-1"
 	>
-		{#each footerLogos as logo, i (logo.src)}
+		{#each footerLogos as logo (logo.src)}
 			<button
 				type="button"
 				aria-label={logo.name}
-				class="footer-logo-link {logo.small ? 'footer-logo-link--small' : ''} {i === 1
-					? 'footer-logo-gap'
-					: ''}"
+				class="footer-logo-link {logo.small ? 'footer-logo-link--small' : ''}"
 				style={logo.nudge ? `--logo-nudge: ${logo.nudge}` : ''}
 				onclick={() => openLogoLink(logo.href)}
 			>
@@ -112,16 +111,6 @@
 	.footer-logo-link--small {
 		width: 5.5rem;
 		height: 2.25rem;
-	}
-
-	.footer-logo-gap {
-		margin-left: 1.6rem;
-	}
-
-	@media (min-width: 1366px) {
-		.footer-logo-gap {
-			margin-left: 0;
-		}
 	}
 
 	.footer-logo-image {
