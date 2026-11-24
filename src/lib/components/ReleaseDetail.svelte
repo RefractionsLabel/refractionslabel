@@ -136,7 +136,7 @@
 						{#if priceText}
 							<p class="!text-ml text-primary">
 								{priceText}
-								<span class="ml-1 !text-xs normal-case text-primary/50">(excl. shipping)</span>
+								<span class="ml-1 !text-xs normal-case text-primary/50">excl. shipping</span>
 							</p>
 						{/if}
 						<a
