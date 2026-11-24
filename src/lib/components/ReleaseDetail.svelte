@@ -132,9 +132,12 @@
 				{#if buy_link}
 					<!-- justify-between drops the gap to zero once the description fills the
 					     column, so keep a floor under the button rather than lg:mt-0. -->
-					<div class="mt-10 md:mt-12 flex items-center justify-center gap-6 md:justify-start">
+					<div class="mt-10 md:mt-12 flex flex-col items-center gap-3 md:items-start">
 						{#if priceText}
-							<p class="!text-ml text-primary">{priceText}</p>
+							<p class="!text-ml text-primary">
+								{priceText}
+								<span class="ml-1 !text-xs normal-case text-primary/50">(excl. shipping)</span>
+							</p>
 						{/if}
 						<a
 							href={buy_link}
