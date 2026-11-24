@@ -10,6 +10,8 @@ in_store: true
 price: "25"
 embed_snippet: ""
 description: |-
+  Pressed, mastered and conceived in England
+
   12" 180g 45RPM black vinyl record
 
   Includes Bandcamp download code
