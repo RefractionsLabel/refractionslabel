@@ -49,15 +49,15 @@
 		>
 		<span class="ml-1 whitespace-nowrap"
 			><span aria-hidden="true" class="mx-2">·</span>
-			<a href="/returns" class="underline underline-offset-2 hover:opacity-80"
-				>Returns & cancellations</a
-			>
-			<span aria-hidden="true" class="mx-2">·</span>
 			<a
 				href="http://ref.ract.fm/links"
 				target="_blank"
 				rel="noopener noreferrer"
 				class="underline underline-offset-2 hover:opacity-80">All links</a
+			>
+			<span aria-hidden="true" class="mx-2">·</span>
+			<a href="/returns" class="underline underline-offset-2 hover:opacity-80"
+				>Returns & cancellations</a
 			></span
 		>
 	</p>

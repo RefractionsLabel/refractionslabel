@@ -31,6 +31,8 @@ collections:
       - { label: "Cover Art", name: "cover_art", widget: "image"}
       - { label: "Buy/Stream Link", name: "buy_link", widget: "string"}
       - { label: "Buy/Stream Button Text", name: "buy_label", widget: "string", hint: "Defaults to 'Buy / Stream'", required: false }
+      - { label: "Show in Store", name: "in_store", widget: "boolean", default: false, required: false, hint: "Also list this release on the Store page, e.g. a vinyl record. It stays on the Releases page too." }
+      - { label: "Price", name: "price", widget: "string", required: false, hint: "Shown on the Store page and next to the buy button, e.g. £25" }
       - { label: "Embed Player Snippet", name: "embed_snippet", widget: "markdown", required: false }
       - { label: "Description", name: "description", widget: "markdown" }
       - label: "Tracklist"
@@ -45,6 +47,23 @@ collections:
           - { label: "Duration", name: "duration", widget: "string", hint: "e.g. 5:42", required: false }
           - { label: "Side / Disc", name: "side", widget: "string", hint: "e.g. A, B, Disc 1 - leave blank for a single ungrouped list", required: false }
           - { label: "Audio Preview", name: "preview", widget: "file", required: false, media_folder: "/static/audio/previews", public_folder: "/audio/previews", hint: "Short MP3 clip (~30-60s, 128-192kbps). Anyone can download it, so upload a clip, not the full track." }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+  - name: "store"
+    label: "Store"
+    label_singular: "Store item"
+    description: "Store-only items such as merch. For a release that is also sold (e.g. vinyl), tick 'Show in Store' on the release instead."
+    folder: "src/lib/_content/store"
+    create: true
+    slug: "{{title}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Subtitle", name: "subtitle", widget: "string", required: false, hint: "Shown under the title, e.g. 'Black / Heavyweight cotton'" }
+      - { label: "Date Added", name: "date", widget: "datetime", hint: "Not shown. Newest items appear first." }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Price", name: "price", widget: "string", required: false, hint: "e.g. £25" }
+      - { label: "Buy Link", name: "buy_link", widget: "string" }
+      - { label: "Buy Button Text", name: "buy_label", widget: "string", hint: "Defaults to 'Buy now'", required: false }
+      - { label: "Description", name: "description", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list", required: false }
   - name: "radio"
     label: "Radio"
