@@ -7,8 +7,11 @@ cover_art: /images/uploads/ex3a20401-web.jpg
 buy_link: https://square.link/u/TWHGfDYS
 buy_label: Buy now
 in_store: true
+price: £25
 embed_snippet: ""
 description: |-
+  Pressed, mastered and conceived in England
+
   12" 180g 45RPM black vinyl record
 
   Includes Bandcamp download code
